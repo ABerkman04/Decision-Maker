@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|c:\\users\\berkm\\documents\\github\\decision_maker_app\\decision_maker\\newpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|solutionrelative:newpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|c:\\users\\berkm\\documents\\github\\decision_maker_app\\decision_maker\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|c:\\users\\berkm\\documents\\github\\decision_maker_app\\decision_maker\\newpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|solutionrelative:newpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|c:\\users\\berkm\\documents\\github\\decision_maker_app\\decision_maker\\newpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|solutionrelative:newpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|c:\\users\\berkm\\documents\\github\\decision_maker_app\\decision_maker\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|c:\\users\\berkm\\documents\\github\\decision_maker_app\\decision_maker\\newpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|solutionrelative:newpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0C8F909-BC36-9230-8CD8-656A95978E12}|Decision_Maker.csproj|c:\\users\\berkm\\documents\\github\\decision_maker_app\\decision_maker\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -54,19 +54,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NewPage.xaml",
               "DocumentMoniker": "C:\\Users\\berkm\\Documents\\GitHub\\Decision_Maker_App\\Decision_Maker\\NewPage.xaml",
               "RelativeDocumentMoniker": "NewPage.xaml",
               "ToolTip": "C:\\Users\\berkm\\Documents\\GitHub\\Decision_Maker_App\\Decision_Maker\\NewPage.xaml",
               "RelativeToolTip": "NewPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-25T17:14:25.792Z"
+              "WhenOpened": "2026-02-25T17:14:25.792Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NewPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\berkm\\Documents\\GitHub\\Decision_Maker_App\\Decision_Maker\\NewPage.xaml.cs",
               "RelativeDocumentMoniker": "NewPage.xaml.cs",
@@ -78,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\berkm\\Documents\\GitHub\\Decision_Maker_App\\Decision_Maker\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
@@ -86,7 +87,8 @@
               "RelativeToolTip": "MainPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T17:17:12.659Z"
+              "WhenOpened": "2026-02-25T17:17:12.659Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -96,14 +98,14 @@
               "RelativeDocumentMoniker": "MainPage.xaml",
               "ToolTip": "C:\\Users\\berkm\\Documents\\GitHub\\Decision_Maker_App\\Decision_Maker\\MainPage.xaml",
               "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-02-21T18:29:59.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\berkm\\Documents\\GitHub\\Decision_Maker_App\\Decision_Maker\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -111,7 +113,8 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T18:29:21.605Z"
+              "WhenOpened": "2026-02-21T18:29:21.605Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
