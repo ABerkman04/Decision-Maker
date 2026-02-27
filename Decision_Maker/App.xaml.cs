@@ -10,9 +10,9 @@ namespace Decision_Maker
 
         }
 
-    protected override Window CreateWindow(IActivationState? activationState)
-    {
-        return new Window(new NavigationPage(new MainPage()));
-    }
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new NavigationPage(new MainPage()));
+        }
     }
 }

@@ -11,4 +11,8 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new NewPage());
     }
+    private async void OnAHPClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AHP());
+    }
 }
