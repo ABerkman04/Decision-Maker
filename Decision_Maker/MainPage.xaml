@@ -20,7 +20,7 @@
                    HasShadow="False"
                    HorizontalOptions="Center"/>
 
-            <Label Text="Valiku Võlur!"
+            <Label Text="Decision Maker"
                    FontSize="36"
                    FontAttributes="Bold"
                    TextColor="Black"
