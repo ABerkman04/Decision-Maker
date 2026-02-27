@@ -26,7 +26,7 @@
                    TextColor="Black"
                    HorizontalOptions="Center"/>
 
-            <Label Text="Põhjendatud otsus, rahulikum meel!!"
+            <Label Text="Põhjendatud otsus, rahulikum meel"
                    FontSize="14"
                    TextColor="Gray"
                    HorizontalOptions="Center"/>
