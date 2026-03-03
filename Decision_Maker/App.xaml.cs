@@ -8,11 +8,18 @@ namespace Decision_Maker
         {
             InitializeComponent();
 
+            InitializeSupabase();
+
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
             return new Window(new NavigationPage(new MainPage()));
+        }
+
+        private async void InitializeSupabase()
+        {
+            await SupabaseService.InitAsync();
         }
     }
 }

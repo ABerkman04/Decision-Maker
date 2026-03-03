@@ -15,4 +15,9 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new AHP());
     }
+
+    private async void OnSupabaseClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new SupabasePage());
+    }
 }

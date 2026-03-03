@@ -4,7 +4,7 @@
              x:Class="Decision_Maker.MainPage"
              BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="*,*,Auto"
+    <Grid RowDefinitions="*,*,Auto, Auto"
           Padding="30">
 
         <!-- Ülemine sisu -->
@@ -47,6 +47,17 @@
         <Button Grid.Row="2"
                 Text="AHP"
                 Clicked="OnAHPClicked"
+                HeightRequest="55"
+                WidthRequest="200"
+                CornerRadius="27"
+                BackgroundColor="#D9D9D9"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                Margin="0,0,0,40"/>
+
+        <Button Grid.Row="3"
+                Text="Supabase"
+                Clicked="OnSupabaseClicked"
                 HeightRequest="55"
                 WidthRequest="200"
                 CornerRadius="27"
