@@ -1,4 +1,6 @@
-﻿namespace Decision_Maker;
+﻿using Decision_Maker.Login;
+
+namespace Decision_Maker;
 
 public partial class MainPage : ContentPage
 {
@@ -9,7 +11,7 @@ public partial class MainPage : ContentPage
 
     private async void OnStartClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new NewPage());
+        await Navigation.PushAsync(new SignUpPage());
     }
     private async void OnAHPClicked(object sender, EventArgs e)
     {
