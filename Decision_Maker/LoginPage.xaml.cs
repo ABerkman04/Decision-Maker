@@ -65,6 +65,17 @@ public partial class LoginPage : ContentPage
             if (session.User != null)
             {
                 await DisplayAlertAsync("Success", $"User registered: {session.User.Email}", "OK");
+
+                var loginSession = await SupabaseService.Client!.Auth.SignInWithPassword(email, password);
+
+                if (loginSession.User != null)
+                {
+                    await Navigation.PushAsync(new LoginTestPage1());
+                }
+                else
+                {
+                    ErrorLabel.Text = "Could not log in after registration. Check your email.";
+                }
             }
             else
             {
