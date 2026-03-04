@@ -59,12 +59,12 @@ public partial class SupabasePage : ContentPage
     }
 }
 
-[Table("users")]
+[Table("decisions")]
 public class User : BaseModel
 {
     [PrimaryKey("id")]
     public int Id { get; set; }
 
-    [Column("name")]
+    [Column("choice_name")]
     public string Name { get; set; }
 }

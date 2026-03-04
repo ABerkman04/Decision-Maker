@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              x:Class="Decision_Maker.Test.TestEnvironment"
              Title="TestEnvironment"
             BackgroundColor="#F5F5F5">
-    
-    <Grid RowDefinitions="*,Auto,Auto, Auto, Auto, Auto"
+
+    <Grid RowDefinitions="*,Auto,Auto, Auto, Auto, Auto, Auto, Auto"
           Padding="30">
 
         <!-- Ülemine sisu -->
@@ -21,13 +22,13 @@
                    HasShadow="False"
                    HorizontalOptions="Center"/>
 
-            <Label Text="Test Environment"
+            <Label Text="{x:Static strings:AppResources.TestEnvironment}"
                    FontSize="36"
                    FontAttributes="Bold"
                    TextColor="Black"
                    HorizontalOptions="Center"/>
 
-            <Label Text="Test Environment"
+            <Label Text="{x:Static strings:AppResources.TestEnvironment}"
                    FontSize="14"
                    TextColor="Gray"
                    HorizontalOptions="Center"/>
@@ -35,70 +36,90 @@
 
         <!-- Alumine nupp -->
         <Button Grid.Row="1"
-                Text="New Page"
+                Text="{x:Static strings:AppResources.NewPage}"
                 Clicked="OnStartClicked"
-                HeightRequest="55"
+                HeightRequest="40"
                 WidthRequest="200"
                 CornerRadius="27"
                 BackgroundColor="#D9D9D9"
                 TextColor="Black"
                 HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
+                Margin="0,-20,0,40"/>
 
         <Button Grid.Row="2"
-                Text="AHP"
+                Text="{x:Static strings:AppResources.AHP}"
                 Clicked="OnAHPClicked"
-                HeightRequest="55"
+                HeightRequest="40"
                 WidthRequest="200"
                 CornerRadius="27"
                 BackgroundColor="#D9D9D9"
                 TextColor="Black"
                 HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
+                Margin="0,-20,0,40"/>
 
         <Button Grid.Row="3"
-                Text="Test environment"
+                Text="{x:Static strings:AppResources.TestEnvironment}"
                 Clicked="OnSupabaseClicked"
-                HeightRequest="55"
+                HeightRequest="40"
                 WidthRequest="200"
                 CornerRadius="27"
                 BackgroundColor="#D9D9D9"
                 TextColor="Black"
                 HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
+                Margin="0,-20,0,40"/>
 
         <Button Grid.Row="3"
-                Text="Log in"
+                Text="{x:Static strings:AppResources.LogIn}"
                 Clicked="OnLoginClicked"
-                HeightRequest="55"
+                HeightRequest="40"
                 WidthRequest="200"
                 CornerRadius="27"
                 BackgroundColor="#D9D9D9"
                 TextColor="Black"
                 HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
+                Margin="0,-20,0,40"/>
+
 
         <Button Grid.Row="4"
-                Text="Create an account"
-                Clicked="OnSignUpPageClicked"
-                HeightRequest="55"
-                WidthRequest="200"
-                CornerRadius="27"
-                BackgroundColor="#D9D9D9"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
-
-        <Button Grid.Row="5"
-                Text="Test Login"
+                Text="{x:Static strings:AppResources.TestLogIn}"
                 Clicked="OnLoginTestPageClicked"
-                HeightRequest="55"
+                HeightRequest="40"
                 WidthRequest="200"
                 CornerRadius="27"
                 BackgroundColor="#D9D9D9"
                 TextColor="Black"
                 HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
+                Margin="0,-20,0,40"/>
+        <Button Grid.Row="5"
+                Text="Eesti keel"
+                Clicked="OnEstoniantClicked"
+                HeightRequest="40"
+                WidthRequest="200"
+                CornerRadius="27"
+                BackgroundColor="#D9D9D9"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                Margin="0,-20,0,40"/>
+        <Button Grid.Row="6"
+                Text="English"
+                Clicked="OnEnglishClicked"
+                HeightRequest="40"
+                WidthRequest="200"
+                CornerRadius="27"
+                BackgroundColor="#D9D9D9"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                Margin="0,-20,0,40"/>
+        <Button Grid.Row="7"
+                Text="Supabase"
+                Clicked="OnSupabaseClicked"
+                HeightRequest="40"
+                WidthRequest="200"
+                CornerRadius="27"
+                BackgroundColor="#D9D9D9"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                Margin="0,-20,0,40"/>
 
     </Grid>
 

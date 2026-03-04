@@ -1,4 +1,6 @@
 using Decision_Maker.Login;
+using Decision_Maker.Resources.Localization;
+using System.Globalization;
 
 namespace Decision_Maker.Test;
 
@@ -8,6 +10,21 @@ public partial class TestEnvironment : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    void ChangeLanguage(string languageCode)
+    {
+        var culture = new CultureInfo(languageCode);
+
+        Thread.CurrentThread.CurrentCulture = culture;
+        Thread.CurrentThread.CurrentUICulture = culture;
+
+        AppResources.Culture = culture;
+
+        // Recreate only this page
+        var currentPage = new TestEnvironment();
+        Navigation.InsertPageBefore(currentPage, this);
+        Navigation.PopAsync();
+    }
 
     private async void OnStartClicked(object sender, EventArgs e)
     {
@@ -33,5 +50,14 @@ public partial class TestEnvironment : ContentPage
     private async void OnSignUpPageClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new SignUpPage());
+    }
+    private async void OnEstoniantClicked(object sender, EventArgs e)
+    {
+        ChangeLanguage("et");
+    }
+
+    private async void OnEnglishClicked(object sender, EventArgs e)
+    {
+        ChangeLanguage("en");
     }
 }
