@@ -1,7 +1,9 @@
 using Supabase;
+using Supabase.Gotrue;
 using Supabase.Postgrest;
 using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
+using System.Diagnostics;
 
 namespace Decision_Maker;
 
@@ -30,9 +32,12 @@ public partial class SupabasePage : ContentPage
     // 🔹 Delete nupp iga rea kõrval
     private async void OnAddUserClicked(object sender, EventArgs e)
     {
+        Debug.WriteLine(sender);
         string newName = $"User {DateTime.Now:HHmmss}";
+        Debug.WriteLine(newName);
 
         var newUser = new User { Name = newName };
+        Debug.WriteLine(newUser);
 
         // INSERT uues kliendis
         await SupabaseService.Client!.From<User>().Insert(newUser);

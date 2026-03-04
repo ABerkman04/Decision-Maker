@@ -1,0 +1,59 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decision_Maker.LoginPage"
+             Title="Login"
+             BackgroundColor="#F5F5F5">
+
+    <VerticalStackLayout Spacing="20"
+                         Padding="30"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+
+        <Label Text="Login"
+               FontSize="36"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <!-- Email -->
+        <Entry x:Name="EmailEntry"
+               Placeholder="Email"
+               Keyboard="Email"
+               TextColor="Black"
+               BackgroundColor="White"
+               HeightRequest="50"
+               WidthRequest="300"/>
+
+        <!-- Password -->
+        <Entry x:Name="PasswordEntry"
+               Placeholder="Password"
+               IsPassword="True"
+               TextColor="Black"
+               BackgroundColor="White"
+               HeightRequest="50"
+               WidthRequest="300"/>
+
+        <!-- Login nupp -->
+        <Button Text="Login"
+                Clicked="OnLoginClicked"
+                HeightRequest="55"
+                WidthRequest="300"
+                CornerRadius="27"
+                BackgroundColor="#4CAF50"
+                TextColor="White"/>
+
+        <!-- Sign Up nupp -->
+        <Button Text="Sign Up"
+                Clicked="OnSignUpClicked"
+                HeightRequest="55"
+                WidthRequest="300"
+                CornerRadius="27"
+                BackgroundColor="#2196F3"
+                TextColor="White"/>
+
+        <!-- Veateade -->
+        <Label x:Name="ErrorLabel"
+               TextColor="Red"
+               FontSize="14"
+               HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

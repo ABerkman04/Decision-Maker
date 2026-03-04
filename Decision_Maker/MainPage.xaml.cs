@@ -20,4 +20,13 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new SupabasePage());
     }
+
+    private async void OnLoginClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LoginPage());
+    }
+    private async void OnLoginTestPageClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LoginTestPage1());
+    }
 }
