@@ -1,0 +1,83 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decision_Maker.AHP.CriteriaPage"
+             xmlns:components="clr-namespace:Decision_Maker.Components"
+             BackgroundColor="#F2F2F2">
+
+    <Grid RowDefinitions="*,90">
+
+        <Frame Grid.Row="0" HasShadow="False">
+
+            <VerticalStackLayout Padding="30" Spacing="20">
+
+                <Label Text="Add Criteria"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Add up to 5 criteria"
+                       FontSize="14"
+                       HorizontalOptions="Center"/>
+
+                <!-- Existing criteria -->
+                <CollectionView x:Name="CriteriaList">
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <Frame Padding="10"
+                   BackgroundColor="#E5E5E5"
+                   CornerRadius="15"
+                   HasShadow="False">
+
+                                <Grid ColumnDefinitions="*,40">
+
+                                    <Label Text="{Binding Name}"
+                           FontSize="16"
+                           VerticalOptions="Center"/>
+
+                                    <Button Grid.Column="1"
+                            Text="X"
+                            WidthRequest="35"
+                            HeightRequest="35"
+                            CornerRadius="15"
+                            BackgroundColor="#CFCFCF"
+                            Clicked="DeleteCriteriaClicked"
+                            CommandParameter="{Binding .}"/>
+
+                                </Grid>
+
+                            </Frame>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <!-- Add new criteria -->
+                <Entry x:Name="CriteriaEntry"
+                       Placeholder="Example: Cost"/>
+
+                <Button Text="Add Criteria"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        BackgroundColor="#CFCFCF"
+                        Clicked="AddCriteriaClicked"/>
+
+                <Button Text="Continue"
+                        CornerRadius="25"
+                        HeightRequest="55"
+                        BackgroundColor="#CFCFCF"
+                        Clicked="ContinueClicked"/>
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+        <components:NavigationBar Grid.Row="1"/>
+
+    </Grid>
+
+</ContentPage>

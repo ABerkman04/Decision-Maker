@@ -72,9 +72,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="AHP.xaml.cs">
-	    <DependentUpon>AHP.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="NewPage.xaml.cs">
 	    <DependentUpon>NewPage.xaml</DependentUpon>
 	  </Compile>
@@ -96,7 +93,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AHP.xaml">
+	  <MauiXaml Update="AHP\CreateDecisionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AHP\CriteriaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AHP\DecisionsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AHP\OptionsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AHP\WeightsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\NavigationBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Login\LoginPage.xaml">

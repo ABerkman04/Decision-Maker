@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decision_Maker.Components.NavigationBar">
+
+    <Grid BackgroundColor="#F2F2F2"
+          ColumnDefinitions="*,*,*"
+          Padding="20,5">
+
+        <!-- HOME -->
+        <VerticalStackLayout Grid.Column="0"
+                             HorizontalOptions="Center">
+
+            <Frame WidthRequest="40"
+                   HeightRequest="40"
+                   CornerRadius="12"
+                   BackgroundColor="#D9D9D9"
+                   HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoHome"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <BoxView HeightRequest="2"
+                     WidthRequest="20"
+                     BackgroundColor="Black"
+                     HorizontalOptions="Center"
+                     Margin="0,2"/>
+
+            <Label Text="Home"
+                   FontSize="13"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+
+        <!-- RESULTS -->
+        <VerticalStackLayout Grid.Column="1"
+                             HorizontalOptions="Center">
+
+            <Frame WidthRequest="40"
+                   HeightRequest="40"
+                   CornerRadius="12"
+                   BackgroundColor="#CFCFCF"
+                   HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoResults"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Label Text="Results"
+                   FontSize="13"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+
+        <!-- SETTINGS -->
+        <VerticalStackLayout Grid.Column="2"
+                             HorizontalOptions="Center">
+
+            <Frame WidthRequest="40"
+                   HeightRequest="40"
+                   CornerRadius="12"
+                   BackgroundColor="#CFCFCF"
+                   HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoSettings"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Label Text="Settings"
+                   FontSize="13"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentView>

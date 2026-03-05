@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decision_Maker.AHP.DecisionsPage"
+             xmlns:components="clr-namespace:Decision_Maker.Components"
+             BackgroundColor="#F2F2F2">
+
+    <Grid RowDefinitions="*,90">
+
+        <!-- MAIN CONTENT -->
+        <Frame Grid.Row="0"
+               HasShadow="False">
+
+            <VerticalStackLayout Padding="20" Spacing="25">
+
+                <!-- HEADER -->
+                <HorizontalStackLayout Spacing="15">
+
+                    <Frame WidthRequest="45"
+                           HeightRequest="45"
+                           CornerRadius="12"
+                           BackgroundColor="#CFCFCF"
+                           HasShadow="False"/>
+
+                    <Label Text="Decision Maker"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+
+                <!-- TITLE -->
+                <Label Text="Your Decisions"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,40,0,0"/>
+
+
+                <!-- TEXT -->
+                <Label
+                    Text="You have no decisions."
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    Margin="20,0"/>
+
+
+                <!-- BUTTON -->
+                <Button Text="Create new decision"
+                        CornerRadius="25"
+                        HeightRequest="55"
+                        BackgroundColor="#CFCFCF"
+                        TextColor="Black"
+                        Clicked="CreateDecisionClicked"
+                        Margin="10,30"/>
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+
+        <!-- BOTTOM NAVBAR -->
+        <components:NavigationBar Grid.Row="1"/>
+
+    </Grid>
+
+</ContentPage>

@@ -1,3 +1,4 @@
+using Decision_Maker.AHP;
 using Decision_Maker.Login;
 using Decision_Maker.Resources.Localization;
 using System.Globalization;
@@ -32,7 +33,7 @@ public partial class TestEnvironment : ContentPage
     }
     private async void OnAHPClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new AHP());
+        await Navigation.PushAsync(new DecisionsPage());
     }
 
     private async void OnSupabaseClicked(object sender, EventArgs e)

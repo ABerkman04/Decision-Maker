@@ -1,0 +1,42 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decision_Maker.AHP.CreateDecisionPage"
+             xmlns:components="clr-namespace:Decision_Maker.Components"
+             BackgroundColor="#F2F2F2">
+
+    <Grid RowDefinitions="*,90">
+
+        <!-- MAIN CONTENT -->
+        <Frame Grid.Row="0"
+               HasShadow="False">
+
+            <VerticalStackLayout Padding="30" Spacing="25">
+
+                <Label Text="Create Decision"
+               FontSize="26"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+                <Label Text="Decision name"
+               FontSize="14"/>
+
+                <Entry x:Name="DecisionNameEntry"
+               Placeholder="Example: Choose a car"/>
+
+                <Button Text="Continue"
+                HeightRequest="55"
+                CornerRadius="25"
+                BackgroundColor="#CFCFCF"
+                Clicked="ContinueClicked"/>
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+
+        <!-- BOTTOM NAVBAR -->
+        <components:NavigationBar Grid.Row="1"/>
+
+    </Grid>
+
+</ContentPage>
