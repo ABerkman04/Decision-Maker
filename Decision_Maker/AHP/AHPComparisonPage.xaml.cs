@@ -217,7 +217,7 @@ public partial class AHPComparisonPage : ContentPage
                 AlternativePriority();
                 FinalScore();
                 //PrintEachMatrix();
-                await DisplayAlertAsync("Done", "All comparisons completed.", "OK");
+                await Navigation.PushAsync(new ResultsPagexaml());
                 return;
             }
         }
