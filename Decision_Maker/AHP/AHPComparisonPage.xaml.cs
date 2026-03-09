@@ -216,7 +216,7 @@ public partial class AHPComparisonPage : ContentPage
                 NormalizeMatrix();
                 AlternativePriority();
                 FinalScore();
-                PrintEachMatrix();
+                //PrintEachMatrix();
                 await DisplayAlertAsync("Done", "All comparisons completed.", "OK");
                 return;
             }
