@@ -93,6 +93,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AHP\AHPComparisonPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="AHP\CreateDecisionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -40,14 +40,14 @@
                                     <Grid ColumnDefinitions="*,40">
 
                                         <Slider Minimum="1"
-                                                Maximum="10"
-                                                Value="{Binding Weight}"
-                                                ValueChanged="SliderChanged"/>
+                                        Maximum="10"
+                                        Value="{Binding RawWeight, Mode=TwoWay}"
+                                        ValueChanged="SliderChanged"/>
 
                                         <Label Grid.Column="1"
-                                               Text="{Binding Weight}"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="Center"/>
+                                       Text="{Binding RawWeight}"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
 
                                     </Grid>
 

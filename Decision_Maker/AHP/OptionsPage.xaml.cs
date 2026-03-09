@@ -56,7 +56,7 @@ public partial class OptionsPage : ContentPage
             Debug.WriteLine(o);
         }
 
-        await DisplayAlertAsync("Next step", "Next page will be AHP comparison", "OK");
+        await Navigation.PushAsync(new AHPComparisonPage());
     }
 
     void DeleteOptionClicked(object sender, EventArgs e)

@@ -21,18 +21,39 @@ public partial class WeightsPage : ContentPage
 
         if (slider?.BindingContext is Criterion c)
         {
-            c.Weight = Math.Round(e.NewValue);
+            var rounded = Math.Round(e.NewValue);
+
+            if (slider.Value != rounded)
+                slider.Value = rounded;
+
+            c.RawWeight = rounded;
+        }
+    }
+    void NormalizeWeights()
+    {
+        var criteria = DecisionManager.CurrentDecision.Criteria;
+
+        double sum = criteria.Sum(c => c.RawWeight);
+
+        foreach (var c in criteria)
+        {
+            c.Weight = c.RawWeight / sum;
         }
     }
 
     async void ContinueClicked(object sender, EventArgs e)
     {
+        NormalizeWeights();
+
         Debug.WriteLine(DecisionManager.CurrentDecision.Name);
+
         foreach (var c in DecisionManager.CurrentDecision.Criteria)
         {
             Debug.WriteLine(c.Name);
             Debug.WriteLine(c.Weight);
+            Debug.WriteLine(c.RawWeight);
         }
+
         await Navigation.PushAsync(new OptionsPage());
     }
 }
