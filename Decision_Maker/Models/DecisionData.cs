@@ -41,4 +41,6 @@ public class DecisionData
 
     public List<List<List<double>>> criteriaMatrix = new();
 
+    public List<List<double>> finalScore = new();
+
 }

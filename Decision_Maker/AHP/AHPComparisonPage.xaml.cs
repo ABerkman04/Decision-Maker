@@ -17,9 +17,9 @@ public partial class AHPComparisonPage : ContentPage
 
     int currentCriterionIndex = 0;
 
-    int questionIndex = 0;
+    int questionIndex = 1;
 
-    //List<List<List<double>>> criteriaMatrix = new();
+    List<List<double>> AlternativePriorityList = new ();
 
     public AHPComparisonPage()
     {
@@ -99,7 +99,6 @@ public partial class AHPComparisonPage : ContentPage
     {
         var pair = comparisons[currentIndex];
         var criterion = DecisionManager.CurrentDecision.Criteria[currentCriterionIndex].Name;
-        questionIndex += 1;
 
 
         QuestionLabel.Text = $"Question {questionIndex}";
@@ -168,6 +167,7 @@ public partial class AHPComparisonPage : ContentPage
             return;
 
         currentIndex--;
+        questionIndex--;
 
         LoadQuestion();
     }
@@ -201,6 +201,7 @@ public partial class AHPComparisonPage : ContentPage
         }
         PrintEachMatrix();
 
+        questionIndex ++;
         currentIndex++;
 
         // Kui kõik option comparisonid selle criteria jaoks tehtud
@@ -212,12 +213,131 @@ public partial class AHPComparisonPage : ContentPage
             // Kui kõik criteria tehtud
             if (currentCriterionIndex >= DecisionManager.CurrentDecision.Criteria.Count)
             {
+                NormalizeMatrix();
+                AlternativePriority();
+                FinalScore();
+                PrintEachMatrix();
                 await DisplayAlertAsync("Done", "All comparisons completed.", "OK");
                 return;
             }
         }
 
         LoadQuestion();
+    }
+
+    void NormalizeMatrix()
+    {
+        var criteriaMatrixList = DecisionManager.CurrentDecision.criteriaMatrix;
+
+        for (int c = 0; c < criteriaMatrixList.Count; c++)
+        {
+            var matrix = criteriaMatrixList[c];
+            int n = matrix.Count;
+
+            // 1. Sum each column
+            double[] colSums = new double[n];
+            for (int j = 0; j < n; j++)
+            {
+                double sum = 0;
+                for (int i = 0; i < n; i++)
+                    sum += matrix[i][j];
+                colSums[j] = sum;
+            }
+
+            // 2. Divide each element by column sum and round to 3 decimals
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    matrix[i][j] = Math.Round(matrix[i][j] / colSums[j], 3);
+                }
+            }
+        }
+    }
+
+    void AlternativePriority()
+    {
+        var criteriaMatrixList = DecisionManager.CurrentDecision.criteriaMatrix;
+        int criteriaCount = criteriaMatrixList.Count;
+        int optionsCount = DecisionManager.CurrentDecision.Options.Count;
+
+        // Tühjenda või loo uus AlternativePriorityList
+        AlternativePriorityList = new List<List<double>>();
+
+        for (int c = 0; c < criteriaCount; c++)
+        {
+            var matrix = criteriaMatrixList[c];
+            var priorities = new List<double>();
+
+            for (int i = 0; i < optionsCount; i++)
+            {
+                double rowSum = 0;
+                for (int j = 0; j < optionsCount; j++)
+                {
+                    rowSum += matrix[i][j];
+                }
+                // Keskmine rea elementidest → prioriteet
+                priorities.Add(Math.Round(rowSum / optionsCount, 3));
+            }
+
+            AlternativePriorityList.Add(priorities);
+        }
+
+        // Debug print
+        for (int c = 0; c < criteriaCount; c++)
+        {
+            Console.WriteLine($"Alternative priorities for {DecisionManager.CurrentDecision.Criteria[c].Name}:");
+            for (int j = 0; j < optionsCount; j++)
+            {
+                Console.WriteLine($"Option {DecisionManager.CurrentDecision.Options[j]}: {AlternativePriorityList[c][j]}");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    void FinalScore()
+    {
+        var decision = DecisionManager.CurrentDecision;
+        int criteriaCount = decision.Criteria.Count;
+        int optionsCount = decision.Options.Count;
+
+        // Loo/initialiseeri finalScore
+        decision.finalScore = new List<List<double>>();
+        // Iga criteria jaoks
+        for (int c = 0; c < criteriaCount; c++)
+        {
+            var scores = new List<double>(new double[optionsCount]);
+            decision.finalScore.Add(scores);
+        }
+
+        // Arvuta final score iga alternatiivi jaoks
+        // Formula: FinalScore(option) = sum(criterionWeight * alternativePriority)
+        var finalScores = new List<double>(new double[optionsCount]);
+
+        for (int i = 0; i < optionsCount; i++)
+        {
+            double total = 0;
+            for (int c = 0; c < criteriaCount; c++)
+            {
+                // Kasuta Criteria.Weight (või RawWeight normaliseeritud)
+                double weight = decision.Criteria[c].Weight;
+                double priority = AlternativePriorityList[c][i];
+
+                total += weight * priority;
+            }
+            finalScores[i] = Math.Round(total, 3);
+        }
+
+        // Salvestame ühe rea finalScore listi
+        decision.finalScore.Clear();
+        decision.finalScore.Add(finalScores);
+
+        // Debug print
+        Console.WriteLine("Final Scores:");
+        for (int i = 0; i < optionsCount; i++)
+        {
+            Console.WriteLine($"{decision.Options[i]}: {finalScores[i]}");
+        }
     }
 
 }
