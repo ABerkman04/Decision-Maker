@@ -16,9 +16,9 @@
                        FontAttributes="Bold"
                        HorizontalOptions="Center"/>
 
-                <Label Text="Final AHP Scores"
-                       FontSize="14"
-                       HorizontalOptions="Center"/>
+                <Label x:Name="DecisionNameLabel"
+               FontSize="14"
+               HorizontalOptions="Center"/>
 
                 <CollectionView x:Name="ResultsList">
 

@@ -36,5 +36,7 @@ public partial class ResultsPagexaml : ContentPage
         results = results.OrderByDescending(r => r.Score).ToList();
 
         ResultsList.ItemsSource = results;
+
+        DecisionNameLabel.Text = DecisionManager.CurrentDecision.Name;
     }
 }
