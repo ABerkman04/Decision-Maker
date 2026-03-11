@@ -37,7 +37,8 @@
         <VerticalStackLayout Grid.Column="1"
                              HorizontalOptions="Center">
 
-            <Frame WidthRequest="40"
+            <Frame x:Name="ResultsButton"
+                   WidthRequest="40"
                    HeightRequest="40"
                    CornerRadius="12"
                    BackgroundColor="#CFCFCF"

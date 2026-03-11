@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decision_Maker.NavBarResults.NavResultsListPage"
+             xmlns:components="clr-namespace:Decision_Maker.Components"
+             Title="NavResultsListPage">
+
+    <Grid RowDefinitions="*,90">
+
+        <Frame Grid.Row="0" HasShadow="False">
+
+            <VerticalStackLayout Padding="30" Spacing="20">
+
+                <Label Text="Results"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+
+                <Label x:Name="DecisionNameLabel"
+               FontSize="14"
+               HorizontalOptions="Center"/>
+
+                <CollectionView x:Name="ResultsList">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+                            <Frame Padding="15"
+                           BackgroundColor="#E5E5E5"
+                           CornerRadius="15"
+                           HasShadow="False">
+
+                                <Button Text="{Binding Name}"
+                                BackgroundColor="Transparent"
+                                FontSize="16"
+                                Clicked="DecisionClicked"
+                                CommandParameter="{Binding Id}"/>
+
+                            </Frame>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+        <components:NavigationBar Grid.Row="1"/>
+
+    </Grid>
+</ContentPage>

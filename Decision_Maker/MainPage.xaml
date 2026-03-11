@@ -4,7 +4,7 @@
              x:Class="Decision_Maker.MainPage"
              BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="*,Auto,Auto, Auto, Auto, Auto"
+    <Grid RowDefinitions="*,Auto,Auto, Auto, Auto, Auto, Auto"
           Padding="30">
 
         <!-- Ülemine sisu -->
@@ -57,10 +57,21 @@
                 Margin="0,0,0,40"/>
 
         <Button Grid.Row="5"
+                Text="Start as guest"
+                Clicked="OnGuestClicked"
+                HeightRequest="55"
+                WidthRequest="200"
+                CornerRadius="27"
+                BackgroundColor="#D9D9D9"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                Margin="0,0,0,40"/>
+
+        <Button Grid.Row="6"
                 Text="Test environment"
                 Clicked="OnTestEnvironmentClicked"
-                HeightRequest="25"
-                WidthRequest="150"
+                HeightRequest="10"
+                WidthRequest="75"
                 CornerRadius="27"
                 BackgroundColor="#D9D9D9"
                 TextColor="Black"

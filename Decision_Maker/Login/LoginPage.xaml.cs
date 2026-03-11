@@ -1,3 +1,4 @@
+using Decision_Maker.AHP;
 using System.Diagnostics;
 
 namespace Decision_Maker.Login;
@@ -28,7 +29,7 @@ public partial class LoginPage : ContentPage
             if (session.User != null)
             {
                 await DisplayAlertAsync("Success", $"Welcome {session.User.Email}", "OK");
-                await Navigation.PushAsync(new LoginTestPage1());
+                await Navigation.PushAsync(new DecisionsPage());
             }
         }
         catch (Exception ex)
