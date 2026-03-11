@@ -72,6 +72,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="AHP\ResultsPage.xaml.cs">
+	    <DependentUpon>ResultsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="NewPage.xaml.cs">
 	    <DependentUpon>NewPage.xaml</DependentUpon>
 	  </Compile>
