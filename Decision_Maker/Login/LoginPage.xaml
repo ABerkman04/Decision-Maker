@@ -6,9 +6,6 @@
 
     <Grid>
         <Frame
-            Margin="20"
-            Padding="0"
-            CornerRadius="25"
             HasShadow="False"
             BackgroundColor="#F2F2F2"
             VerticalOptions="Center">

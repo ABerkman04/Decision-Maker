@@ -1,3 +1,4 @@
+using Decision_Maker.AHP;
 using System.Diagnostics;
 
 namespace Decision_Maker.Login;
@@ -53,7 +54,7 @@ public partial class SignUpPage : ContentPage
 
                 if (loginSession.User != null)
                 {
-                    await Navigation.PushAsync(new LoginTestPage1());
+                    await Navigation.PushAsync(new DecisionsPage());
                 }
             }
         }

@@ -1,4 +1,5 @@
-﻿using Decision_Maker.Login;
+﻿using Decision_Maker.AHP;
+using Decision_Maker.Login;
 using Decision_Maker.Test;
 
 namespace Decision_Maker;
@@ -17,6 +18,11 @@ public partial class MainPage : ContentPage
     private async void OnSignUpPageClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new SignUpPage());
+    }
+
+    private async void OnGuestClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new DecisionsPage());
     }
 
     private async void OnTestEnvironmentClicked(object sender, EventArgs e)
