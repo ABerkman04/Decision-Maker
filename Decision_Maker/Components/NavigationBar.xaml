@@ -3,74 +3,86 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.Components.NavigationBar">
 
-    <Grid BackgroundColor="#F2F2F2"
+    <Grid BackgroundColor= "WhiteSmoke"
           ColumnDefinitions="*,*,*"
-          Padding="20,5">
+          Padding="10, 25">
 
         <!-- HOME -->
         <VerticalStackLayout Grid.Column="0"
-                             HorizontalOptions="Center">
+                             HorizontalOptions="Center"
+                             Spacing="2">
 
-            <Frame WidthRequest="40"
-                   HeightRequest="40"
-                   CornerRadius="12"
-                   BackgroundColor="#D9D9D9"
-                   HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoHome"/>
-                </Frame.GestureRecognizers>
-            </Frame>
-
-            <BoxView HeightRequest="2"
-                     WidthRequest="20"
-                     BackgroundColor="Black"
-                     HorizontalOptions="Center"
-                     Margin="0,2"/>
+            <Image Source="home1.png"
+                   WidthRequest="28"/>
 
             <Label Text="Home"
-                   FontSize="13"
+                   FontSize="14"
                    HorizontalOptions="Center"/>
+
+            <!-- active line -->
+            <BoxView x:Name="HomeLine"
+                     Margin="-3"
+                     HeightRequest="1"
+                     WidthRequest="50"
+                     BackgroundColor="Black"
+                     IsVisible="False"/>
+
+            <VerticalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GoHome"/>
+            </VerticalStackLayout.GestureRecognizers>
+
         </VerticalStackLayout>
 
 
         <!-- RESULTS -->
         <VerticalStackLayout Grid.Column="1"
-                             HorizontalOptions="Center">
+                             HorizontalOptions="Center"
+                             Spacing="2">
 
-            <Frame x:Name="ResultsButton"
-                   WidthRequest="40"
-                   HeightRequest="40"
-                   CornerRadius="12"
-                   BackgroundColor="#CFCFCF"
-                   HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoResults"/>
-                </Frame.GestureRecognizers>
-            </Frame>
+            <Image Source="results1.png"
+                   WidthRequest="28"/>
 
             <Label Text="Results"
-                   FontSize="13"
+                   FontSize="14"
                    HorizontalOptions="Center"/>
+
+            <BoxView x:Name="ResultsLine"
+                     Margin="-3"
+                     HeightRequest="1"
+                     WidthRequest="50"
+                     BackgroundColor="Black"
+                     IsVisible="False"/>
+
+            <VerticalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GoResults"/>
+            </VerticalStackLayout.GestureRecognizers>
+
         </VerticalStackLayout>
 
 
         <!-- SETTINGS -->
         <VerticalStackLayout Grid.Column="2"
-                             HorizontalOptions="Center">
+                             HorizontalOptions="Center"
+                             Spacing="2">
 
-            <Frame WidthRequest="40"
-                   HeightRequest="40"
-                   CornerRadius="12"
-                   BackgroundColor="#CFCFCF"
-                   HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoSettings"/>
-                </Frame.GestureRecognizers>
-            </Frame>
+            <Image Source="settings1.png"
+                   WidthRequest="28"/>
 
             <Label Text="Settings"
-                   FontSize="13"
+                   FontSize="14"
                    HorizontalOptions="Center"/>
+
+            <BoxView x:Name="SettingsLine"
+                     Margin="-3"
+                     HeightRequest="1"
+                     WidthRequest="50"
+                     BackgroundColor="Black"
+                     IsVisible="False"/>
+
+            <VerticalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GoSettings"/>
+            </VerticalStackLayout.GestureRecognizers>
+
         </VerticalStackLayout>
 
     </Grid>
