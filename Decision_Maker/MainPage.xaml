@@ -62,6 +62,14 @@
                     Padding="0,60,0,0"
                     TranslationY="0">
 
+                <Border.Shadow>
+                    <Shadow
+                        Brush="#000000"
+                        Offset="0,2"
+                        Radius="4"
+                        Opacity="0.30" />
+                </Border.Shadow>
+
                 <VerticalStackLayout HorizontalOptions="Fill"
                                      Spacing="14">
 
