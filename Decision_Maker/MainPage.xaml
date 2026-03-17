@@ -3,12 +3,116 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:Decision_Maker.Components"
              x:Class="Decision_Maker.MainPage"
+             BackgroundColor="Gray"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid Padding="0">
+        <Grid RowDefinitions="2.35*,1*">
+
+            <!-- Top section -->
+            <Border Grid.Row="0"
+                    BackgroundColor="#C4F1C0"
+                    StrokeThickness="0"
+                    Padding="20">
+
+                <Grid>
+                    <!-- Background pattern image goes here -->
+                    <Image Source="pattern.png"
+                           Aspect="AspectFill" 
+                           HorizontalOptions="Fill" 
+                           VerticalOptions="Fill" />
+
+
+                    <VerticalStackLayout HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         Spacing="0">
+
+                        <!-- Logo goes here -->
+                        <Image Source="icon1.png"
+                               HeightRequest="120"
+                               WidthRequest="120"
+                               Aspect="AspectFit"
+                               HorizontalOptions="Center" />
+
+                        <Label Text="Decision Maker"
+                               FontSize="40"
+                               FontFamily="AlegreyaSansBold"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               Margin="0,8,0,0" />
+
+                        <Label Text="Well-founded decision = calmer mind"
+                               FontSize="16"
+                               FontFamily="AlegreyaSansRegular"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <!-- Bottom card -->
+            <Border Grid.Row="1"
+                    HeightRequest="300"
+                    BackgroundColor="#FFFFFF"
+                    Stroke="#D4D2D2"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 30,30,0,0"
+                    Padding="0,60,0,0"
+                    TranslationY="0">
+
+                <VerticalStackLayout HorizontalOptions="Fill"
+                                     Spacing="14">
+
+                    <components:PrimaryButton ButtonText="Log in"
+                                              Clicked="OnLoginClicked"
+                                              HorizontalOptions="Center"
+                                              Margin="0,6,0,0" />
+
+                    <components:SecondaryButton ButtonText="Start as guest"
+                                                Clicked="OnGuestClicked"
+                                                HorizontalOptions="Center" />
+
+                    <HorizontalStackLayout HorizontalOptions="Center"
+                                           Spacing="0"
+                                           Margin="0,4,0,0">
+
+                        <Label Text="Don't have an account? "
+                               FontSize="14"
+                               FontFamily="AlegreyaSansRegular"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center" />
+
+                        <Label Text="Register"
+                               FontSize="14"
+                               FontFamily="AlegreyaSansRegular"
+                               TextColor="Black"
+                               TextDecorations="Underline"
+                               VerticalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSignUpPageClicked" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
+
+<!-- <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:Decision_Maker.Components"
+             x:Class="Decision_Maker.MainPage"
              BackgroundColor="#F5F5F5">
 
     <Grid RowDefinitions="*,Auto,Auto, Auto, Auto, Auto, Auto"
           Padding="30">
 
-        <!-- Ülemine sisu -->
+
         <VerticalStackLayout Grid.Row="0"
                              Spacing="10"
                              HorizontalOptions="Center"
@@ -45,7 +149,7 @@
                           ButtonText="Start as guest"
                           Clicked="OnGuestClicked"
                           HorizontalOptions="Center"
-                          Margin="0,0,0,18" />
+                          Margin="0,0,0,18" /> -->
 
         <!-- <Button Grid.Row="4"
                 Text="Create an account"
@@ -78,9 +182,9 @@
                 BackgroundColor="#D9D9D9"
                 TextColor="Black"
                 HorizontalOptions="Center"
-                Margin="0,0,0,40"/> -->
+                Margin="0,0,0,40"/> 
 
     </Grid>
 
-</ContentPage>
+</ContentPage> -->
     
