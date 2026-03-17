@@ -60,7 +60,7 @@
 
 
         <!-- BOTTOM NAVBAR -->
-        <components:NavigationBar Grid.Row="1"/>
+        <components:NavigationBar x:Name="NavigationBar" Grid.Row="1"/>
 
     </Grid>
 

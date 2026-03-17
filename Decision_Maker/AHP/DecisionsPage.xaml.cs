@@ -5,6 +5,8 @@ public partial class DecisionsPage : ContentPage
     public DecisionsPage()
     {
         InitializeComponent();
+
+        NavigationBar.SetActive("home");
     }
 
     void CreateDecisionClicked(object sender, EventArgs e)
