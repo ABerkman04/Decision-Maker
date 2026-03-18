@@ -7,7 +7,7 @@
 
     <Border
         WidthRequest="320"
-        BackgroundColor="#FFFFFF"
+        BackgroundColor="#F4F4F4"
         Stroke="#D4D2D2"
         StrokeThickness="1"
         StrokeShape="RoundRectangle 16">
