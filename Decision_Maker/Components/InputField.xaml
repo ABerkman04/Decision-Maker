@@ -10,10 +10,10 @@
                TextColor="Black"
                FontFamily="AlegreyaSansRegular" />
 
-        <Border BackgroundColor="#FFFFFF"
+        <Border BackgroundColor="#F4F4F4"
                 Stroke="#D4D2D2"
                 StrokeThickness="1"
-                StrokeShape="RoundRectangle 16"
+                StrokeShape="RoundRectangle 14"
                 Padding="16,0"
                 HeightRequest="52">
 
@@ -21,11 +21,11 @@
                 <Shadow Brush="#000000"
                         Offset="0,2"
                         Radius="4"
-                        Opacity="0.14" />
+                        Opacity="0.15" />
             </Border.Shadow>
 
             <Grid ColumnDefinitions="*,Auto">
-                <Entry Text="{Binding InputText, Source={x:Reference ThisInput}, Mode=TwoWay}"
+                <Entry Text="{Binding Text, Source={x:Reference ThisInput}, Mode=TwoWay}"
                        Placeholder="{Binding PlaceholderText, Source={x:Reference ThisInput}}"
                        IsPassword="{Binding IsPassword, Source={x:Reference ThisInput}}"
                        Keyboard="{Binding InputKeyboard, Source={x:Reference ThisInput}}"
