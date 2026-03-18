@@ -1,5 +1,6 @@
 namespace Decision_Maker.NavBarResults;
 
+using Decision_Maker.Components;
 using System.Diagnostics;
 
 
@@ -10,6 +11,8 @@ public partial class NavResultsPage : ContentPage
     public NavResultsPage(Guid id)
     {
         InitializeComponent();
+
+        NavigationBar.SetActive("results");
 
         decisionId = id;
 

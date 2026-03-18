@@ -1,4 +1,6 @@
 namespace Decision_Maker.NavBarResults;
+
+using Decision_Maker.Components;
 using System.Diagnostics;
 
 
@@ -7,6 +9,8 @@ public partial class NavResultsListPage : ContentPage
 	public NavResultsListPage()
 	{
 		InitializeComponent();
+
+        NavigationBar.SetActive("results");
 
         LoadDecisions();
     }

@@ -1,6 +1,7 @@
 using Decision_Maker.AHP;
 using Decision_Maker.Login;
 using Decision_Maker.NavBarResults;
+using Decision_Maker.NawBarSettings;
 using Decision_Maker.Services;
 
 namespace Decision_Maker.Components;
@@ -15,7 +16,8 @@ public partial class NavigationBar : ContentView
 
         if (!isLoggedIn)
         {
-            ResultsButton.Opacity = 0.4;
+            //ResultsButton.Opacity = 0.4;
+            //SettingsButton.Opacity = 0.4;
             //ResultsButton.IsEnabled = false;
         }
     }
@@ -78,7 +80,21 @@ public partial class NavigationBar : ContentView
 
     async void GoSettings(object sender, EventArgs e)
     {
-        if (DecisionSession.IsDecisionInProgress)
+        if (SupabaseService.Client.Auth.CurrentUser == null)
+        {
+            bool login = await Application.Current.MainPage.DisplayAlertAsync(
+                "Login required",
+                "You need to log in to view your settings. Do you want to log in or continue as guest?",
+                "Login",
+                "Continue as Guest");
+
+            if (login)
+            {
+                await Navigation.PushAsync(new LoginPage());
+                return;
+            }
+        }
+        else if (DecisionSession.IsDecisionInProgress)
         {
             bool answer = await Application.Current.MainPage.DisplayAlertAsync(
                 "Leave decision?",
@@ -90,8 +106,27 @@ public partial class NavigationBar : ContentView
                 return;
 
             DecisionSession.IsDecisionInProgress = false;
-        }
 
-        await Navigation.PushAsync(new DecisionsPage());
+            await Navigation.PushAsync(new NawBarSettingsPage());
+        }
+        else
+        {
+            await Navigation.PushAsync(new NawBarSettingsPage());
+        }
+    }
+    public void SetActive(string page)
+    {
+        HomeLine.IsVisible = false;
+        ResultsLine.IsVisible = false;
+        SettingsLine.IsVisible = false;
+
+        if (page == "home")
+            HomeLine.IsVisible = true;
+
+        if (page == "results")
+            ResultsLine.IsVisible = true;
+
+        if (page == "settings")
+            SettingsLine.IsVisible = true;
     }
 }
