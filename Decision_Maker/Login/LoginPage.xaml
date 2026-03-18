@@ -1,10 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:Decision_Maker.Components"
              x:Class="Decision_Maker.Login.LoginPage"
              Title="LoginPage"
-             BackgroundColor="#1E1E1E">
+             BackgroundColor="Gray">
 
-    <Grid>
+    <Grid Padding="0">
+        <Grid RowDefinitions="2.35*,1*">
+
+            <!-- Top section -->
+            <Border Grid.Row="0"
+                BackgroundColor="#C4F1C0"
+                HeightRequest="780"
+                StrokeThickness="0"
+                Padding="0">
+
+                <Grid>
+                    <!-- Background pattern image -->
+                    <Image Source="pattern.png"
+                       Aspect="AspectFill" />
+
+                    <VerticalStackLayout HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     Spacing="0">
+
+                        <!-- Logo -->
+                        <Image Source="icon1.png"
+                           HeightRequest="120"
+                           WidthRequest="120"
+                           Aspect="AspectFit"
+                           HorizontalOptions="Center" />
+
+                        <Label Text="Decision Maker"
+                           FontSize="42"
+                           FontFamily="AlegreyaSansExtraBold"
+                           TextColor="Black"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,8,0,0" />
+
+                        <Label Text="Well-founded decision = calmer mind"
+                           FontSize="16"
+                           FontFamily="AlegreyaSansRegular"
+                           TextColor="Black"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <!-- Bottom card -->
+            <Border Grid.Row="1"
+                HeightRequest="580"
+                BackgroundColor="#FFFFFF"
+                Stroke="#D4D2D2"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 30,30,0,0"
+                Padding="0,50,0,0"
+                TranslationY="0">
+
+                <Border.Shadow>
+                    <Shadow
+                    Brush="#000000"
+                    Offset="0,1"
+                    Radius="4"
+                    Opacity="0.40" />
+                </Border.Shadow>
+
+                <VerticalStackLayout HorizontalOptions="Fill"
+                                 Spacing="18">
+                    
+                    
+
+                    <components:PrimaryButton ButtonText="Log in"
+                                          Clicked="OnLoginClicked"
+                                          HorizontalOptions="Center"
+                                          Margin="0,6,0,0" />
+
+                    <HorizontalStackLayout HorizontalOptions="Center"
+                                       Spacing="0"
+                                       Margin="0,4,0,0">
+
+                        <Label Text="Don't have an account? "
+                           FontSize="14"
+                           FontFamily="AlegreyaSansRegular"
+                           TextColor="Black"
+                           VerticalTextAlignment="Center" />
+
+                        <Label Text="Register"
+                           FontSize="14"
+                           FontFamily="AlegreyaSansRegular"
+                           TextColor="Black"
+                           TextDecorations="Underline"
+                           VerticalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCreateAccountClicked" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+        </Grid>
+    </Grid>
+
+    <!-- <Grid>
         <Frame
             HasShadow="False"
             BackgroundColor="#F2F2F2"
@@ -13,7 +114,7 @@
             <ScrollView>
                 <VerticalStackLayout Spacing="15" Padding="25">
 
-                    <!-- Ülemine lainejoon -->
+                    
                     <Frame HeightRequest="120"
                    WidthRequest="120"
                    CornerRadius="25"
@@ -21,7 +122,7 @@
                    HasShadow="False"
                    HorizontalOptions="Center"/>
 
-                    <!-- Pealkiri -->
+                    
                     <VerticalStackLayout Spacing="2" HorizontalOptions="Center">
                         <Label
                             Text="Sign in"
@@ -36,21 +137,21 @@
                             HorizontalOptions="Center"/>
                     </VerticalStackLayout>
 
-                    <!-- Email -->
+                    
                     <Entry x:Name="EmailEntry"
                    Placeholder="Enter email"
                    Keyboard="Email"
                    BackgroundColor="Transparent"
                    Margin="15,0"/>
 
-                   <!-- Password -->
+                  
                    <Entry x:Name="PasswordEntry"
                    Placeholder="Enter password"
                    IsPassword="True"
                    BackgroundColor="Transparent"
                    Margin="15,0"/>
 
-                    <!-- Forgot password -->
+                    
                    <Label Text="Forgot password?"
                    FontSize="12"
                    TextColor="Black"
@@ -61,7 +162,7 @@
                    </Label.GestureRecognizers>
                    </Label>
 
-                    <!-- Login button -->
+                   
                     <Button Text="Log in"
                     Clicked="OnLoginClicked"
                     BackgroundColor="#0064e0"
@@ -70,7 +171,7 @@
                     HeightRequest="45"
                     Margin="0,20,0,20"/>
 
-                    <!-- Create account -->
+                    
                     <Button Text="Create new account"
                     Clicked="OnCreateAccountClicked"
                     BackgroundColor="#D6D6D6"
@@ -81,5 +182,5 @@
                 </VerticalStackLayout>
             </ScrollView>
         </Frame>
-    </Grid>
+    </Grid> -->
 </ContentPage>
