@@ -6,16 +6,18 @@
 
     <VerticalStackLayout Spacing="6">
         <Label Text="{Binding LabelText, Source={x:Reference ThisInput}}"
-               FontSize="14"
+               FontSize="16"
                TextColor="Black"
-               FontFamily="AlegreyaSansRegular" />
+               FontFamily="AlegreyaSansRegular" 
+               Margin="50,0,0,0" />
 
         <Border BackgroundColor="#F4F4F4"
                 Stroke="#D4D2D2"
                 StrokeThickness="1"
                 StrokeShape="RoundRectangle 14"
                 Padding="16,0"
-                HeightRequest="52">
+                WidthRequest="320"
+                HeightRequest="48">
 
             <Border.Shadow>
                 <Shadow Brush="#000000"

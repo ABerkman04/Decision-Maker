@@ -1,10 +1,22 @@
-﻿namespace Decision_Maker.Components;
+﻿#if ANDROID
+using Android.Graphics.Drawables;
+using Microsoft.Maui.Handlers;
+#endif
+
+namespace Decision_Maker.Components;
 
 public partial class InputField : ContentView
 {
     public InputField()
     {
         InitializeComponent();
+
+#if ANDROID
+        EntryHandler.Mapper.AppendToMapping("NoUnderline", (handler, view) =>
+        {
+            handler.PlatformView.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
+        });
+#endif
     }
 
     public static readonly BindableProperty LabelTextProperty =
