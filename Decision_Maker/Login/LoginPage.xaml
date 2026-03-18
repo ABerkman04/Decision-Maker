@@ -58,7 +58,7 @@
                 Stroke="#D4D2D2"
                 StrokeThickness="1"
                 StrokeShape="RoundRectangle 30,30,0,0"
-                Padding="0,50,0,0"
+                Padding="0,40,0,0"
                 TranslationY="0">
 
                 <Border.Shadow>
@@ -72,7 +72,7 @@
                 <VerticalStackLayout HorizontalOptions="Fill"
                                  Spacing="18">
                     <Label Text="Log in"
-                       FontSize="24"
+                       FontSize="26"
                        FontFamily="AlegreyaSansExtraBold"
                        TextColor="Black"
                        HorizontalOptions="Center"
