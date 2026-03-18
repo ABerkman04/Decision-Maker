@@ -10,21 +10,22 @@
         <!-- HOME -->
         <VerticalStackLayout Grid.Column="0"
                              HorizontalOptions="Center"
-                             Spacing="2">
+                             Spacing="3">
 
             <Image Source="home1.png"
                    WidthRequest="28"/>
 
             <Label Text="Home"
-                   FontSize="14"
-                   HorizontalOptions="Center"/>
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   FontFamily="AlegreyaSansRegular" />
 
             <!-- active line -->
             <BoxView x:Name="HomeLine"
                      Margin="-3"
                      HeightRequest="1"
                      WidthRequest="50"
-                     BackgroundColor="Black"
+                     BackgroundColor="Grey"
                      IsVisible="False"/>
 
             <VerticalStackLayout.GestureRecognizers>
@@ -37,20 +38,21 @@
         <!-- RESULTS -->
         <VerticalStackLayout Grid.Column="1"
                              HorizontalOptions="Center"
-                             Spacing="2">
+                             Spacing="3">
 
             <Image Source="results1.png"
                    WidthRequest="28"/>
 
             <Label Text="Results"
-                   FontSize="14"
-                   HorizontalOptions="Center"/>
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   FontFamily="AlegreyaSansRegular"/>
 
             <BoxView x:Name="ResultsLine"
                      Margin="-3"
                      HeightRequest="1"
                      WidthRequest="50"
-                     BackgroundColor="Black"
+                     BackgroundColor="Grey"
                      IsVisible="False"/>
 
             <VerticalStackLayout.GestureRecognizers>
@@ -63,20 +65,21 @@
         <!-- SETTINGS -->
         <VerticalStackLayout Grid.Column="2"
                              HorizontalOptions="Center"
-                             Spacing="2">
+                             Spacing="3">
 
             <Image Source="settings1.png"
                    WidthRequest="28"/>
 
             <Label Text="Settings"
-                   FontSize="14"
-                   HorizontalOptions="Center"/>
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   FontFamily="AlegreyaSansRegular" />
 
             <BoxView x:Name="SettingsLine"
                      Margin="-3"
                      HeightRequest="1"
                      WidthRequest="50"
-                     BackgroundColor="Black"
+                     BackgroundColor="Grey"
                      IsVisible="False"/>
 
             <VerticalStackLayout.GestureRecognizers>
