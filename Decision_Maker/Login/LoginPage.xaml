@@ -70,8 +70,11 @@
 
                 <VerticalStackLayout HorizontalOptions="Fill"
                                  Spacing="18">
+<<<<<<< Updated upstream
                     
                     
+=======
+>>>>>>> Stashed changes
 
                     <components:PrimaryButton ButtonText="Log in"
                                           Clicked="OnLoginClicked"

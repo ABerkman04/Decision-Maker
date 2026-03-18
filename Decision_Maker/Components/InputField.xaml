@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Decision_Maker.Components.InputField"
+             x:Name="ThisInput">
+
+    <VerticalStackLayout Spacing="6">
+        <Label Text="{Binding LabelText, Source={x:Reference ThisInput}}"
+               FontSize="14"
+               TextColor="Black"
+               FontFamily="AlegreyaSansRegular" />
+
+        <Border BackgroundColor="#FFFFFF"
+                Stroke="#D4D2D2"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 16"
+                Padding="16,0"
+                HeightRequest="52">
+
+            <Border.Shadow>
+                <Shadow Brush="#000000"
+                        Offset="0,2"
+                        Radius="4"
+                        Opacity="0.14" />
+            </Border.Shadow>
+
+            <Grid ColumnDefinitions="*,Auto">
+                <Entry Text="{Binding InputText, Source={x:Reference ThisInput}, Mode=TwoWay}"
+                       Placeholder="{Binding PlaceholderText, Source={x:Reference ThisInput}}"
+                       IsPassword="{Binding IsPassword, Source={x:Reference ThisInput}}"
+                       Keyboard="{Binding InputKeyboard, Source={x:Reference ThisInput}}"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       PlaceholderColor="#9A9A9A"
+                       VerticalOptions="Center" />
+
+                <Image Grid.Column="1"
+                       Source="{Binding IconSource, Source={x:Reference ThisInput}}"
+                       HeightRequest="18"
+                       WidthRequest="18"
+                       VerticalOptions="Center" />
+            </Grid>
+        </Border>
+    </VerticalStackLayout>
+</ContentView>
