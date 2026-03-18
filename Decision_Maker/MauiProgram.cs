@@ -17,6 +17,7 @@ namespace Decision_Maker
                     fonts.AddFont("AlegreyaSans-Regular.ttf", "AlegreyaSansRegular");
                     fonts.AddFont("AlegreyaSans-Medium.ttf", "AlegreyaSansMedium");
                     fonts.AddFont("AlegreyaSans-Bold.ttf", "AlegreyaSansBold");
+                    fonts.AddFont("AlegreyaSans-ExtraBold.ttf", "AlegreyaSansExtraBold");
                 });
 
 

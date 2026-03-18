@@ -12,22 +12,20 @@
             <!-- Top section -->
             <Border Grid.Row="0"
                     BackgroundColor="#C4F1C0"
+                    HeightRequest="780"
                     StrokeThickness="0"
-                    Padding="20">
+                    Padding="0">
 
                 <Grid>
-                    <!-- Background pattern image goes here -->
+                    <!-- Background pattern image -->
                     <Image Source="pattern.png"
-                           Aspect="AspectFill" 
-                           HorizontalOptions="Fill" 
-                           VerticalOptions="Fill" />
-
+                           Aspect="AspectFill" />
 
                     <VerticalStackLayout HorizontalOptions="Center"
                                          VerticalOptions="Center"
                                          Spacing="0">
 
-                        <!-- Logo goes here -->
+                        <!-- Logo -->
                         <Image Source="icon1.png"
                                HeightRequest="120"
                                WidthRequest="120"
@@ -35,8 +33,8 @@
                                HorizontalOptions="Center" />
 
                         <Label Text="Decision Maker"
-                               FontSize="40"
-                               FontFamily="AlegreyaSansBold"
+                               FontSize="42"
+                               FontFamily="AlegreyaSansExtraBold"
                                TextColor="Black"
                                HorizontalOptions="Center"
                                HorizontalTextAlignment="Center"
@@ -54,24 +52,24 @@
 
             <!-- Bottom card -->
             <Border Grid.Row="1"
-                    HeightRequest="300"
+                    HeightRequest="280"
                     BackgroundColor="#FFFFFF"
                     Stroke="#D4D2D2"
                     StrokeThickness="1"
                     StrokeShape="RoundRectangle 30,30,0,0"
-                    Padding="0,60,0,0"
+                    Padding="0,50,0,0"
                     TranslationY="0">
 
                 <Border.Shadow>
                     <Shadow
                         Brush="#000000"
-                        Offset="0,2"
+                        Offset="0,1"
                         Radius="4"
-                        Opacity="0.30" />
+                        Opacity="0.40" />
                 </Border.Shadow>
 
                 <VerticalStackLayout HorizontalOptions="Fill"
-                                     Spacing="14">
+                                     Spacing="18">
 
                     <components:PrimaryButton ButtonText="Log in"
                                               Clicked="OnLoginClicked"
