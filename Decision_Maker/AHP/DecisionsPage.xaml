@@ -3,13 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.AHP.DecisionsPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
-             BackgroundColor="#F2F2F2">
+             BackgroundColor="Gray"
+             NavigationPage.HasNavigationBar="False">
 
     <Grid RowDefinitions="*,90">
 
         <!-- MAIN CONTENT -->
-        <Frame Grid.Row="0"
-               HasShadow="False">
+        <Border Grid.Row="0"
+                BackgroundColor="#C4F1C0"
+                StrokeThickness="0"
+                Padding="0">
 
             <VerticalStackLayout Padding="20" Spacing="25">
 
@@ -56,7 +59,7 @@
 
             </VerticalStackLayout>
 
-        </Frame>
+        </Border>
 
 
         <!-- BOTTOM NAVBAR -->
