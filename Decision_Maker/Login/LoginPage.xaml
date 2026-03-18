@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:Decision_Maker.Components"
              x:Class="Decision_Maker.Login.LoginPage"
-             Title="LoginPage"
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="Gray">
 
     <Grid Padding="0">
@@ -24,7 +24,7 @@
                     <VerticalStackLayout HorizontalOptions="Center"
                                      VerticalOptions="Center"
                                      Spacing="0"
-                                     Margin="0,-140,0,0">
+                                     Margin="0,-100,0,0">
 
                         <!-- Logo -->
                         <Image Source="icon1.png"
