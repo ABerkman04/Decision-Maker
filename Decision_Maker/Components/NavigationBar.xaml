@@ -5,7 +5,8 @@
 
     <Grid BackgroundColor= "WhiteSmoke"
           ColumnDefinitions="*,*,*"
-          Padding="10, 20">
+          Padding="10, 15"
+          VerticalOptions="End">
 
         <!-- HOME -->
         <VerticalStackLayout Grid.Column="0"
@@ -13,10 +14,10 @@
                              Spacing="3">
 
             <Image Source="home1.png"
-                   WidthRequest="28"/>
+                   WidthRequest="22"/>
 
             <Label Text="Home"
-                   FontSize="16"
+                   FontSize="14"
                    HorizontalOptions="Center"
                    FontFamily="AlegreyaSansRegular" />
 
@@ -24,7 +25,7 @@
             <BoxView x:Name="HomeLine"
                      Margin="-3"
                      HeightRequest="1"
-                     WidthRequest="50"
+                     WidthRequest="40"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
@@ -41,17 +42,17 @@
                              Spacing="3">
 
             <Image Source="results1.png"
-                   WidthRequest="28"/>
+                   WidthRequest="22"/>
 
             <Label Text="Results"
-                   FontSize="16"
+                   FontSize="14"
                    HorizontalOptions="Center"
                    FontFamily="AlegreyaSansRegular"/>
 
             <BoxView x:Name="ResultsLine"
                      Margin="-3"
                      HeightRequest="1"
-                     WidthRequest="50"
+                     WidthRequest="40"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
@@ -68,17 +69,17 @@
                              Spacing="3">
 
             <Image Source="settings1.png"
-                   WidthRequest="28"/>
+                   WidthRequest="22"/>
 
             <Label Text="Settings"
-                   FontSize="16"
+                   FontSize="14"
                    HorizontalOptions="Center"
                    FontFamily="AlegreyaSansRegular" />
 
             <BoxView x:Name="SettingsLine"
                      Margin="-3"
                      HeightRequest="1"
-                     WidthRequest="50"
+                     WidthRequest="40"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
