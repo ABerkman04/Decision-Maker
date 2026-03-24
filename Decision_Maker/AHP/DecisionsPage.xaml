@@ -21,7 +21,7 @@
                    Aspect="AspectFill"/>
 
             <!-- content layout -->
-            <Grid Padding="18,20,18,20"
+            <Grid Padding="20,30,20,20"
                   RowDefinitions="Auto,*">
 
                 <!-- HEADER -->
@@ -50,7 +50,7 @@
                             Padding="20,22"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Margin="0,-20,0,0">
+                            Margin="0,-80,0,0">
 
                         <Border.Shadow>
                             <Shadow
