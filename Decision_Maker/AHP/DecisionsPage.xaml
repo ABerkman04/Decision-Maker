@@ -46,7 +46,7 @@
                     <Border BackgroundColor="#F4F4F4"
                             Stroke="#D9D9D9"
                             StrokeThickness="1"
-                            StrokeShape="RoundRectangle 18"
+                            StrokeShape="RoundRectangle 16"
                             Padding="20,22"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
@@ -77,7 +77,7 @@
                             <components:PrimaryButton ButtonText="New decision"
                                                       Clicked="CreateDecisionClicked"
                                                       HorizontalOptions="Center"
-                                                      Margin="0,4,0,0" />
+                                                      Margin="0,0,0,0" />
 
                         </VerticalStackLayout>
                     </Border>
