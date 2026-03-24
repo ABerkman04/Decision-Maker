@@ -5,7 +5,7 @@
 
     <Grid BackgroundColor= "WhiteSmoke"
           ColumnDefinitions="*,*,*"
-          Padding="10, 15"
+          Padding="10, 20"
           VerticalOptions="End">
 
         <!-- HOME -->

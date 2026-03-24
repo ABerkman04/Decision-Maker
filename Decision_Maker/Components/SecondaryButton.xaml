@@ -23,9 +23,9 @@
         <Button
             Text="{Binding ButtonText, Source={x:Reference ThisButton}}"
             BackgroundColor="Transparent"
-            TextColor="Black"
+            TextColor="#222222"
             FontSize="18"
-            FontFamily="AlegreyaSansRegular"
+            FontFamily="AlegreyaSansBold"
             HeightRequest="48"
             CornerRadius="16"
             BorderWidth="0"
