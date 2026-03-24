@@ -95,40 +95,4 @@
 
     </Grid>
 
-
-    <!-- <Grid RowDefinitions="*,80">
-
-        
-        <Frame Grid.Row="0"
-               HasShadow="False">
-
-            <VerticalStackLayout Padding="30" Spacing="25">
-
-                <Label Text="Create Decision"
-               FontSize="26"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"/>
-
-                <Label Text="Decision name"
-               FontSize="14"/>
-
-                <Entry x:Name="DecisionNameEntry"
-               Placeholder="Example: Choose a car"/>
-
-                <Button Text="Continue"
-                HeightRequest="55"
-                CornerRadius="25"
-                BackgroundColor="#CFCFCF"
-                Clicked="ContinueClicked"/>
-
-            </VerticalStackLayout>
-
-        </Frame>
-
-
-        
-        <components:NavigationBar Grid.Row="1"/>
-
-    </Grid> -->
-
 </ContentPage>

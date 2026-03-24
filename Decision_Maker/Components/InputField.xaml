@@ -12,7 +12,7 @@
                Margin="50,0,0,0" />
 
         <Border BackgroundColor="#F4F4F4"
-                Stroke="#D4D2D2"
+                Stroke="#A8DAB0"
                 StrokeThickness="1"
                 StrokeShape="RoundRectangle 14"
                 Padding="16,0"

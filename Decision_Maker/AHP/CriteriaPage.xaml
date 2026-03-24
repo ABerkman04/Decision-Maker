@@ -2,9 +2,153 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.AHP.CriteriaPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
-             BackgroundColor="#F2F2F2">
+             BackgroundColor="Gray"
+             NavigationPage.HasNavigationBar="False">
 
-    <Grid RowDefinitions="*,90">
+    <Grid RowDefinitions="*,80"
+          RowSpacing="0">
+
+        <!-- MAIN CONTENT -->
+        <Grid Grid.Row="0">
+
+            <!-- background -->
+            <Border BackgroundColor="#C4F1C0"
+                    StrokeThickness="0" />
+
+            <!-- pattern -->
+            <Image Source="pattern.png"
+                   Aspect="AspectFill"/>
+
+            <!-- content layout -->
+            <Grid Padding="20,30,20,20"
+                  RowDefinitions="Auto,*">
+
+                <!-- HEADER -->
+                <HorizontalStackLayout Grid.Row="0"
+                                       Spacing="12">
+
+                    <Image Source="icon1.png"
+                           WidthRequest="34"
+                           HeightRequest="34"
+                           Aspect="AspectFit" />
+
+                    <Label Text="Decision Maker"
+                           FontSize="20"
+                           FontFamily="AlegreyaSansExtraBold"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </HorizontalStackLayout>
+
+                <!-- CENTER AREA -->
+                <Grid Grid.Row="1">
+
+                    <Border BackgroundColor="#F4F4F4"
+                            Stroke="#D9D9D9"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 16"
+                            Padding="20,22"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Center"
+                            Margin="0,-80,0,0">
+
+                        <Border.Shadow>
+                            <Shadow
+                                Brush="#000000"
+                                Offset="0,1"
+                                Radius="4"
+                                Opacity="0.40" />
+                        </Border.Shadow>
+
+                        <VerticalStackLayout Spacing="16">
+
+                            <Label Text="Add Criteria"
+                                   FontSize="20"
+                                   FontFamily="AlegreyaSansExtraBold"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="Black" />
+
+                            <Label Text="Add up to 5 criteria"
+                                   FontSize="14"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="Black" />
+
+                            <CollectionView x:Name="CriteriaList"
+                                SelectionMode="None"
+                                Margin="0,0,0,6">
+
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BackgroundColor="#F4F4F4"
+                                            Stroke="#A8DAB0"
+                                            StrokeThickness="1"
+                                            StrokeShape="RoundRectangle 16"
+                                            Padding="16,0"
+                                            WidthRequest="320"
+                                            HeightRequest="48"
+                                            Margin="0,0,0,5">
+
+                                            <Border.Shadow>
+                                                <Shadow Brush="#000000"
+                                                    Offset="0,2"
+                                                    Radius="4"
+                                                    Opacity="0.15" />
+                                            </Border.Shadow>
+
+                                            <Grid ColumnDefinitions="*,Auto">
+
+                                                <Label Text="{Binding Name}"
+                                                   VerticalOptions="Center"
+                                                   TextColor="Black"
+                                                   FontFamily="AlegreyaSansRegular"
+                                                   FontSize="16" />
+
+                                                <ImageButton Grid.Column="1"
+                                                     Source="trash.png"
+                                                     BackgroundColor="Transparent"
+                                                     HeightRequest="18"
+                                                     WidthRequest="18"
+                                                     VerticalOptions="Center"
+                                                     Clicked="DeleteCriteriaClicked"
+                                                     CommandParameter="{Binding .}" />
+
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+
+                            </CollectionView>
+
+                            <components:InputField x:Name="CriteriaEntry"
+                                                   PlaceholderText="Example: Price" 
+                                                   Margin="0,-30,0,20"/>
+
+                            <components:SecondaryButton ButtonText="Add Criterion"
+                                                Clicked="AddCriteriaClicked"
+                                                HorizontalOptions="Center" />
+
+
+                            <components:PrimaryButton ButtonText="Continue"
+                                                      Clicked="ContinueClicked"
+                                                      HorizontalOptions="Center"
+                                                      Margin="0,0,0,5" />
+
+                        </VerticalStackLayout>
+                    </Border>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+        <!-- BOTTOM NAVBAR -->
+        <components:NavigationBar x:Name="NavigationBar"
+                                  Grid.Row="1" />
+
+    </Grid>
+
+
+    <!-- <Grid RowDefinitions="*,80">
 
         <Frame Grid.Row="0" HasShadow="False">
 
@@ -19,7 +163,7 @@
                        FontSize="14"
                        HorizontalOptions="Center"/>
 
-                <!-- Existing criteria -->
+                
                 <CollectionView x:Name="CriteriaList">
 
                     <CollectionView.ItemTemplate>
@@ -56,7 +200,7 @@
 
                 </CollectionView>
 
-                <!-- Add new criteria -->
+                
                 <Entry x:Name="CriteriaEntry"
                        Placeholder="Example: Cost"/>
 
@@ -78,6 +222,6 @@
 
         <components:NavigationBar Grid.Row="1"/>
 
-    </Grid>
+    </Grid> -->
 
 </ContentPage>
