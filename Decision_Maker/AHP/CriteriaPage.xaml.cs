@@ -59,10 +59,12 @@ public partial class CriteriaPage : ContentPage
         await Navigation.PushAsync(new WeightsPage());
     }
 
-    void DeleteCriteriaClicked(object sender, EventArgs e)
+    void DeleteCriteriaClicked(object sender, TappedEventArgs e)
     {
-        var button = sender as Button;
-        var criteria = button?.CommandParameter as DecisionData.Criterion;
+        var gesture = sender as TapGestureRecognizer;
+        var criteria = gesture?.CommandParameter as DecisionData.Criterion;
+        //var button = sender as Button;
+        //var criteria = button?.CommandParameter as DecisionData.Criterion;
 
         if (criteria == null)
             return;
