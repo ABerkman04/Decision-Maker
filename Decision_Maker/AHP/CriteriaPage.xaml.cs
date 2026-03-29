@@ -2,6 +2,7 @@ using Decision_Maker.Models;
 using Decision_Maker.Services;
 using Supabase.Gotrue;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Decision_Maker.AHP;
 
@@ -61,7 +62,8 @@ public partial class CriteriaPage : ContentPage
 
     void DeleteCriteriaClicked(object sender, TappedEventArgs e)
     {
-        var gesture = sender as TapGestureRecognizer;
+        var image = sender as Image;
+        var gesture = image?.GestureRecognizers.FirstOrDefault() as TapGestureRecognizer;
         var criteria = gesture?.CommandParameter as DecisionData.Criterion;
         //var button = sender as Button;
         //var criteria = button?.CommandParameter as DecisionData.Criterion;
