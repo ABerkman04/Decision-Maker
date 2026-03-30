@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              x:Class="Decision_Maker.Login.SignUpPage"
              NavigationPage.HasNavigationBar="False"
             BackgroundColor="Gray">
@@ -32,7 +33,7 @@
                            Aspect="AspectFit"
                            HorizontalOptions="Center" />
 
-                        <Label Text="Decision Maker"
+                        <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="42"
                            FontFamily="AlegreyaSansExtraBold"
                            TextColor="Black"
@@ -40,7 +41,7 @@
                            HorizontalTextAlignment="Center"
                            Margin="0,8,0,0" />
 
-                        <Label Text="Well-founded decision = calmer mind"
+                        <Label Text="{x:Static strings:AppResources.Well_founded_decision}"
                            FontSize="16"
                            FontFamily="AlegreyaSansRegular"
                            TextColor="Black"
@@ -70,34 +71,34 @@
 
                 <VerticalStackLayout HorizontalOptions="Fill"
                                  Spacing="18">
-                    <Label Text="Register"
+                    <Label Text="{x:Static strings:AppResources.Register}"
                        FontSize="26"
                        FontFamily="AlegreyaSansExtraBold"
                        TextColor="Black"
                        HorizontalOptions="Center"
                        Margin="0,-10,0,0" />
                     <components:InputField x:Name="DisplayNameEntry"
-                       LabelText="Name"
-                       PlaceholderText="Enter name"
+                       LabelText="{x:Static strings:AppResources.Name}"
+                       PlaceholderText="{x:Static strings:AppResources.Enter_name}"
                        IconSource="user2.png"
                        InputKeyboard="Email" />
                     <components:InputField x:Name="EmailEntry"
-                       LabelText="Email"
-                       PlaceholderText="Enter email"
+                       LabelText="{x:Static strings:AppResources.Email}"
+                       PlaceholderText="{x:Static strings:AppResources.Enter_email}"
                        IconSource="mail.png"
                        InputKeyboard="Email" />
                     <components:InputField x:Name="PasswordEntry"
-                       LabelText="Password"
-                       PlaceholderText="Enter password"
+                       LabelText="{x:Static strings:AppResources.Password}"
+                       PlaceholderText="{x:Static strings:AppResources.Enter_password}"
                        IconSource="key.png"
                        IsPassword="True" />
                     <components:InputField x:Name="RepeatPasswordEntry"
-                       LabelText="Password"
-                       PlaceholderText="Repeat password"
+                       LabelText="{x:Static strings:AppResources.Enter_password}"
+                       PlaceholderText="{x:Static strings:AppResources.Repeat_password}"
                        IconSource="key.png"
                        IsPassword="True" />
 
-                    <components:PrimaryButton ButtonText="Register"
+                    <components:PrimaryButton ButtonText="{x:Static strings:AppResources.Register}"
                                           Clicked="OnSignUpClicked"
                                           HorizontalOptions="Center"
                                           Margin="0,6,0,0" />
@@ -106,13 +107,13 @@
                                        Spacing="0"
                                        Margin="0,0,0,0">
 
-                        <Label Text="Already have an account? "
+                        <Label Text="{x:Static strings:AppResources.Already_have_an_account}"
                            FontSize="14"
                            FontFamily="AlegreyaSansRegular"
                            TextColor="Black"
                            VerticalTextAlignment="Center" />
 
-                        <Label Text="Sign in"
+                        <Label Text="{x:Static strings:AppResources.Log_in}"
                            FontSize="14"
                            FontFamily="AlegreyaSansRegular"
                            TextColor="Black"
@@ -121,93 +122,11 @@
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnSignInClicked" />
                             </Label.GestureRecognizers>
-                        </Label> 
+                        </Label>
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
             </Border>
 
         </Grid>
     </Grid>
-
-
-    <!-- <Grid>
-        <Frame
-            HasShadow="False"
-            BackgroundColor="#F2F2F2"
-            VerticalOptions="Center">
-
-            <ScrollView>
-                <VerticalStackLayout Spacing="15" Padding="25">
-
-                    
-                    <Frame HeightRequest="120"
-                   WidthRequest="120"
-                   CornerRadius="25"
-                   BackgroundColor="#D9D9D9"
-                   HasShadow="False"
-                   HorizontalOptions="Center"/>
-
-                   
-                    <VerticalStackLayout Spacing="2" HorizontalOptions="Center">
-                        <Label
-                            Text="Register"
-                            FontSize="26"
-                            FontAttributes="Bold"
-                            TextColor="Black"
-                            HorizontalOptions="Center" />
-                        <BoxView
-                            HeightRequest="2"
-                            WidthRequest="60"
-                            BackgroundColor="Black"
-                            HorizontalOptions="Center"/>
-                    </VerticalStackLayout>
-
-                    
-                    <Entry x:Name="DisplayNameEntry"
-                       Placeholder="Enter display name"
-                       BackgroundColor="Transparent"
-                       Margin="15,0"/>
-
-                    
-                    <Entry x:Name="EmailEntry"
-                       Placeholder="Enter email"
-                       Keyboard="Email"
-                       BackgroundColor="Transparent"
-                       Margin="15,0"/>
-
-                    
-                    <Entry x:Name="PasswordEntry"
-                       Placeholder="Enter password"
-                       IsPassword="True"
-                       BackgroundColor="Transparent"
-                       Margin="15,0"/>
-
-                    
-                    <Entry x:Name="RepeatPasswordEntry"
-                       Placeholder="Repeat password"
-                       IsPassword="True"
-                       BackgroundColor="Transparent"
-                       Margin="15,0"/>
-
-                    
-                    <Button Text="Sign up"
-                    Clicked="OnSignUpClicked"
-                    BackgroundColor="#D6D6D6"
-                    TextColor="#0064e0"
-                    CornerRadius="20"
-                    HeightRequest="45"
-                    Margin="0,10,0,20"/>
-
-                    
-                    <Button Text="Already have an account? Sign in"
-                    Clicked="OnSignInClicked"
-                    BackgroundColor="#0064e0"
-                    TextColor="#D6D6D6"
-                    CornerRadius="20"
-                    HeightRequest="45"
-                    Margin="0,-10,0,20"/>
-                </VerticalStackLayout>
-            </ScrollView>
-        </Frame>
-    </Grid> -->
 </ContentPage>

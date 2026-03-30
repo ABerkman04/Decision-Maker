@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              x:Class="Decision_Maker.Login.LoginPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="Gray">
@@ -33,7 +34,7 @@
                            Aspect="AspectFit"
                            HorizontalOptions="Center" />
 
-                        <Label Text="Decision Maker"
+                        <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="42"
                            FontFamily="AlegreyaSansExtraBold"
                            TextColor="Black"
@@ -41,7 +42,7 @@
                            HorizontalTextAlignment="Center"
                            Margin="0,8,0,0" />
 
-                        <Label Text="Well-founded decision = calmer mind"
+                        <Label Text="{x:Static strings:AppResources.Well_founded_decision}"
                            FontSize="16"
                            FontFamily="AlegreyaSansRegular"
                            TextColor="Black"
@@ -71,25 +72,25 @@
 
                 <VerticalStackLayout HorizontalOptions="Fill"
                                  Spacing="18">
-                    <Label Text="Log in"
+                    <Label Text="{x:Static strings:AppResources.Log_in}"
                        FontSize="26"
                        FontFamily="AlegreyaSansExtraBold"
                        TextColor="Black"
                        HorizontalOptions="Center"
                        Margin="0,-10,0,0" />
                     <components:InputField x:Name="EmailEntry"
-                       LabelText="Email"
-                       PlaceholderText="Enter email"
+                       LabelText="{x:Static strings:AppResources.Email}"
+                       PlaceholderText="{x:Static strings:AppResources.Enter_email}"
                        IconSource="mail.png"
                        InputKeyboard="Email" />
                     
                     <components:InputField x:Name="PasswordEntry"
-                       LabelText="Password"
-                       PlaceholderText="Enter password"
+                       LabelText="{x:Static strings:AppResources.Password}"
+                       PlaceholderText="{x:Static strings:AppResources.Enter_password}"
                        IconSource="key.png"
                        IsPassword="True" />
 
-                    <Label Text="Forgot password?"
+                    <Label Text="{x:Static strings:AppResources.Forgot_password}"
                        FontSize="14"
                        FontFamily="AlegreyaSansRegular"
                        TextColor="Black"
@@ -101,7 +102,7 @@
                         </Label.GestureRecognizers>
                     </Label>
 
-                    <components:PrimaryButton ButtonText="Log in"
+                    <components:PrimaryButton ButtonText="{x:Static strings:AppResources.Log_in}"
                                           Clicked="OnLoginClicked"
                                           HorizontalOptions="Center"
                                           Margin="0,6,0,0" />
@@ -110,13 +111,13 @@
                                        Spacing="0"
                                        Margin="0,0,0,0">
 
-                        <Label Text="Don't have an account? "
+                        <Label Text="{x:Static strings:AppResources.Dont_have_an_account}"
                            FontSize="14"
                            FontFamily="AlegreyaSansRegular"
                            TextColor="Black"
                            VerticalTextAlignment="Center" />
 
-                        <Label Text="Register"
+                        <Label Text="{x:Static strings:AppResources.Register}"
                            FontSize="14"
                            FontFamily="AlegreyaSansRegular"
                            TextColor="Black"

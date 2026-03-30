@@ -7,6 +7,14 @@ public partial class DecisionsPage : ContentPage
         InitializeComponent();
 
         NavigationBar.SetActive("home");
+        if (SupabaseService.Client.Auth.CurrentUser != null)
+        {
+            var user = SupabaseService.Client.Auth.CurrentUser;
+
+            var displayName =
+                user.UserMetadata?["display_name"]?.ToString();
+            DisplayLabel.Text = "Welcome " + displayName + "!";
+        }
     }
 
     void CreateDecisionClicked(object sender, EventArgs e)

@@ -117,19 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AHP" xml:space="preserve">
-    <value>AHP</value>
+  <data name="Already have an account" xml:space="preserve">
+    <value>Already have an account? </value>
   </data>
-  <data name="LogIn" xml:space="preserve">
-    <value>Log In</value>
+  <data name="Decision Maker" xml:space="preserve">
+    <value>Decision Maker</value>
   </data>
-  <data name="NewPage" xml:space="preserve">
-    <value>New Page</value>
+  <data name="Dont have an account" xml:space="preserve">
+    <value>Don't have an account? </value>
   </data>
-  <data name="TestEnvironment" xml:space="preserve">
-    <value>Test Environment</value>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
   </data>
-  <data name="TestLogIn" xml:space="preserve">
-    <value>Test Log In</value>
+  <data name="Enter email" xml:space="preserve">
+    <value>Enter email</value>
+  </data>
+  <data name="Enter name" xml:space="preserve">
+    <value>Enter name</value>
+  </data>
+  <data name="Enter password" xml:space="preserve">
+    <value>Enter password</value>
+  </data>
+  <data name="Forgot password" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
+  <data name="Log in" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Repeat password" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="Start as guest" xml:space="preserve">
+    <value>Start as guest</value>
+  </data>
+  <data name="Well founded decision" xml:space="preserve">
+    <value>Well-founded decision = calmer mind</value>
   </data>
 </root>

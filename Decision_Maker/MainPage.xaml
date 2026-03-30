@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              x:Class="Decision_Maker.MainPage"
              BackgroundColor="Gray"
              NavigationPage.HasNavigationBar="False">
@@ -17,6 +18,30 @@
                     Padding="0">
 
                 <Grid>
+
+                    <!-- TEMP!!!! Keel -->
+                    <Button Grid.Row="0"
+                    Text="English"
+                    Clicked="EnglishClicked"
+                    HeightRequest="55"
+                    WidthRequest="200"
+                    CornerRadius="27"
+                    BackgroundColor="#D9D9D9"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    Margin="0,-400,0,40"/>
+                    <Button Grid.Row="0"
+                    Text="Estonian"
+                    Clicked="EstonianClicked"
+                    HeightRequest="55"
+                    WidthRequest="200"
+                    CornerRadius="27"
+                    BackgroundColor="#D9D9D9"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    Margin="0,-250,0,40"/>
+                    <!-- TEMP!!!! Keel lopp -->
+
                     <!-- Background pattern image -->
                     <Image Source="pattern.png"
                            Aspect="AspectFill" />
@@ -31,8 +56,7 @@
                                WidthRequest="120"
                                Aspect="AspectFit"
                                HorizontalOptions="Center" />
-
-                        <Label Text="Decision Maker"
+                        <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                                FontSize="42"
                                FontFamily="AlegreyaSansExtraBold"
                                TextColor="Black"
@@ -40,7 +64,7 @@
                                HorizontalTextAlignment="Center"
                                Margin="0,8,0,0" />
 
-                        <Label Text="Well-founded decision = calmer mind"
+                        <Label Text="{x:Static strings:AppResources.Well_founded_decision}"
                                FontSize="16"
                                FontFamily="AlegreyaSansRegular"
                                TextColor="Black"
@@ -71,26 +95,25 @@
                 <VerticalStackLayout HorizontalOptions="Fill"
                                      Spacing="18">
 
-                    <components:PrimaryButton ButtonText="Log in"
+                    <components:PrimaryButton ButtonText="{x:Static strings:AppResources.Log_in}"
                                               Clicked="OnLoginClicked"
                                               HorizontalOptions="Center"
                                               Margin="0,6,0,0" />
 
-                    <components:SecondaryButton ButtonText="Start as guest"
+                    <components:SecondaryButton ButtonText="{x:Static strings:AppResources.Start_as_guest}"
                                                 Clicked="OnGuestClicked"
                                                 HorizontalOptions="Center" />
-
                     <HorizontalStackLayout HorizontalOptions="Center"
                                            Spacing="0"
                                            Margin="0,4,0,0">
 
-                        <Label Text="Don't have an account? "
+                        <Label Text="{x:Static strings:AppResources.Dont_have_an_account}"
                                FontSize="14"
                                FontFamily="AlegreyaSansRegular"
                                TextColor="Black"
                                VerticalTextAlignment="Center" />
 
-                        <Label Text="Register"
+                        <Label Text="{x:Static strings:AppResources.Register}"
                                FontSize="14"
                                FontFamily="AlegreyaSansRegular"
                                TextColor="Black"
@@ -108,89 +131,3 @@
     </Grid>
 
 </ContentPage>
-
-<!-- <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:components="clr-namespace:Decision_Maker.Components"
-             x:Class="Decision_Maker.MainPage"
-             BackgroundColor="#F5F5F5">
-
-    <Grid RowDefinitions="*,Auto,Auto, Auto, Auto, Auto, Auto"
-          Padding="30">
-
-
-        <VerticalStackLayout Grid.Row="0"
-                             Spacing="10"
-                             HorizontalOptions="Center"
-                             VerticalOptions="Center">
-
-            <Frame HeightRequest="120"
-                   WidthRequest="120"
-                   CornerRadius="25"
-                   BackgroundColor="#D9D9D9"
-                   HasShadow="False"
-                   HorizontalOptions="Center"/>
-
-            <Label Text="Decision Maker"
-                   FontSize="40"
-                   FontFamily="AlegreyaSansBold"
-                   TextColor="Black"
-                   HorizontalOptions="Center"/>
-
-            <Label Text="Well-founded decision, calmer mind"
-                   FontSize="16"
-                   FontFamily="AlegreyaSansRegular"
-                   TextColor="Gray"
-                   HorizontalOptions="Center"/>
-        </VerticalStackLayout>
-
-
-
-        <components:PrimaryButton Grid.Row="3"
-                          ButtonText="Log in"
-                          Clicked="OnLoginClicked"
-                          HorizontalOptions="Center"
-                          Margin="0,0,0,18" />
-        <components:SecondaryButton Grid.Row="4"
-                          ButtonText="Start as guest"
-                          Clicked="OnGuestClicked"
-                          HorizontalOptions="Center"
-                          Margin="0,0,0,18" /> -->
-
-        <!-- <Button Grid.Row="4"
-                Text="Create an account"
-                Clicked="OnSignUpPageClicked"
-                HeightRequest="55"
-                WidthRequest="200"
-                CornerRadius="27"
-                BackgroundColor="#D9D9D9"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
-
-        <Button Grid.Row="5"
-                Text="Start as guest"
-                Clicked="OnGuestClicked"
-                HeightRequest="55"
-                WidthRequest="200"
-                CornerRadius="27"
-                BackgroundColor="#D9D9D9"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                Margin="0,0,0,40"/>
-
-        <Button Grid.Row="6"
-                Text="Test environment"
-                Clicked="OnTestEnvironmentClicked"
-                HeightRequest="10"
-                WidthRequest="75"
-                CornerRadius="27"
-                BackgroundColor="#D9D9D9"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                Margin="0,0,0,40"/> 
-
-    </Grid>
-
-</ContentPage> -->
-    

@@ -150,6 +150,63 @@
 
         </Grid>
 
+
+        <!-- LANGUAGE OVERLAY -->
+        <Grid x:Name="LanguageOverlay"
+              IsVisible="False"
+              BackgroundColor="#80000000">
+            <!-- poolläbipaistev taust -->
+
+            <!-- White panel -->
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="20"
+                Padding="20"
+                Margin="40,120,40,120"
+                VerticalOptions="Center">
+
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Header -->
+                    <Grid ColumnDefinitions="*,Auto">
+
+                        <Label Text="Language"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+
+                        <!-- Close X -->
+                        <Label Grid.Column="1"
+                       Text="✕"
+                       FontSize="20"
+                       VerticalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="CloseLanguageOverlay"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </Grid>
+
+                    <!-- English -->
+                    <Label Text="English"
+                   FontSize="16">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EnglishClicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <!-- Eesti -->
+                    <Label Text="Eesti"
+                   FontSize="16">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EstonianClicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+
         <!-- Bottom Navbar -->
         <components:NavigationBar x:Name="NavigationBar" Grid.Row="1"/>
 

@@ -62,7 +62,9 @@
 
                         <VerticalStackLayout Spacing="16">
 
-                            <Label Text="Welcome, User!"
+                            <Label 
+                                   x:Name="DisplayLabel"
+                                   Text="Welcome, User!"
                                    FontSize="20"
                                    FontFamily="AlegreyaSansExtraBold"
                                    HorizontalTextAlignment="Center"

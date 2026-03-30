@@ -117,19 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AHP" xml:space="preserve">
-    <value>AHP</value>
+  <data name="Already have an account" xml:space="preserve">
+    <value>Kas sul on juba konto? </value>
   </data>
-  <data name="LogIn" xml:space="preserve">
-    <value>Logi Sisse</value>
+  <data name="Decision Maker" xml:space="preserve">
+    <value>Valiku Võlur</value>
   </data>
-  <data name="NewPage" xml:space="preserve">
-    <value>Uus leht</value>
+  <data name="Dont have an account" xml:space="preserve">
+    <value>Kas sul pole veel kontot? </value>
   </data>
-  <data name="TestEnvironment" xml:space="preserve">
-    <value>Testikeskkond</value>
+  <data name="Email" xml:space="preserve">
+    <value>E-post</value>
   </data>
-  <data name="TestLogIn" xml:space="preserve">
-    <value>Testi Sisse Logi Sisse</value>
+  <data name="Enter email" xml:space="preserve">
+    <value>Sisesta e-posti aadress</value>
+  </data>
+  <data name="Enter name" xml:space="preserve">
+    <value>Sisesta nimi</value>
+  </data>
+  <data name="Enter password" xml:space="preserve">
+    <value>Sisesta parool</value>
+  </data>
+  <data name="Forgot password" xml:space="preserve">
+    <value>Unustasid parooli?</value>
+  </data>
+  <data name="Log in" xml:space="preserve">
+    <value>Logi sisse</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parool</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registreeru</value>
+  </data>
+  <data name="Repeat password" xml:space="preserve">
+    <value>Korda parool</value>
+  </data>
+  <data name="Start as guest" xml:space="preserve">
+    <value>Alusta külalisena</value>
+  </data>
+  <data name="Well founded decision" xml:space="preserve">
+    <value>Põhjendatud otsus = rahulikum meel</value>
   </data>
 </root>

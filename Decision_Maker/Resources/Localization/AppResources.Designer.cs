@@ -61,47 +61,137 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AHP.
+        ///   Looks up a localized string similar to Already have an account? .
         /// </summary>
-        internal static string AHP {
+        internal static string Already_have_an_account {
             get {
-                return ResourceManager.GetString("AHP", resourceCulture);
+                return ResourceManager.GetString("Already have an account", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Log In.
+        ///   Looks up a localized string similar to Decision Maker.
         /// </summary>
-        internal static string LogIn {
+        internal static string Decision_Maker {
             get {
-                return ResourceManager.GetString("LogIn", resourceCulture);
+                return ResourceManager.GetString("Decision Maker", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Page.
+        ///   Looks up a localized string similar to Don&apos;t have an account? .
         /// </summary>
-        internal static string NewPage {
+        internal static string Dont_have_an_account {
             get {
-                return ResourceManager.GetString("NewPage", resourceCulture);
+                return ResourceManager.GetString("Dont have an account", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test Environment.
+        ///   Looks up a localized string similar to Email.
         /// </summary>
-        internal static string TestEnvironment {
+        internal static string Email {
             get {
-                return ResourceManager.GetString("TestEnvironment", resourceCulture);
+                return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test Log In.
+        ///   Looks up a localized string similar to Enter email.
         /// </summary>
-        internal static string TestLogIn {
+        internal static string Enter_email {
             get {
-                return ResourceManager.GetString("TestLogIn", resourceCulture);
+                return ResourceManager.GetString("Enter email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter name.
+        /// </summary>
+        internal static string Enter_name {
+            get {
+                return ResourceManager.GetString("Enter name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter password.
+        /// </summary>
+        internal static string Enter_password {
+            get {
+                return ResourceManager.GetString("Enter password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forgot password?.
+        /// </summary>
+        internal static string Forgot_password {
+            get {
+                return ResourceManager.GetString("Forgot password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log in.
+        /// </summary>
+        internal static string Log_in {
+            get {
+                return ResourceManager.GetString("Log in", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        internal static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repeat password.
+        /// </summary>
+        internal static string Repeat_password {
+            get {
+                return ResourceManager.GetString("Repeat password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start as guest.
+        /// </summary>
+        internal static string Start_as_guest {
+            get {
+                return ResourceManager.GetString("Start as guest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Well-founded decision = calmer mind.
+        /// </summary>
+        internal static string Well_founded_decision {
+            get {
+                return ResourceManager.GetString("Well founded decision", resourceCulture);
             }
         }
     }
