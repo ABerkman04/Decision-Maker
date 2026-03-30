@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.NawBarSettings.NawBarSettingsPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              NavigationPage.HasNavigationBar="False">
 
 
@@ -39,7 +40,7 @@
                     HeightRequest="26"/>
 
                 <Label
-                    Text="Decision Maker"
+                    Text="{x:Static strings:AppResources.Decision_Maker}"
                     FontSize="20"
                     FontAttributes="Bold"
                     VerticalOptions="Center"/>
@@ -63,7 +64,7 @@
                         <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
 
                             <Label
-                                Text="Settings"
+                                Text="{x:Static strings:AppResources.Settings}"
                                 FontSize="22"
                                 TextColor="Black"
                                 FontAttributes="Bold"
@@ -87,7 +88,7 @@
                             <Image Source="info1.png" WidthRequest="25"/>
                             <Label Grid.Column="1"
                                    Margin="3,6,0,0"
-                                   Text="About app"
+                                   Text="{x:Static strings:AppResources.About_app}"
                                    VerticalOptions="Center"/>
                             <Image Grid.Column="2"
                                    Margin="-10,13,0,0"
@@ -108,7 +109,7 @@
                             <Image Source="language1.png" WidthRequest="25"/>
                             <Label Grid.Column="1"
                                    Margin="3,6,0,0"
-                                   Text="Language"
+                                   Text="{x:Static strings:AppResources.Language}"
                                    VerticalOptions="Center"/>
                             <Image Grid.Column="2"
                                    Margin="-10,13,0,0"
@@ -129,7 +130,7 @@
                             <Image Source="logout1.png" WidthRequest="25"/>
                             <Label Grid.Column="1"
                                    Margin="3,6,0,0"
-                                   Text="Log out"
+                                   Text="{x:Static strings:AppResources.Log_out}"
                                    TextColor="Red"
                                    VerticalOptions="Center"/>
                             <Image Grid.Column="2"
@@ -170,7 +171,7 @@
                     <!-- Header -->
                     <Grid ColumnDefinitions="*,Auto">
 
-                        <Label Text="Language"
+                        <Label Text="{x:Static strings:AppResources.Language}"
                        FontSize="20"
                        FontAttributes="Bold"
                        VerticalOptions="Center"/>
@@ -188,7 +189,7 @@
                     </Grid>
 
                     <!-- English -->
-                    <Label Text="English"
+                    <Label Text="English" 
                    FontSize="16">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="EnglishClicked"/>

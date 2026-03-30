@@ -61,11 +61,83 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About app.
+        /// </summary>
+        internal static string About_app {
+            get {
+                return ResourceManager.GetString("About app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add a title to your decision.
+        /// </summary>
+        internal static string Add_a_title_to_your_decision {
+            get {
+                return ResourceManager.GetString("Add a title to your decision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Criteria.
+        /// </summary>
+        internal static string Add_Criteria {
+            get {
+                return ResourceManager.GetString("Add Criteria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Criterion.
+        /// </summary>
+        internal static string Add_Criterion {
+            get {
+                return ResourceManager.GetString("Add Criterion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add up to 5 criteria.
+        /// </summary>
+        internal static string Add_up_to_5_criteria {
+            get {
+                return ResourceManager.GetString("Add up to 5 criteria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Already have an account? .
         /// </summary>
         internal static string Already_have_an_account {
             get {
                 return ResourceManager.GetString("Already have an account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue.
+        /// </summary>
+        internal static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create a Decision.
+        /// </summary>
+        internal static string Create_a_Decision {
+            get {
+                return ResourceManager.GetString("Create a Decision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create a decision, add options and criteria, then compare them step by step. Get a clear winner and see why it ranked highest..
+        /// </summary>
+        internal static string Create_a_decision_add_options_and_criteria {
+            get {
+                return ResourceManager.GetString("Create a decision add options and criteria", resourceCulture);
             }
         }
         
@@ -124,11 +196,47 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Example: Choose a car.
+        /// </summary>
+        internal static string Example_Choose_a_car {
+            get {
+                return ResourceManager.GetString("Example Choose a car", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Example: Price.
+        /// </summary>
+        internal static string Example_Price {
+            get {
+                return ResourceManager.GetString("Example Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot password?.
         /// </summary>
         internal static string Forgot_password {
             get {
                 return ResourceManager.GetString("Forgot password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
@@ -142,11 +250,29 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Log out.
+        /// </summary>
+        internal static string Log_out {
+            get {
+                return ResourceManager.GetString("Log out", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New decision.
+        /// </summary>
+        internal static string New_decision {
+            get {
+                return ResourceManager.GetString("New decision", resourceCulture);
             }
         }
         
@@ -178,11 +304,38 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Results .
+        /// </summary>
+        internal static string Results {
+            get {
+                return ResourceManager.GetString("Results", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start as guest.
         /// </summary>
         internal static string Start_as_guest {
             get {
                 return ResourceManager.GetString("Start as guest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome {0}!.
+        /// </summary>
+        internal static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
         

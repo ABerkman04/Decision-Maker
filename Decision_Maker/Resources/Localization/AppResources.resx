@@ -117,8 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About app" xml:space="preserve">
+    <value>About app</value>
+  </data>
+  <data name="Add a title to your decision" xml:space="preserve">
+    <value>Add a title to your decision</value>
+  </data>
+  <data name="Add Criteria" xml:space="preserve">
+    <value>Add Criteria</value>
+  </data>
+  <data name="Add Criterion" xml:space="preserve">
+    <value>Add Criterion</value>
+  </data>
+  <data name="Add up to 5 criteria" xml:space="preserve">
+    <value>Add up to 5 criteria</value>
+  </data>
   <data name="Already have an account" xml:space="preserve">
     <value>Already have an account? </value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Create a Decision" xml:space="preserve">
+    <value>Create a Decision</value>
+  </data>
+  <data name="Create a decision add options and criteria" xml:space="preserve">
+    <value>Create a decision, add options and criteria, then compare them step by step. Get a clear winner and see why it ranked highest.</value>
   </data>
   <data name="Decision Maker" xml:space="preserve">
     <value>Decision Maker</value>
@@ -138,14 +162,32 @@
   <data name="Enter password" xml:space="preserve">
     <value>Enter password</value>
   </data>
+  <data name="Example Choose a car" xml:space="preserve">
+    <value>Example: Choose a car</value>
+  </data>
+  <data name="Example Price" xml:space="preserve">
+    <value>Example: Price</value>
+  </data>
   <data name="Forgot password" xml:space="preserve">
     <value>Forgot password?</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
   </data>
   <data name="Log in" xml:space="preserve">
     <value>Log in</value>
   </data>
+  <data name="Log out" xml:space="preserve">
+    <value>Log out</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="New decision" xml:space="preserve">
+    <value>New decision</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -156,8 +198,17 @@
   <data name="Repeat password" xml:space="preserve">
     <value>Repeat password</value>
   </data>
+  <data name="Results" xml:space="preserve">
+    <value>Results </value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
   <data name="Start as guest" xml:space="preserve">
     <value>Start as guest</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome {0}!</value>
   </data>
   <data name="Well founded decision" xml:space="preserve">
     <value>Well-founded decision = calmer mind</value>

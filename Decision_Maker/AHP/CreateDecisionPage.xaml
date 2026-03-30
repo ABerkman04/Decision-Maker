@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.AHP.CreateDecisionPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              BackgroundColor="Gray"
              NavigationPage.HasNavigationBar="False">
 
@@ -32,7 +33,7 @@
                            HeightRequest="34"
                            Aspect="AspectFit" />
 
-                    <Label Text="Decision Maker"
+                    <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="20"
                            FontFamily="AlegreyaSansExtraBold"
                            VerticalOptions="Center"
@@ -61,21 +62,21 @@
 
                         <VerticalStackLayout Spacing="16">
 
-                            <Label Text="Create a Decision"
+                            <Label Text="{x:Static strings:AppResources.Create_a_Decision}"
                                    FontSize="20"
                                    FontFamily="AlegreyaSansExtraBold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
-                            <Label Text="Add a title to your decision"
+                            <Label Text="{x:Static strings:AppResources.Add_a_title_to_your_decision}"
                                    FontSize="14"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
                             <components:InputField x:Name="DecisionNameEntry"
-                                                   PlaceholderText="Example: Choose a car" 
+                                                   PlaceholderText="{x:Static strings:AppResources.Example_Choose_a_car}"
                                                    Margin="0,-30,0,10"/>
 
-                            <components:PrimaryButton ButtonText="Continue"
+                            <components:PrimaryButton ButtonText="{x:Static strings:AppResources.Continue}"
                                                       Clicked="ContinueClicked"
                                                       HorizontalOptions="Center"
                                                       Margin="0,0,0,5" />

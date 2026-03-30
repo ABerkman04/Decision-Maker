@@ -1,5 +1,7 @@
 namespace Decision_Maker.AHP;
 
+using Decision_Maker.Resources.Localization;
+
 public partial class DecisionsPage : ContentPage
 {
     public DecisionsPage()
@@ -13,7 +15,7 @@ public partial class DecisionsPage : ContentPage
 
             var displayName =
                 user.UserMetadata?["display_name"]?.ToString();
-            DisplayLabel.Text = "Welcome " + displayName + "!";
+            DisplayLabel.Text = string.Format(AppResources.Welcome, displayName);
         }
     }
 

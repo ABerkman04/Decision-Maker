@@ -117,8 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About app" xml:space="preserve">
+    <value>Rakendusest</value>
+  </data>
+  <data name="Add a title to your decision" xml:space="preserve">
+    <value>Lisa oma otsusele pealkiri</value>
+  </data>
+  <data name="Add Criteria" xml:space="preserve">
+    <value>Lisa kriteeriumid</value>
+  </data>
+  <data name="Add Criterion" xml:space="preserve">
+    <value>Lisa kriteerium</value>
+  </data>
+  <data name="Add up to 5 criteria" xml:space="preserve">
+    <value>Lisa kuni 5 kriteeriumi</value>
+  </data>
   <data name="Already have an account" xml:space="preserve">
     <value>Kas sul on juba konto? </value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Jätka</value>
+  </data>
+  <data name="Create a Decision" xml:space="preserve">
+    <value>Loo otsus</value>
+  </data>
+  <data name="Create a decision add options and criteria" xml:space="preserve">
+    <value>Loo otsus, lisa valikud ja kriteeriumid, seejärel võrdle neid samm-sammult. Saa selge võitja ja näe, miks see kõrgeima koha sai.</value>
   </data>
   <data name="Decision Maker" xml:space="preserve">
     <value>Valiku Võlur</value>
@@ -138,14 +162,32 @@
   <data name="Enter password" xml:space="preserve">
     <value>Sisesta parool</value>
   </data>
+  <data name="Example Choose a car" xml:space="preserve">
+    <value>Näide: vali auto</value>
+  </data>
+  <data name="Example Price" xml:space="preserve">
+    <value>Näide: hind</value>
+  </data>
   <data name="Forgot password" xml:space="preserve">
     <value>Unustasid parooli?</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Avaleht</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Keel</value>
   </data>
   <data name="Log in" xml:space="preserve">
     <value>Logi sisse</value>
   </data>
+  <data name="Log out" xml:space="preserve">
+    <value>Logi välja</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Nimi</value>
+  </data>
+  <data name="New decision" xml:space="preserve">
+    <value>Uus otsus</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Parool</value>
@@ -156,8 +198,17 @@
   <data name="Repeat password" xml:space="preserve">
     <value>Korda parool</value>
   </data>
+  <data name="Results" xml:space="preserve">
+    <value>Tulemused</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Seaded</value>
+  </data>
   <data name="Start as guest" xml:space="preserve">
     <value>Alusta külalisena</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Tere tulemast, {0}!</value>
   </data>
   <data name="Well founded decision" xml:space="preserve">
     <value>Põhjendatud otsus = rahulikum meel</value>
