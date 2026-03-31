@@ -80,7 +80,7 @@
                                         <Border Margin="0,0,0,10"
                                             Padding="15,8"
                                             BackgroundColor="#EDEDED"
-                                            Stroke="#CFCFCF"
+                                            Stroke="#A8DAB0"
                                             StrokeThickness="1">
 
                                             <Border.StrokeShape>
