@@ -68,13 +68,14 @@
                                    TextColor="Black" />
 
                             <Label Text="Add up to 5 alternatives"
-                                   FontSize="14"
+                                   FontSize="16"
+                                   FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
                             <CollectionView x:Name="OptionsList"
-                                SelectionMode="None"
-                                Margin="0,0,0,6">
+                                            Margin="0,0,0,6"
+                                            SelectionMode="None">
 
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate>

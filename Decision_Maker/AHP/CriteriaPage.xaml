@@ -68,7 +68,8 @@
                                    TextColor="Black" />
 
                             <Label Text="Add up to 5 criteria"
-                                   FontSize="14"
+                                   FontSize="16"
+                                   FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 

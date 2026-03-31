@@ -68,11 +68,14 @@
                                    TextColor="Black" />
 
                             <Label Text="Move sliders to change importance"
-                                   FontSize="14"
+                                   FontSize="16"
+                                   FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
-                            <CollectionView x:Name="WeightsList">
+                            <CollectionView x:Name="WeightsList"
+                                            Margin="0,10,0,0"
+                                            SelectionMode="None">
 
                                 <CollectionView.ItemTemplate>
 

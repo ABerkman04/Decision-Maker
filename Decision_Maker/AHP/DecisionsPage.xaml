@@ -69,7 +69,8 @@
                                    TextColor="Black" />
 
                             <Label Text="Create a decision, add options and criteria, then compare them step by step. Get a clear winner and see why it ranked highest."
-                                   FontSize="14"
+                                   FontSize="16"
+                                   FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
                                    LineBreakMode="WordWrap"
                                    TextColor="Black" />
