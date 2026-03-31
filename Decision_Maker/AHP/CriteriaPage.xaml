@@ -20,7 +20,7 @@
                    Aspect="AspectFill"/>
 
             <!-- content layout -->
-            <Grid Padding="20,30,20,20"
+            <Grid Padding="20,30,20,-20"
                   RowDefinitions="Auto,*">
 
                 <!-- HEADER -->
