@@ -20,7 +20,7 @@
                    Aspect="AspectFill"/>
 
             <!-- content layout -->
-            <Grid Padding="20,30,20,40"
+            <Grid Padding="20,30,20,60"
                   RowDefinitions="Auto,*">
 
                 <!-- HEADER -->
@@ -49,7 +49,7 @@
                             Padding="20,22"
                             HorizontalOptions="Fill"
                             VerticalOptions="Fill"
-                            Margin="0,20,0,0">
+                            Margin="0,25,0,0">
 
                         <Border.Shadow>
                             <Shadow
@@ -87,7 +87,7 @@
                                                 <RoundRectangle CornerRadius="16" />
                                             </Border.StrokeShape>
 
-                                            <VerticalStackLayout Spacing="5">
+                                            <VerticalStackLayout Spacing="1">
 
                                                 <Label Text="{Binding Name}"
                                                    FontSize="16"
