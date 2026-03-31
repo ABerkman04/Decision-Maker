@@ -69,7 +69,8 @@
                                    TextColor="Black" />
 
                             <Label Text="Here you can see all your decisions"
-                                   FontSize="14"
+                                   FontSize="16"
+                                   FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
@@ -97,6 +98,7 @@
                                                         BackgroundColor="Transparent"
                                                         TextColor="Black"
                                                         FontSize="16"
+                                                        FontFamily="AlegreyaSansRegular"
                                                         HorizontalOptions="Start"
                                                         Clicked="DecisionClicked"
                                                         CommandParameter="{Binding Id}" />
