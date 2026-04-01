@@ -25,7 +25,7 @@
             <BoxView x:Name="HomeLine"
                      Margin="-3"
                      HeightRequest="1"
-                     WidthRequest="40"
+                     WidthRequest="20"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
@@ -52,7 +52,7 @@
             <BoxView x:Name="ResultsLine"
                      Margin="-3"
                      HeightRequest="1"
-                     WidthRequest="40"
+                     WidthRequest="20"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
@@ -79,7 +79,7 @@
             <BoxView x:Name="SettingsLine"
                      Margin="-3"
                      HeightRequest="1"
-                     WidthRequest="40"
+                     WidthRequest="20"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
