@@ -3,92 +3,91 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.Components.NavigationBar">
 
-    <Grid BackgroundColor= "WhiteSmoke"
-          ColumnDefinitions="*,*,*"
-          Padding="10, 20"
-          VerticalOptions="End">
+    <Border BackgroundColor="#EEEEEE"
+            Stroke="#D9D9D9"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 0">
 
-        <!-- HOME -->
-        <VerticalStackLayout Grid.Column="0"
-                             HorizontalOptions="Center"
-                             Spacing="3">
+        <Grid ColumnDefinitions="*,*,*"
+              Padding="10,20"
+              VerticalOptions="End">
 
-            <Image Source="home1.png"
-                   WidthRequest="22"/>
+            <!-- HOME -->
+            <VerticalStackLayout Grid.Column="0"
+                                 HorizontalOptions="Center"
+                                 Spacing="3">
 
-            <Label Text="Home"
-                   FontSize="14"
-                   HorizontalOptions="Center"
-                   FontFamily="AlegreyaSansRegular" />
+                <Image Source="home1.png"
+                       WidthRequest="22"/>
 
-            <!-- active line -->
-            <BoxView x:Name="HomeLine"
-                     Margin="-3"
-                     HeightRequest="1"
-                     WidthRequest="40"
-                     BackgroundColor="Grey"
-                     IsVisible="False"/>
+                <Label Text="Home"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       FontFamily="AlegreyaSansRegular" />
 
-            <VerticalStackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="GoHome"/>
-            </VerticalStackLayout.GestureRecognizers>
+                <BoxView x:Name="HomeLine"
+                         Margin="-3"
+                         HeightRequest="1"
+                         WidthRequest="40"
+                         BackgroundColor="Grey"
+                         IsVisible="False"/>
 
-        </VerticalStackLayout>
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoHome"/>
+                </VerticalStackLayout.GestureRecognizers>
+            </VerticalStackLayout>
 
+            <!-- RESULTS -->
+            <VerticalStackLayout Grid.Column="1"
+                                 HorizontalOptions="Center"
+                                 Spacing="3">
 
-        <!-- RESULTS -->
-        <VerticalStackLayout Grid.Column="1"
-                             HorizontalOptions="Center"
-                             Spacing="3">
+                <Image Source="results1.png"
+                       WidthRequest="22"/>
 
-            <Image Source="results1.png"
-                   WidthRequest="22"/>
+                <Label Text="Results"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       FontFamily="AlegreyaSansRegular"/>
 
-            <Label Text="Results"
-                   FontSize="14"
-                   HorizontalOptions="Center"
-                   FontFamily="AlegreyaSansRegular"/>
+                <BoxView x:Name="ResultsLine"
+                         Margin="-3"
+                         HeightRequest="1"
+                         WidthRequest="40"
+                         BackgroundColor="Grey"
+                         IsVisible="False"/>
 
-            <BoxView x:Name="ResultsLine"
-                     Margin="-3"
-                     HeightRequest="1"
-                     WidthRequest="40"
-                     BackgroundColor="Grey"
-                     IsVisible="False"/>
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoResults"/>
+                </VerticalStackLayout.GestureRecognizers>
+            </VerticalStackLayout>
 
-            <VerticalStackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="GoResults"/>
-            </VerticalStackLayout.GestureRecognizers>
+            <!-- SETTINGS -->
+            <VerticalStackLayout Grid.Column="2"
+                                 HorizontalOptions="Center"
+                                 Spacing="3">
 
-        </VerticalStackLayout>
+                <Image Source="settings1.png"
+                       WidthRequest="22"/>
 
+                <Label Text="Settings"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       FontFamily="AlegreyaSansRegular" />
 
-        <!-- SETTINGS -->
-        <VerticalStackLayout Grid.Column="2"
-                             HorizontalOptions="Center"
-                             Spacing="3">
+                <BoxView x:Name="SettingsLine"
+                         Margin="-3"
+                         HeightRequest="1"
+                         WidthRequest="40"
+                         BackgroundColor="Grey"
+                         IsVisible="False"/>
 
-            <Image Source="settings1.png"
-                   WidthRequest="22"/>
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoSettings"/>
+                </VerticalStackLayout.GestureRecognizers>
+            </VerticalStackLayout>
 
-            <Label Text="Settings"
-                   FontSize="14"
-                   HorizontalOptions="Center"
-                   FontFamily="AlegreyaSansRegular" />
-
-            <BoxView x:Name="SettingsLine"
-                     Margin="-3"
-                     HeightRequest="1"
-                     WidthRequest="40"
-                     BackgroundColor="Grey"
-                     IsVisible="False"/>
-
-            <VerticalStackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="GoSettings"/>
-            </VerticalStackLayout.GestureRecognizers>
-
-        </VerticalStackLayout>
-
-    </Grid>
+        </Grid>
+    </Border>
 
 </ContentView>

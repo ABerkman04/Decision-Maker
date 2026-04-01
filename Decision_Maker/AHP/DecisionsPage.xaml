@@ -73,6 +73,7 @@
                                    FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
                                    LineBreakMode="WordWrap"
+                                   LineHeight="1.3"
                                    TextColor="Black" />
 
                             <components:PrimaryButton ButtonText="New decision"

@@ -69,7 +69,7 @@
                 </Border.Shadow>
 
                 <VerticalStackLayout HorizontalOptions="Fill"
-                                 Spacing="18">
+                                     Spacing="18">
                     <Label Text="Register"
                        FontSize="26"
                        FontFamily="AlegreyaSansExtraBold"
@@ -79,7 +79,7 @@
                     <components:InputField x:Name="DisplayNameEntry"
                        LabelText="Name"
                        PlaceholderText="Enter name"
-                       IconSource="user2.png"
+                       IconSource="userr.png"
                        InputKeyboard="Email" />
                     <components:InputField x:Name="EmailEntry"
                        LabelText="Email"
@@ -92,7 +92,7 @@
                        IconSource="key.png"
                        IsPassword="True" />
                     <components:InputField x:Name="RepeatPasswordEntry"
-                       LabelText="Password"
+                       LabelText="Repeat Password"
                        PlaceholderText="Repeat password"
                        IconSource="key.png"
                        IsPassword="True" />
