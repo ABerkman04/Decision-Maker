@@ -33,7 +33,7 @@ public partial class OptionsPage : ContentPage
         }
 
         DecisionManager.CurrentDecision.Options.Add(text);
-
+        Debug.WriteLine(text);
         OptionEntry.Text = "";
 
         RefreshList();
