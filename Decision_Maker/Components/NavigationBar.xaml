@@ -23,7 +23,7 @@
 
             <!-- active line -->
             <BoxView x:Name="HomeLine"
-                     Margin="-3"
+                     Margin="-2"
                      HeightRequest="1"
                      WidthRequest="20"
                      BackgroundColor="Grey"
@@ -50,7 +50,7 @@
                    FontFamily="AlegreyaSansRegular"/>
 
             <BoxView x:Name="ResultsLine"
-                     Margin="-3"
+                     Margin="-2"
                      HeightRequest="1"
                      WidthRequest="20"
                      BackgroundColor="Grey"
@@ -77,7 +77,7 @@
                    FontFamily="AlegreyaSansRegular" />
 
             <BoxView x:Name="SettingsLine"
-                     Margin="-3"
+                     Margin="-2"
                      HeightRequest="1"
                      WidthRequest="20"
                      BackgroundColor="Grey"
