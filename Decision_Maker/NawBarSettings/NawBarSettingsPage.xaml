@@ -19,7 +19,7 @@
 
             <!-- pattern -->
             <Image Source="pattern.png"
-                   Aspect="AspectFill"/>
+                   Aspect="AspectFill" />
 
             <!-- content layout -->
             <Grid Padding="20,30,20,20"
@@ -103,7 +103,7 @@
                                        HorizontalOptions="End" />
 
                                 <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="AboutClicked"/>
+                                    <TapGestureRecognizer Tapped="AboutClicked" />
                                 </Grid.GestureRecognizers>
                             </Grid>
 
@@ -134,7 +134,7 @@
                                        HorizontalOptions="End" />
 
                                 <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="LanguageClicked"/>
+                                    <TapGestureRecognizer Tapped="LanguageClicked" />
                                 </Grid.GestureRecognizers>
                             </Grid>
 
@@ -165,7 +165,7 @@
                                        HorizontalOptions="End" />
 
                                 <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="LogoutClicked"/>
+                                    <TapGestureRecognizer Tapped="LogoutClicked" />
                                 </Grid.GestureRecognizers>
                             </Grid>
 
@@ -174,69 +174,70 @@
 
                         </VerticalStackLayout>
 
+                    </Border>
 
-        <!-- LANGUAGE OVERLAY -->
-        <Grid x:Name="LanguageOverlay"
-              IsVisible="False"
-              BackgroundColor="#80000000">
-            <!-- poolläbipaistev taust -->
+                    <!-- LANGUAGE OVERLAY -->
+                    <Grid x:Name="LanguageOverlay"
+                          IsVisible="False"
+                          BackgroundColor="#80000000">
+                        <!-- poolläbipaistev taust -->
 
-            <!-- White panel -->
-            <Frame
-                BackgroundColor="White"
-                CornerRadius="20"
-                Padding="20"
-                Margin="40,120,40,120"
-                VerticalOptions="Center">
+                        <!-- White panel -->
+                        <Frame BackgroundColor="White"
+                               CornerRadius="20"
+                               Padding="20"
+                               Margin="40,120,40,120"
+                               VerticalOptions="Center">
 
-                <VerticalStackLayout Spacing="20">
+                            <VerticalStackLayout Spacing="20">
 
-                    <!-- Header -->
-                    <Grid ColumnDefinitions="*,Auto">
+                                <!-- Header -->
+                                <Grid ColumnDefinitions="*,Auto">
 
-                        <Label Text="{x:Static strings:AppResources.Language}"
-                       FontSize="20"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"/>
+                                    <Label Text="{x:Static strings:AppResources.Language}"
+                                           FontSize="20"
+                                           FontAttributes="Bold"
+                                           VerticalOptions="Center" />
 
-                        <!-- Close X -->
-                        <Label Grid.Column="1"
-                       Text="✕"
-                       FontSize="20"
-                       VerticalOptions="Center">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="CloseLanguageOverlay"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                                    <!-- Close X -->
+                                    <Label Grid.Column="1"
+                                           Text="✕"
+                                           FontSize="20"
+                                           VerticalOptions="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="CloseLanguageOverlay" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
 
+                                </Grid>
+
+                                <!-- English -->
+                                <Label Text="English"
+                                       FontSize="16">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="EnglishClicked" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                                <!-- Eesti -->
+                                <Label Text="Eesti"
+                                       FontSize="16">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="EstonianClicked" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                            </VerticalStackLayout>
+                        </Frame>
                     </Grid>
 
-                    <!-- English -->
-                    <Label Text="English" 
-                   FontSize="16">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="EnglishClicked"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-
-                    <!-- Eesti -->
-                    <Label Text="Eesti"
-                   FontSize="16">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="EstonianClicked"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-
-                </VerticalStackLayout>
-            </Frame>
-        </Grid>
-
-        <!-- Bottom Navbar -->
-        <components:NavigationBar x:Name="NavigationBar" Grid.Row="1"/>
-                    </Border>
                 </Grid>
             </Grid>
         </Grid>
+
+        <!-- Bottom Navbar -->
+        <components:NavigationBar x:Name="NavigationBar"
+                                  Grid.Row="1" />
 
     </Grid>
 
