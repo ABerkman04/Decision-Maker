@@ -42,7 +42,7 @@
                 <!-- CENTER AREA -->
                 <Grid Grid.Row="1">
 
-                    <Border BackgroundColor="#F4F4F4"
+                    <Border BackgroundColor="#FFFFFF"
                             Stroke="#D9D9D9"
                             StrokeThickness="1"
                             StrokeShape="RoundRectangle 16"
@@ -82,7 +82,7 @@
                                     <DataTemplate>
                                         <Border Margin="0,0,0,10"
                                             Padding="15,8"
-                                            BackgroundColor="#EDEDED"
+                                            BackgroundColor="#F6F6F6"
                                             Stroke="#A8DAB0"
                                             StrokeThickness="1">
 
