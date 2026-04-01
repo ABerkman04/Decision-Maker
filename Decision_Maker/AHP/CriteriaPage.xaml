@@ -21,7 +21,7 @@
                    Aspect="AspectFill"/>
 
             <!-- content layout -->
-            <Grid Padding="20,30,20,20"
+            <Grid Padding="20,30,20,-20"
                   RowDefinitions="Auto,*">
 
                 <!-- HEADER -->
@@ -43,14 +43,14 @@
                 <!-- CENTER AREA -->
                 <Grid Grid.Row="1">
 
-                    <Border BackgroundColor="#F4F4F4"
+                    <Border BackgroundColor="#FFFFFF"
                             Stroke="#D9D9D9"
                             StrokeThickness="1"
                             StrokeShape="RoundRectangle 16"
                             Padding="20,22"
                             HorizontalOptions="Fill"
                             VerticalOptions="Center"
-                            Margin="0,-80,0,0">
+                            Margin="0,-30,0,0">
 
                         <Border.Shadow>
                             <Shadow
@@ -69,7 +69,8 @@
                                    TextColor="Black" />
 
                             <Label Text="{x:Static strings:AppResources.Add_up_to_5_criteria}"
-                                   FontSize="14"
+                                   FontSize="16"
+                                   FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
@@ -88,13 +89,6 @@
                                             HeightRequest="48"
                                             Margin="0,0,0,5">
 
-                                            <Border.Shadow>
-                                                <Shadow Brush="#000000"
-                                                    Offset="0,2"
-                                                    Radius="4"
-                                                    Opacity="0.15" />
-                                            </Border.Shadow>
-
                                             <Grid ColumnDefinitions="*,Auto">
 
                                                 <Label Text="{Binding Name}"
@@ -103,14 +97,18 @@
                                                    FontFamily="AlegreyaSansRegular"
                                                    FontSize="16" />
 
-                                                <ImageButton Grid.Column="1"
-                                                     Source="trash.png"
-                                                     BackgroundColor="Transparent"
-                                                     HeightRequest="18"
-                                                     WidthRequest="18"
-                                                     VerticalOptions="Center"
-                                                     Clicked="DeleteCriteriaClicked"
-                                                     CommandParameter="{Binding .}" />
+                                                <Image Grid.Column="1"
+                                                       Source="trash.png"
+                                                       HeightRequest="22"
+                                                       WidthRequest="22"
+                                                       Aspect="AspectFit"
+                                                       HorizontalOptions="End"
+                                                       VerticalOptions="Center">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="DeleteCriteriaClicked"
+                                                                              CommandParameter="{Binding .}" />
+                                                    </Image.GestureRecognizers>
+                                                </Image>
 
                                             </Grid>
                                         </Border>

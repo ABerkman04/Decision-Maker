@@ -4,8 +4,7 @@
              xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              x:Class="Decision_Maker.Components.NavigationBar">
 
-
-    <Grid BackgroundColor= "WhiteSmoke"
+    <Grid BackgroundColor= "#F6F6F6"
           ColumnDefinitions="*,*,*"
           Padding="10, 20"
           VerticalOptions="End">
@@ -25,9 +24,9 @@
 
             <!-- active line -->
             <BoxView x:Name="HomeLine"
-                     Margin="-3"
+                     Margin="-2"
                      HeightRequest="1"
-                     WidthRequest="40"
+                     WidthRequest="20"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
@@ -52,9 +51,9 @@
                    FontFamily="AlegreyaSansRegular"/>
 
             <BoxView x:Name="ResultsLine"
-                     Margin="-3"
+                     Margin="-2"
                      HeightRequest="1"
-                     WidthRequest="40"
+                     WidthRequest="20"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 
@@ -79,9 +78,9 @@
                    FontFamily="AlegreyaSansRegular" />
 
             <BoxView x:Name="SettingsLine"
-                     Margin="-3"
+                     Margin="-2"
                      HeightRequest="1"
-                     WidthRequest="40"
+                     WidthRequest="20"
                      BackgroundColor="Grey"
                      IsVisible="False"/>
 

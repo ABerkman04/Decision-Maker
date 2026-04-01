@@ -70,7 +70,7 @@
                 </Border.Shadow>
 
                 <VerticalStackLayout HorizontalOptions="Fill"
-                                 Spacing="18">
+                                     Spacing="18">
                     <Label Text="{x:Static strings:AppResources.Register}"
                        FontSize="26"
                        FontFamily="AlegreyaSansExtraBold"
@@ -80,7 +80,7 @@
                     <components:InputField x:Name="DisplayNameEntry"
                        LabelText="{x:Static strings:AppResources.Name}"
                        PlaceholderText="{x:Static strings:AppResources.Enter_name}"
-                       IconSource="user2.png"
+                       IconSource="userr.png"
                        InputKeyboard="Email" />
                     <components:InputField x:Name="EmailEntry"
                        LabelText="{x:Static strings:AppResources.Email}"

@@ -1,5 +1,7 @@
+using Decision_Maker.Models;
 using Decision_Maker.Services;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Decision_Maker.AHP;
 
@@ -31,7 +33,7 @@ public partial class OptionsPage : ContentPage
         }
 
         DecisionManager.CurrentDecision.Options.Add(text);
-
+        Debug.WriteLine(text);
         OptionEntry.Text = "";
 
         RefreshList();
@@ -59,7 +61,7 @@ public partial class OptionsPage : ContentPage
         await Navigation.PushAsync(new AHPComparisonPage());
     }
 
-    void DeleteOptionClicked(object sender, EventArgs e)
+    void DeleteOptionClicked(object sender, TappedEventArgs e)
     {
         var button = sender as Button;
         var option = button?.CommandParameter as string;

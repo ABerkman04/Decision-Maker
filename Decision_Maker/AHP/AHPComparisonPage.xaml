@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.AHP.AHPComparisonPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
-             BackgroundColor="#F2F2F2">
+             BackgroundColor="Grey"
+             NavigationPage.HasNavigationBar="False">
 
-    <Grid RowDefinitions="*,90">
+    <Grid RowDefinitions="*,80">
 
         <ScrollView Grid.Row="0">
 
