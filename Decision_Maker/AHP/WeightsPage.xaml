@@ -104,7 +104,7 @@
                                                         Minimum="1"
                                                         Maximum="10"
                                                         Value="{Binding RawWeight, Mode=TwoWay}"
-                                                        ThumbColor="White"
+                                                        ThumbColor="Lightgrey"
                                                         MinimumTrackColor="Black"
                                                         MaximumTrackColor="Black"
                                                         ValueChanged="SliderChanged"

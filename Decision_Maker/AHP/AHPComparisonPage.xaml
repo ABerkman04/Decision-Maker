@@ -6,151 +6,228 @@
              BackgroundColor="Grey"
              NavigationPage.HasNavigationBar="False">
 
-    <Grid RowDefinitions="*,80">
+    <Grid RowDefinitions="*,80"
+          RowSpacing="0">
 
-        <ScrollView Grid.Row="0">
+        <!-- MAIN CONTENT -->
+        <Grid Grid.Row="0">
 
-            <VerticalStackLayout Padding="30" Spacing="25">
+            <!-- background -->
+            <Border BackgroundColor="#C4F1C0"
+                    StrokeThickness="0" />
 
-                <!-- Question number -->
-                <Label x:Name="QuestionLabel"
-                       Text="Question 1"
-                       FontSize="26"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"/>
+            <!-- pattern -->
+            <Image Source="pattern.png"
+                   Aspect="AspectFill" />
 
-                <!-- Question -->
-                <Label HorizontalOptions="Center"
-                        FontSize="18">
+            <ScrollView>
+                <Grid Padding="20,30,20,20"
+                      RowDefinitions="Auto,*">
 
-                    <Label.FormattedText>
-                        <FormattedString>
+                    <!-- HEADER -->
+                    <HorizontalStackLayout Grid.Row="0"
+                                           Spacing="12">
 
-                            <Span Text="Regarding "/>
+                        <Image Source="icon1.png"
+                               WidthRequest="34"
+                               HeightRequest="34"
+                               Aspect="AspectFit" />
 
-                            <Span x:Name="CriterionLabel"
-                            FontAttributes="Bold"/>
+                        <Label Text="Decision Maker"
+                               FontSize="20"
+                               FontFamily="AlegreyaSansExtraBold"
+                               VerticalOptions="Center"
+                               TextColor="Black" />
+                    </HorizontalStackLayout>
 
-                            <Span Text=", which is more important: "/>
+                    <!-- CONTENT -->
+                    <VerticalStackLayout Grid.Row="1"
+                                         Spacing="20"
+                                         Margin="0,40,0,20">
 
-                            <Span x:Name="OptionALabel"/>
+                        <!-- QUESTION CARD -->
+                        <Border BackgroundColor="#FFFFFF"
+                                Stroke="#D9D9D9"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 16"
+                                Padding="20,22">
 
-                            <Span Text=" or "/>
+                            <Border.Shadow>
+                                <Shadow Brush="#000000"
+                                        Offset="0,1"
+                                        Radius="4"
+                                        Opacity="0.40" />
+                            </Border.Shadow>
 
-                            <Span x:Name="OptionBLabel"/>
+                            <VerticalStackLayout Spacing="16">
 
-                            <Span Text="?"/>
+                                <!-- Question title -->
+                                <Label x:Name="QuestionLabel"
+                                       Text="Question"
+                                       FontSize="20"
+                                       FontFamily="AlegreyaSansExtraBold"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="Black" />
 
-                        </FormattedString>
-                    </Label.FormattedText>
+                                <!-- Question sentence -->
+                                <Label HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="16"
+                                       FontFamily="AlegreyaSansRegular"
+                                       TextColor="Black"
+                                       LineBreakMode="WordWrap">
 
-                </Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Regarding " />
+                                            <Span x:Name="CriterionLabel"
+                                                  FontAttributes="Bold" />
+                                            <Span Text=", which is more important: " />
+                                            <Span x:Name="OptionALabel" />
+                                            <Span Text=" or " />
+                                            <Span x:Name="OptionBLabel" />
+                                            <Span Text="?" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
 
+                                <!-- Option buttons -->
+                                <Grid ColumnDefinitions="*,*"
+                                      ColumnSpacing="12">
 
-                <!-- Option buttons -->
-                <Grid ColumnDefinitions="*,*" ColumnSpacing="20">
+                                    <Button x:Name="OptionAButton"
+                                            CornerRadius="16"
+                                            HeightRequest="46"
+                                            BackgroundColor="#F6F6F6"
+                                            BorderColor="#C4F1C0"
+                                            BorderWidth="1"
+                                            TextColor="Black"
+                                            FontSize="16"
+                                            FontFamily="AlegreyaSansRegular"
+                                            Clicked="OptionAClicked" />
 
-                    <Button x:Name="OptionAButton"
-                            CornerRadius="20"
-                            HeightRequest="55"
-                            BackgroundColor="#CFCFCF"
-                            Clicked="OptionAClicked"/>
+                                    <Button x:Name="OptionBButton"
+                                            Grid.Column="1"
+                                            CornerRadius="16"
+                                            HeightRequest="46"
+                                            BackgroundColor="#F6F6F6"
+                                            BorderColor="#C4F1C0"
+                                            BorderWidth="1"
+                                            TextColor="Black"
+                                            FontSize="16"
+                                            FontFamily="AlegreyaSansRegular"
+                                            Clicked="OptionBClicked" />
 
-                    <Button x:Name="OptionBButton"
-                            Grid.Column="1"
-                            CornerRadius="20"
-                            HeightRequest="55"
-                            BackgroundColor="#CFCFCF"
-                            Clicked="OptionBClicked"/>
+                                </Grid>
 
-                </Grid>
+                                <!-- Helper text -->
+                                <Label Text="Select how important it is compared to the other option:"
+                                       FontSize="15"
+                                       FontFamily="AlegreyaSansRegular"
+                                       HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="Black" />
 
+                                <!-- Scale numbers -->
+                                <Grid ColumnDefinitions="*,*,*,*,*,*,*,*,*"
+                                      Margin="4,0,4,0">
 
-                <Label Text="Select how important it is compared to the other option:"
-                       FontSize="16"
-                       HorizontalOptions="Center"
-                       HorizontalTextAlignment="Center"/>
+                                    <Label Text="1" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="2" Grid.Column="1" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="3" Grid.Column="2" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="4" Grid.Column="3" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="5" Grid.Column="4" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="6" Grid.Column="5" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="7" Grid.Column="6" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="8" Grid.Column="7" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
+                                    <Label Text="9" Grid.Column="8" HorizontalOptions="Center" FontSize="14" TextColor="Black" />
 
+                                </Grid>
 
-                <Grid ColumnDefinitions="*,*,*,*,*,*,*,*,*">
+                                <!-- Slider -->
+                                <Slider Minimum="1"
+                                        Maximum="9"
+                                        Value="1"
+                                        MinimumTrackColor="Black"
+                                        MaximumTrackColor="Black"
+                                        ThumbColor="Lightgrey"
+                                        ValueChanged="SliderChanged" />
 
-                    <Label Text="1" HorizontalOptions="Center"/>
-                    <Label Text="2" Grid.Column="1" HorizontalOptions="Center"/>
-                    <Label Text="3" Grid.Column="2" HorizontalOptions="Center"/>
-                    <Label Text="4" Grid.Column="3" HorizontalOptions="Center"/>
-                    <Label Text="5" Grid.Column="4" HorizontalOptions="Center"/>
-                    <Label Text="6" Grid.Column="5" HorizontalOptions="Center"/>
-                    <Label Text="7" Grid.Column="6" HorizontalOptions="Center"/>
-                    <Label Text="8" Grid.Column="7" HorizontalOptions="Center"/>
-                    <Label Text="9" Grid.Column="8" HorizontalOptions="Center"/>
+                                <!-- Scale meaning -->
+                                <Grid ColumnDefinitions="*,*"
+                                      Margin="0,-20,0,0">
 
-                </Grid>
+                                    <Label Text="Equally&#10;important"
+                                           FontSize="12"
+                                           FontFamily="AlegreyaSansRegular"
+                                           TextColor="Black"
+                                           LineBreakMode="WordWrap" />
 
+                                    <Label Text="Extremely&#10;more important"
+                                           Grid.Column="1"
+                                           FontSize="12"
+                                           FontFamily="AlegreyaSansRegular"
+                                           TextColor="Black"
+                                           HorizontalTextAlignment="End"
+                                           HorizontalOptions="End"
+                                           LineBreakMode="WordWrap" />
 
-                <Slider Minimum="1"
-                        Maximum="9"
-                        Value="5"
-                        ValueChanged="SliderChanged"/>
+                                </Grid>
 
+                            </VerticalStackLayout>
+                        </Border>
 
-                <Grid ColumnDefinitions="*,*">
+                        <!-- SUMMARY CARD -->
+                        <Border BackgroundColor="#FFFFFF"
+                                Stroke="#D9D9D9"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 16"
+                                Padding="20,22">
 
-                    <Label Text="Equally important"
-                           FontSize="14"/>
+                            <Border.Shadow>
+                                <Shadow Brush="#000000"
+                                        Offset="0,1"
+                                        Radius="4"
+                                        Opacity="0.40" />
+                            </Border.Shadow>
 
-                    <Label Text="Extremely more important"
-                           Grid.Column="1"
-                           FontSize="14"
-                           HorizontalOptions="End"/>
+                            <VerticalStackLayout Spacing="12">
 
-                </Grid>
+                                <Label Text="Summary"
+                                       FontSize="20"
+                                       FontFamily="AlegreyaSansExtraBold"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="Black" />
 
+                                <Label x:Name="ChoiceLabel"
+                                       Text="Your choice: -"
+                                       FontSize="16"
+                                       FontFamily="AlegreyaSansRegular"
+                                       TextColor="Black" />
 
-                <Frame Padding="20"
-                       BackgroundColor="#E5E5E5"
-                       CornerRadius="20"
-                       HasShadow="True">
+                                <Label x:Name="StrengthLabel"
+                                       Text="Strength: 5 - Strongly more important"
+                                       FontSize="16"
+                                       FontFamily="AlegreyaSansRegular"
+                                       TextColor="Black"
+                                       LineBreakMode="WordWrap" />
 
-                    <VerticalStackLayout Spacing="10">
+                                <components:PrimaryButton ButtonText="Continue"
+                                                          Clicked="ContinueClicked"
+                                                          HorizontalOptions="Center"
+                                                          Margin="0,4,0,3" />
 
-                        <Label Text="Summary"
-                               FontAttributes="Bold"
-                               FontSize="18"/>
-
-                        <Label x:Name="ChoiceLabel"
-                               Text="Your Choice: -"/>
-
-                        <Label x:Name="StrengthLabel"
-                               Text="Strength: 5 - Strongly more important"/>
+                            </VerticalStackLayout>
+                        </Border>
 
                     </VerticalStackLayout>
-
-                </Frame>
-
-
-                <Grid ColumnDefinitions="*,*" ColumnSpacing="20">
-
-                    <Button Text="Back"
-                            CornerRadius="25"
-                            HeightRequest="55"
-                            BackgroundColor="#CFCFCF"
-                            Clicked="BackClicked"/>
-
-                    <Button Text="Continue"
-                            Grid.Column="1"
-                            CornerRadius="25"
-                            HeightRequest="55"
-                            BackgroundColor="#CFCFCF"
-                            Clicked="ContinueClicked"/>
-
                 </Grid>
+            </ScrollView>
 
-            </VerticalStackLayout>
+        </Grid>
 
-        </ScrollView>
-
-        <components:NavigationBar Grid.Row="1"/>
+        <!-- BOTTOM NAVBAR -->
+        <components:NavigationBar Grid.Row="1" />
 
     </Grid>
-
 </ContentPage>
