@@ -331,7 +331,7 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Welcome {0}!.
+        ///   Looks up a localized string similar to Welcome, {0}!.
         /// </summary>
         internal static string Welcome {
             get {

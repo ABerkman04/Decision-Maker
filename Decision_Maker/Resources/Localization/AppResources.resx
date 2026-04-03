@@ -208,7 +208,7 @@
     <value>Start as guest</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Welcome {0}!</value>
+    <value>Welcome, {0}!</value>
   </data>
   <data name="Well founded decision" xml:space="preserve">
     <value>Well-founded decision = calmer mind</value>
