@@ -73,7 +73,8 @@
                                        HorizontalOptions="Start"
                                        VerticalOptions="Center"
                                        Aspect="AspectFit">
-                                    <!--<Image.GestureRecognizers>
+                                    <!-- NUPU JAOKS
+                                    <Image.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="BackClicked" />
                                     </Image.GestureRecognizers>-->
                                 </Image>
