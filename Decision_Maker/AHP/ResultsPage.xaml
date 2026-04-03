@@ -6,59 +6,140 @@
              BackgroundColor="Grey"
              NavigationPage.HasNavigationBar="False">
 
-    <Grid RowDefinitions="*,90">
+    <Grid RowDefinitions="*,80"
+          RowSpacing="0">
 
-        <Frame Grid.Row="0" HasShadow="False">
+        <!-- MAIN CONTENT -->
+        <Grid Grid.Row="0">
 
-            <VerticalStackLayout Padding="30" Spacing="20">
+            <!-- background -->
+            <Border BackgroundColor="#C4F1C0"
+                    StrokeThickness="0" />
 
-                <Label Text="Results"
-                       FontSize="26"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"/>
+            <!-- pattern -->
+            <Image Source="pattern.png"
+                   Aspect="AspectFill" />
 
-                <Label x:Name="DecisionNameLabel"
-               FontSize="14"
-               HorizontalOptions="Center"/>
+            <!-- content layout -->
+            <Grid Padding="20,30,20,20"
+                  RowDefinitions="Auto,*">
 
-                <CollectionView x:Name="ResultsList">
+                <!-- HEADER -->
+                <HorizontalStackLayout Grid.Row="0"
+                                       Spacing="12">
 
-                    <CollectionView.ItemTemplate>
+                    <Image Source="icon1.png"
+                           WidthRequest="34"
+                           HeightRequest="34"
+                           Aspect="AspectFit" />
 
-                        <DataTemplate>
+                    <Label Text="Decision Maker"
+                           FontSize="20"
+                           FontFamily="AlegreyaSansExtraBold"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </HorizontalStackLayout>
 
-                            <Frame Padding="12"
-                                   BackgroundColor="#E5E5E5"
-                                   CornerRadius="15"
-                                   HasShadow="False">
+                <!-- CENTER AREA -->
+                <Grid Grid.Row="1">
 
-                                <Grid ColumnDefinitions="*,Auto">
+                    <Border BackgroundColor="#FFFFFF"
+                            Stroke="#D9D9D9"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 16"
+                            Padding="20,22"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Center"
+                            Margin="0,-80,0,0">
 
-                                    <Label Text="{Binding Option}"
-                                           FontSize="16"
-                                           VerticalOptions="Center"/>
+                        <Border.Shadow>
+                            <Shadow Brush="#000000"
+                                    Offset="0,1"
+                                    Radius="4"
+                                    Opacity="0.40" />
+                        </Border.Shadow>
 
-                                    <Label Grid.Column="1"
-                                           Text="{Binding Score}"
-                                           FontSize="16"
-                                           FontAttributes="Bold"
-                                           VerticalOptions="Center"/>
+                        <VerticalStackLayout Spacing="16">
 
-                                </Grid>
+                            <!-- back + title row -->
+                            <Grid ColumnDefinitions="30,*,30"
+                                  VerticalOptions="Center">
+                                <Label Grid.Column="1"
+                                       Text="Results"
+                                       FontSize="20"
+                                       FontFamily="AlegreyaSansExtraBold"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="Black" />
 
-                            </Frame>
+                                <BoxView Grid.Column="2"
+                                         Opacity="0" />
+                            </Grid>
 
-                        </DataTemplate>
+                            <Label x:Name="DecisionNameLabel"
+                                   FontSize="16"
+                                   FontFamily="AlegreyaSansRegular"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="Black" />
 
-                    </CollectionView.ItemTemplate>
+                            <CollectionView x:Name="ResultsList"
+                                            Margin="0,10,0,0"
+                                            SelectionMode="None">
 
-                </CollectionView>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Margin="0,0,0,14"
+                                                Padding="25,12"
+                                                BackgroundColor="#F6F6F6"
+                                                Stroke="#A8DAB0"
+                                                StrokeThickness="1">
 
-            </VerticalStackLayout>
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="16" />
+                                            </Border.StrokeShape>
 
-        </Frame>
+                                            <Grid ColumnDefinitions="*,Auto"
+                                                  ColumnSpacing="12">
 
-        <components:NavigationBar Grid.Row="1"/>
+                                                <Label Grid.Column="0"
+                                                       Text="{Binding OptionName}"
+                                                       FontSize="16"
+                                                       FontFamily="AlegreyaSansRegular"
+                                                       TextColor="Black"
+                                                       VerticalOptions="Center" />
+
+                                                <Label Grid.Column="1"
+                                                       Text="{Binding Score}"
+                                                       FontSize="16"
+                                                       FontFamily="AlegreyaSansExtraBold"
+                                                       TextColor="Black"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="End" />
+
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+
+                            </CollectionView>
+                            
+                            <components:PrimaryButton ButtonText="Show results page"
+                                                      HorizontalOptions="Center"
+                                                      Margin="0,0,0,3" />
+
+                        </VerticalStackLayout>
+                    </Border>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+        <!-- BOTTOM NAVBAR -->
+        <components:NavigationBar x:Name="NavigationBar"
+                                  Grid.Row="1" />
 
     </Grid>
 
