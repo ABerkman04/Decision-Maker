@@ -63,8 +63,9 @@ public partial class OptionsPage : ContentPage
 
     void DeleteOptionClicked(object sender, TappedEventArgs e)
     {
-        var button = sender as Button;
-        var option = button?.CommandParameter as string;
+        var image = sender as Image;
+        var gesture = image?.GestureRecognizers.FirstOrDefault() as TapGestureRecognizer;
+        var option = gesture?.CommandParameter as string;
 
         if (option == null)
             return;

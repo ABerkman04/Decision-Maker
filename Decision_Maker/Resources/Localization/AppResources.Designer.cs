@@ -223,6 +223,15 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to guest.
+        /// </summary>
+        internal static string Guest {
+            get {
+                return ResourceManager.GetString("Guest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         internal static string Home {
@@ -277,11 +286,38 @@ namespace Decision_Maker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not logged in.
+        /// </summary>
+        internal static string Not_logged_in {
+            get {
+                return ResourceManager.GetString("Not logged in", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please log in first. Redirecting to home..
+        /// </summary>
+        internal static string Please_log_in_first {
+            get {
+                return ResourceManager.GetString("Please log in first", resourceCulture);
             }
         }
         

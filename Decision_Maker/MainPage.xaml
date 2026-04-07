@@ -105,42 +105,60 @@
 
                     <!-- Keelevalik -->
                     <HorizontalStackLayout HorizontalOptions="Center"
-                                           Spacing="4"
-                                           Margin="0,-6,0,0">
+                       Spacing="10"
+                       Margin="0,-6,0,0">
 
                         <Image Source="globe.png"
-                               HeightRequest="16"
-                               WidthRequest="16"
-                               VerticalOptions="Center"
-                               Margin="0,0,2,0" />
+                       HeightRequest="16"
+                       WidthRequest="16"
+                       VerticalOptions="Center" />
 
-                        <Label x:Name="EstonianLabel"
+                        <!-- ESTONIAN -->
+                        <VerticalStackLayout Spacing="2">
+                            <Label x:Name="EstonianLabel"
                                Text="Eesti"
                                FontSize="14"
                                FontFamily="AlegreyaSansRegular"
                                TextColor="Black"
-                               VerticalTextAlignment="Center">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="EstonianClicked" />
-                            </Label.GestureRecognizers>
-                        </Label>
+                               HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="EstonianClicked" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <BoxView x:Name="EstonianLine"
+                             HeightRequest="1"
+                             WidthRequest="15"
+                             BackgroundColor="Grey"
+                             IsVisible="False"
+                             HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
 
                         <Label Text="|"
-                               FontSize="13"
-                               FontFamily="AlegreyaSansRegular"
-                               TextColor="#4A4A4A"
-                               VerticalTextAlignment="Center" />
+                           FontSize="13"
+                           TextColor="#4A4A4A"
+                           VerticalTextAlignment="Center" />
 
-                        <Label x:Name="EnglishLabel"
+                        <!-- ENGLISH -->
+                        <VerticalStackLayout Spacing="2">
+                            <Label x:Name="EnglishLabel"
                                Text="English"
                                FontSize="14"
                                FontFamily="AlegreyaSansRegular"
                                TextColor="Black"
-                               VerticalTextAlignment="Center">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="EnglishClicked" />
-                            </Label.GestureRecognizers>
-                        </Label>
+                               HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="EnglishClicked" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <BoxView x:Name="EnglishLine"
+                             HeightRequest="1"
+                             WidthRequest="15"
+                             BackgroundColor="Grey"
+                             IsVisible="True"
+                             HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
 
                     </HorizontalStackLayout>
 

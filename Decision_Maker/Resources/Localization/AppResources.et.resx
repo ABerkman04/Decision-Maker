@@ -171,6 +171,9 @@
   <data name="Forgot password" xml:space="preserve">
     <value>Unustasid parooli?</value>
   </data>
+  <data name="Guest" xml:space="preserve">
+    <value>külaline</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Avaleht</value>
   </data>
@@ -189,8 +192,17 @@
   <data name="New decision" xml:space="preserve">
     <value>Uus otsus</value>
   </data>
+  <data name="Not logged in" xml:space="preserve">
+    <value>Pole sisse logitud</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Parool</value>
+  </data>
+  <data name="Please log in first" xml:space="preserve">
+    <value>Palun logi sisse. Suuname avalehele.</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Registreeru</value>

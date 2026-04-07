@@ -171,6 +171,9 @@
   <data name="Forgot password" xml:space="preserve">
     <value>Forgot password?</value>
   </data>
+  <data name="Guest" xml:space="preserve">
+    <value>guest</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
@@ -189,8 +192,17 @@
   <data name="New decision" xml:space="preserve">
     <value>New decision</value>
   </data>
+  <data name="Not logged in" xml:space="preserve">
+    <value>Not logged in</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="Please log in first" xml:space="preserve">
+    <value>Please log in first. Redirecting to home.</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>

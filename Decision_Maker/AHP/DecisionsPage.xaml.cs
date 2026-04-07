@@ -9,14 +9,26 @@ public partial class DecisionsPage : ContentPage
         InitializeComponent();
 
         NavigationBar.SetActive("home");
-        if (SupabaseService.Client.Auth.CurrentUser != null)
-        {
-            var user = SupabaseService.Client.Auth.CurrentUser;
 
-            var displayName =
-                user.UserMetadata?["display_name"]?.ToString();
-            DisplayLabel.Text = string.Format(AppResources.Welcome, displayName);
+        var user = SupabaseService.Client.Auth.CurrentUser;
+
+        string displayName;
+
+        if (user != null)
+        {
+            displayName = user.UserMetadata?["display_name"]?.ToString();
+
+            if (string.IsNullOrEmpty(displayName))
+            {
+                displayName = "User"; // fallback kui nimi puudub
+            }
         }
+        else
+        {
+            displayName = AppResources.Guest; // kasutame lokaliseeritud sõna
+        }
+
+        DisplayLabel.Text = string.Format(AppResources.Welcome, displayName);
     }
 
     void CreateDecisionClicked(object sender, EventArgs e)

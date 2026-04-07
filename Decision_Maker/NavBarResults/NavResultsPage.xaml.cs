@@ -1,5 +1,6 @@
 namespace Decision_Maker.NavBarResults;
 
+using Decision_Maker.AHP;
 using Decision_Maker.Components;
 using System.Diagnostics;
 
@@ -29,7 +30,23 @@ public partial class NavResultsPage : ContentPage
                 .Order("rank", Supabase.Postgrest.Constants.Ordering.Ascending)
                 .Get();
 
-            ResultsList.ItemsSource = resultsResponse.Models;
+            var results = resultsResponse.Models.ToList();
+
+            // 1️⃣ arvutame kogusumma
+            double totalScore = results.Sum(r => r.Score);
+
+            // 2️⃣ normaliseerime nii, et summa oleks 100%
+            var resultsWithPercent = results.Select(r =>
+            {
+                double percent = (r.Score / totalScore) * 100;
+                return new
+                {
+                    r.OptionName,
+                    Score = $"{percent:F1} %"  // ühe kümnendkoha täpsus
+                };
+            }).ToList();
+
+            ResultsList.ItemsSource = resultsWithPercent;
 
             var decisionResponse = await SupabaseService.Client
                 .From<Decision>()
@@ -42,5 +59,9 @@ public partial class NavResultsPage : ContentPage
         {
             Debug.WriteLine(ex);
         }
+    }
+    async void BackClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NavResultsListPage());
     }
 }

@@ -104,11 +104,19 @@
                                                         CommandParameter="{Binding Id}" />
 
                                                 <Image Grid.Column="1"
-                                                       Source="trash.png"
-                                                       WidthRequest="22"
-                                                       HeightRequest="22"
-                                                       VerticalOptions="Center"
-                                                       HorizontalOptions="End" />
+                                                   Source="trash.png"
+                                                   WidthRequest="22"
+                                                   HeightRequest="22"
+                                                   VerticalOptions="Center"
+                                                   HorizontalOptions="End">
+
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer 
+                                                        Tapped="DeleteDecisionClicked"
+                                                        CommandParameter="{Binding Id}" />
+                                                    </Image.GestureRecognizers>
+
+                                                </Image>
 
                                             </Grid>
                                         </Border>

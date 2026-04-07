@@ -15,8 +15,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    //Keel
-    string language = "en";
+
     void ChangeLanguage(string languageCode)
     {
         var culture = new CultureInfo(languageCode);
@@ -26,20 +25,38 @@ public partial class MainPage : ContentPage
 
         AppResources.Culture = culture;
 
-        // Recreate only this page
+        Preferences.Set("app_language", languageCode);
+
         var currentPage = new MainPage();
         Navigation.InsertPageBefore(currentPage, this);
         Navigation.PopAsync();
     }
-    private async void EnglishClicked(object sender, EventArgs e)
+    private void EnglishClicked(object sender, EventArgs e)
     {
         ChangeLanguage("en");
     }
-    private async void EstonianClicked(object sender, EventArgs e)
+
+    private void EstonianClicked(object sender, EventArgs e)
     {
         ChangeLanguage("et");
     }
-    //Keel lopp
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        var lang = Preferences.Get("app_language", "en");
+        SetActiveLanguage(lang);
+    }
+    void SetActiveLanguage(string lang)
+    {
+        EstonianLine.IsVisible = false;
+        EnglishLine.IsVisible = false;
+
+        if (lang == "et")
+            EstonianLine.IsVisible = true;
+        else if (lang == "en")
+            EnglishLine.IsVisible = true;
+    }
 
     private async void OnLoginClicked(object sender, EventArgs e)
     {
@@ -54,4 +71,5 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new DecisionsPage());
     }
+
 }

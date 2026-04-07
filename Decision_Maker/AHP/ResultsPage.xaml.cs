@@ -1,3 +1,5 @@
+using Decision_Maker.NavBarResults;
+using Decision_Maker.Resources.Localization;
 using Decision_Maker.Services;
 using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
@@ -22,6 +24,24 @@ public partial class ResultsPage : ContentPage
         {
             SaveDecisionToDatabase();
         }
+        DecisionSession.IsDecisionInProgress = false;
+    }
+    async void GoToResultsPage(object sender, EventArgs e)
+    {
+        if (SupabaseService.Client.Auth.CurrentUser == null)
+        {
+            await DisplayAlertAsync(
+                AppResources.Not_logged_in,
+                AppResources.Please_log_in_first,
+                AppResources.OK
+            );
+
+            // mine home lehele
+            await Navigation.PushAsync(new DecisionsPage());
+            return;
+        }
+
+        await Navigation.PushAsync(new NavResultsListPage());
     }
 
     void LoadResults()
@@ -42,9 +62,18 @@ public partial class ResultsPage : ContentPage
         // Sort best → worst
         results = results.OrderByDescending(r => r.Score).ToList();
 
-        ResultsList.ItemsSource = results;
+        // Normaliseerime, et summa oleks täpselt 100%
+        double totalScore = results.Sum(r => r.Score);
 
-        DecisionNameLabel.Text = DecisionManager.CurrentDecision.Name;
+        var resultsWithPercent = results.Select(r => new
+        {
+            Option = r.Option,
+            Score = $"{(r.Score / totalScore * 100):F1} %" // ühe kümnendkoha täpsus
+        }).ToList();
+
+        ResultsList.ItemsSource = resultsWithPercent;
+
+        DecisionNameLabel.Text = decision.Name;
     }
 
     async void SaveDecisionToDatabase()
