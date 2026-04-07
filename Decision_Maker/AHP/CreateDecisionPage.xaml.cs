@@ -1,5 +1,6 @@
 using Decision_Maker.Services;
 using Decision_Maker.Models;
+using Decision_Maker.Resources.Localization;
 
 namespace Decision_Maker.AHP;
 
@@ -16,7 +17,7 @@ public partial class CreateDecisionPage : ContentPage
 
         if (string.IsNullOrEmpty(name))
         {
-            await DisplayAlertAsync("Error", "Please enter decision name", "OK");
+            await DisplayAlertAsync(AppResources.Error, AppResources.Please_enter_decision_name, AppResources.OK);
             return;
         }
 

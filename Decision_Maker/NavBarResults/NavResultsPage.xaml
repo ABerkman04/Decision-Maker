@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.NavBarResults.NavResultsPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              Title="NavResultsPage"
              BackgroundColor="Grey"
              NavigationPage.HasNavigationBar="False">
@@ -34,7 +35,7 @@
                            HeightRequest="34"
                            Aspect="AspectFit" />
 
-                    <Label Text="Decision Maker"
+                    <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="20"
                            FontFamily="AlegreyaSansExtraBold"
                            VerticalOptions="Center"
@@ -80,7 +81,7 @@
                                 </Image>
 
                                 <Label Grid.Column="1"
-                                       Text="Results"
+                                       Text="{x:Static strings:AppResources.Results}"
                                        FontSize="20"
                                        FontFamily="AlegreyaSansExtraBold"
                                        HorizontalTextAlignment="Center"

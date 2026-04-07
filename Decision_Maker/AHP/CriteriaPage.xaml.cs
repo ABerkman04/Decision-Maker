@@ -1,4 +1,5 @@
 using Decision_Maker.Models;
+using Decision_Maker.Resources.Localization;
 using Decision_Maker.Services;
 using Supabase.Gotrue;
 using System.Diagnostics;
@@ -29,7 +30,7 @@ public partial class CriteriaPage : ContentPage
 
         if (DecisionManager.CurrentDecision.Criteria.Count >= 5)
         {
-            await DisplayAlertAsync("Limit reached", "Maximum 5 criteria allowed.", "OK");
+            await DisplayAlertAsync(AppResources.Limit_reached, AppResources.Maximum_5_criteria_allowed, AppResources.OK);
             return;
         }
 
@@ -48,7 +49,7 @@ public partial class CriteriaPage : ContentPage
     {
         if (DecisionManager.CurrentDecision.Criteria.Count < 2)
         {
-            await DisplayAlertAsync("Error", "Add at least 2 criteria.", "OK");
+            await DisplayAlertAsync(AppResources.Error, AppResources.Add_at_least_2_criteria, AppResources.OK);
             return;
         }
         Debug.WriteLine(DecisionManager.CurrentDecision.Name);

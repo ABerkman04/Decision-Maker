@@ -1,4 +1,5 @@
 using Decision_Maker.Models;
+using Decision_Maker.Resources.Localization;
 using Decision_Maker.Services;
 using System.Diagnostics;
 using System.Linq;
@@ -28,7 +29,7 @@ public partial class OptionsPage : ContentPage
 
         if (DecisionManager.CurrentDecision.Options.Count >= 5)
         {
-            await DisplayAlertAsync("Limit reached", "Maximum 5 options allowed.", "OK");
+            await DisplayAlertAsync(AppResources.Limit_reached, AppResources.Maximum_5_criteria_allowed, AppResources.OK);
             return;
         }
 
@@ -43,7 +44,7 @@ public partial class OptionsPage : ContentPage
     {
         if (DecisionManager.CurrentDecision.Options.Count < 2)
         {
-            await DisplayAlertAsync("Error", "Add at least 2 options.", "OK");
+            await DisplayAlertAsync(AppResources.Error, AppResources.Add_at_least_2_options, AppResources.OK);
             return;
         }
 

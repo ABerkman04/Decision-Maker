@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              x:Class="Decision_Maker.AHP.ResultsPage"
              BackgroundColor="Grey"
              NavigationPage.HasNavigationBar="False">
@@ -33,7 +34,7 @@
                            HeightRequest="34"
                            Aspect="AspectFit" />
 
-                    <Label Text="Decision Maker"
+                    <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="20"
                            FontFamily="AlegreyaSansExtraBold"
                            VerticalOptions="Center"
@@ -65,7 +66,7 @@
                             <Grid ColumnDefinitions="30,*,30"
                                   VerticalOptions="Center">
                                 <Label Grid.Column="1"
-                                       Text="Results"
+                                       Text="{x:Static strings:AppResources.Results}"
                                        FontSize="20"
                                        FontFamily="AlegreyaSansExtraBold"
                                        HorizontalTextAlignment="Center"
@@ -124,7 +125,7 @@
 
                             </CollectionView>
 
-                            <components:PrimaryButton ButtonText="Show results page"
+                            <components:PrimaryButton ButtonText="{x:Static strings:AppResources.Show_results_page}"
                           Clicked="GoToResultsPage"
                           HorizontalOptions="Center"
                           Margin="0,0,0,3" />

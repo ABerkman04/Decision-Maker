@@ -120,8 +120,20 @@
   <data name="About app" xml:space="preserve">
     <value>About app</value>
   </data>
+  <data name="About_app_info" xml:space="preserve">
+    <value>This app helps you make well-founded decisions using the AHP (Analytic Hierarchy Process) method. Compare options step by step, see the results, and understand why the top choice ranked highest.</value>
+  </data>
+  <data name="Account_created" xml:space="preserve">
+    <value>Account created!</value>
+  </data>
   <data name="Add a title to your decision" xml:space="preserve">
     <value>Add a title to your decision</value>
+  </data>
+  <data name="Add at least 2 criteria" xml:space="preserve">
+    <value>Add at least 2 criteria.</value>
+  </data>
+  <data name="Add at least 2 options" xml:space="preserve">
+    <value>Add at least 2 options.</value>
   </data>
   <data name="Add Criteria" xml:space="preserve">
     <value>Add Criteria</value>
@@ -132,8 +144,23 @@
   <data name="Add up to 5 criteria" xml:space="preserve">
     <value>Add up to 5 criteria</value>
   </data>
+  <data name="Add_Alternative" xml:space="preserve">
+    <value>Add Alternative</value>
+  </data>
+  <data name="Add_Alternatives" xml:space="preserve">
+    <value>Add Alternatives</value>
+  </data>
+  <data name="Add_up_to_5_alternatives" xml:space="preserve">
+    <value>Add up to 5 alternatives</value>
+  </data>
+  <data name="All_fields_required" xml:space="preserve">
+    <value>All fields are required.</value>
+  </data>
   <data name="Already have an account" xml:space="preserve">
     <value>Already have an account? </value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Continue</value>
@@ -145,13 +172,25 @@
     <value>Create a decision, add options and criteria, then compare them step by step. Get a clear winner and see why it ranked highest.</value>
   </data>
   <data name="Decision Maker" xml:space="preserve">
-    <value>Decision Maker</value>
+    <value>Valiku Võlur</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete_confirmation" xml:space="preserve">
+    <value>Are you sure you want to delete this decision?</value>
   </data>
   <data name="Dont have an account" xml:space="preserve">
     <value>Don't have an account? </value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="Email not verified" xml:space="preserve">
+    <value>Email not verified</value>
+  </data>
+  <data name="Email_already_registered" xml:space="preserve">
+    <value>Email is already registered</value>
   </data>
   <data name="Enter email" xml:space="preserve">
     <value>Enter email</value>
@@ -162,11 +201,20 @@
   <data name="Enter password" xml:space="preserve">
     <value>Enter password</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="Example Choose a car" xml:space="preserve">
     <value>Example: Choose a car</value>
   </data>
   <data name="Example Price" xml:space="preserve">
     <value>Example: Price</value>
+  </data>
+  <data name="Example_Option" xml:space="preserve">
+    <value>Example: BMW</value>
+  </data>
+  <data name="Failed_to_delete_decision" xml:space="preserve">
+    <value>Failed to delete decision.</value>
   </data>
   <data name="Forgot password" xml:space="preserve">
     <value>Forgot password?</value>
@@ -177,14 +225,38 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Invalid credentials" xml:space="preserve">
+    <value>Invalid email or password</value>
+  </data>
+  <data name="Invalid_email" xml:space="preserve">
+    <value>Invalid email address</value>
+  </data>
+  <data name="Invalid_email_format" xml:space="preserve">
+    <value>Please enter a valid email address.</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="Limit reached" xml:space="preserve">
+    <value>Limit reached</value>
   </data>
   <data name="Log in" xml:space="preserve">
     <value>Log in</value>
   </data>
   <data name="Log out" xml:space="preserve">
     <value>Log out</value>
+  </data>
+  <data name="Login failed" xml:space="preserve">
+    <value>Login failed</value>
+  </data>
+  <data name="Logout_confirmation" xml:space="preserve">
+    <value>Are you sure you want to logout?</value>
+  </data>
+  <data name="Maximum 5 criteria allowed" xml:space="preserve">
+    <value>Maximum 5 criteria allowed.</value>
+  </data>
+  <data name="Move_sliders_to_change_importance" xml:space="preserve">
+    <value>Move sliders to change importance</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
@@ -198,11 +270,29 @@
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="or" xml:space="preserve">
+    <value> or </value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="Passwords_do_not_match" xml:space="preserve">
+    <value>Passwords do not match.</value>
+  </data>
+  <data name="Please enter decision name" xml:space="preserve">
+    <value>Please enter decision name.</value>
+  </data>
+  <data name="Please enter email and password" xml:space="preserve">
+    <value>Please enter email and password.</value>
+  </data>
   <data name="Please log in first" xml:space="preserve">
     <value>Please log in first. Redirecting to home.</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Regarding" xml:space="preserve">
+    <value>Regarding</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
@@ -216,13 +306,121 @@
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="Set_Criteria_Importance" xml:space="preserve">
+    <value>Set Criteria Importance</value>
+  </data>
+  <data name="Sign_up_failed" xml:space="preserve">
+    <value>Sign up failed</value>
+  </data>
   <data name="Start as guest" xml:space="preserve">
     <value>Start as guest</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="User not found" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+  <data name="Weak_password" xml:space="preserve">
+    <value>Password is too weak. It must be at least 6 characters long and contain both letters and digits.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome, {0}!</value>
   </data>
+  <data name="Welcome user" xml:space="preserve">
+    <value>Welcome, {0}!</value>
+  </data>
   <data name="Well founded decision" xml:space="preserve">
     <value>Well-founded decision = calmer mind</value>
+  </data>
+  <data name="which is more important" xml:space="preserve">
+    <value>, which is more important: </value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Select how important it is compared to the other option" xml:space="preserve">
+    <value>Select how important it is compared to the other option: </value>
+  </data>
+  <data name="Equally_important" xml:space="preserve">
+    <value>Equally important</value>
+  </data>
+  <data name="Extremely_more_important" xml:space="preserve">
+    <value>Extremely more important</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Your_choice" xml:space="preserve">
+    <value>Your choice:</value>
+  </data>
+  <data name="Strength_1" xml:space="preserve">
+    <value>Strength: 1 - Equally important</value>
+  </data>
+  <data name="QuestionLabelFormat" xml:space="preserve">
+    <value>Question {0}</value>
+  </data>
+  <data name="YourChoiceSelected" xml:space="preserve">
+    <value>Your Choice: {0}</value>
+  </data>
+  <data name="StrengthLabelFormat" xml:space="preserve">
+    <value>Strength: {0} - {1}</value>
+  </data>
+  <data name="PleaseSelectOption" xml:space="preserve">
+    <value>Please select an option.</value>
+  </data>
+  <data name="Strength1" xml:space="preserve">
+    <value>Equally important</value>
+  </data>
+  <data name="Strength2" xml:space="preserve">
+    <value>Equally to moderately more important</value>
+  </data>
+  <data name="Strength3" xml:space="preserve">
+    <value>Moderately more important</value>
+  </data>
+  <data name="Strength4" xml:space="preserve">
+    <value>Moderately to strongly more important</value>
+  </data>
+  <data name="Strength5" xml:space="preserve">
+    <value>Strongly more important</value>
+  </data>
+  <data name="Strength6" xml:space="preserve">
+    <value>Strongly to very strongly more important</value>
+  </data>
+  <data name="Strength7" xml:space="preserve">
+    <value>Very strongly more important</value>
+  </data>
+  <data name="Strength8" xml:space="preserve">
+    <value>Very strongly to extremely more important</value>
+  </data>
+  <data name="Strength9" xml:space="preserve">
+    <value>Extremely more important</value>
+  </data>
+  <data name="Show results page" xml:space="preserve">
+    <value>Show results page</value>
+  </data>
+  <data name="LeaveDecisionTitle" xml:space="preserve">
+    <value>Leave decision?</value>
+  </data>
+  <data name="LeaveDecisionMessage" xml:space="preserve">
+    <value>Your current decision will be lost.</value>
+  </data>
+  <data name="LeaveButton" xml:space="preserve">
+    <value>Leave</value>
+  </data>
+  <data name="StayButton" xml:space="preserve">
+    <value>Stay</value>
+  </data>
+  <data name="LoginRequiredTitle" xml:space="preserve">
+    <value>Login required</value>
+  </data>
+  <data name="LoginRequiredMessage" xml:space="preserve">
+    <value>You need to log in to save results. Do you want to log in or continue as guest?</value>
+  </data>
+  <data name="ContinueAsGuestButton" xml:space="preserve">
+    <value>Continue as Guest</value>
+  </data>
+  <data name="Here you can see all your decisions" xml:space="preserve">
+    <value>Here you can see all your decisions</value>
   </data>
 </root>

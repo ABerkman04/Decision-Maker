@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.AHP.AHPComparisonPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              BackgroundColor="Grey"
              NavigationPage.HasNavigationBar="False">
 
@@ -33,7 +34,7 @@
                                HeightRequest="34"
                                Aspect="AspectFit" />
 
-                        <Label Text="Decision Maker"
+                        <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                                FontSize="20"
                                FontFamily="AlegreyaSansExtraBold"
                                VerticalOptions="Center"
@@ -63,7 +64,7 @@
 
                                 <!-- Question title -->
                                 <Label x:Name="QuestionLabel"
-                                       Text="Question"
+                                       Text="{x:Static strings:AppResources.Question}"
                                        FontSize="20"
                                        FontFamily="AlegreyaSansExtraBold"
                                        HorizontalTextAlignment="Center"
@@ -79,12 +80,12 @@
 
                                     <Label.FormattedText>
                                         <FormattedString>
-                                            <Span Text="Regarding " />
+                                            <Span Text="{x:Static strings:AppResources.Regarding}" />
                                             <Span x:Name="CriterionLabel"
                                                   FontAttributes="Bold" />
-                                            <Span Text=", which is more important: " />
+                                            <Span Text="{x:Static strings:AppResources.which_is_more_important}"/>
                                             <Span x:Name="OptionALabel" />
-                                            <Span Text=" or " />
+                                            <Span Text="{x:Static strings:AppResources.or}" />
                                             <Span x:Name="OptionBLabel" />
                                             <Span Text="?" />
                                         </FormattedString>
@@ -121,7 +122,7 @@
                                 </Grid>
 
                                 <!-- Helper text -->
-                                <Label Text="Select how important it is compared to the other option:"
+                                <Label Text="{x:Static strings:AppResources.Select_how_important_it_is_compared_to_the_other_option}"
                                        FontSize="15"
                                        FontFamily="AlegreyaSansRegular"
                                        HorizontalOptions="Center"
@@ -145,7 +146,8 @@
                                 </Grid>
 
                                 <!-- Slider -->
-                                <Slider Minimum="1"
+                                <Slider x:Name="ImportanceSlider"
+                                        Minimum="1"
                                         Maximum="9"
                                         Value="1"
                                         MinimumTrackColor="Black"
@@ -157,13 +159,13 @@
                                 <Grid ColumnDefinitions="*,*"
                                       Margin="0,-20,0,0">
 
-                                    <Label Text="Equally&#10;important"
+                                    <Label Text="{x:Static strings:AppResources.Equally_important}"
                                            FontSize="12"
                                            FontFamily="AlegreyaSansRegular"
                                            TextColor="Black"
                                            LineBreakMode="WordWrap" />
 
-                                    <Label Text="Extremely&#10;more important"
+                                    <Label Text="{x:Static strings:AppResources.Extremely_more_important}"
                                            Grid.Column="1"
                                            FontSize="12"
                                            FontFamily="AlegreyaSansRegular"
@@ -193,29 +195,32 @@
 
                             <VerticalStackLayout Spacing="12">
 
-                                <Label Text="Summary"
+                                <Label Text="{x:Static strings:AppResources.Summary}"
                                        FontSize="20"
                                        FontFamily="AlegreyaSansExtraBold"
                                        HorizontalTextAlignment="Center"
                                        TextColor="Black" />
 
                                 <Label x:Name="ChoiceLabel"
-                                       Text="Your choice: -"
+                                       Text="{x:Static strings:AppResources.Your_choice}"
                                        FontSize="16"
                                        FontFamily="AlegreyaSansRegular"
                                        TextColor="Black" />
 
                                 <Label x:Name="StrengthLabel"
-                                       Text="Strength: 5 - Strongly more important"
+                                       Text="{x:Static strings:AppResources.Strength_1}"
                                        FontSize="16"
                                        FontFamily="AlegreyaSansRegular"
                                        TextColor="Black"
                                        LineBreakMode="WordWrap" />
 
-                                <components:PrimaryButton ButtonText="Continue"
-                                                          Clicked="ContinueClicked"
-                                                          HorizontalOptions="Center"
-                                                          Margin="0,4,0,3" />
+                                <components:PrimaryButton x:Name="ContinueButton"
+                              ButtonText="{x:Static strings:AppResources.Continue}"
+                              Clicked="ContinueClicked"
+                              HorizontalOptions="Center"
+                              Margin="0,4,0,3"
+                              IsEnabled="False"
+                              Opacity="0.5" />
 
                             </VerticalStackLayout>
                         </Border>

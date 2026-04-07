@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.AHP.OptionsPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              BackgroundColor="Gray"
              NavigationPage.HasNavigationBar="False">
 
@@ -32,7 +33,7 @@
                            HeightRequest="34"
                            Aspect="AspectFit" />
 
-                    <Label Text="Decision Maker"
+                    <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="20"
                            FontFamily="AlegreyaSansExtraBold"
                            VerticalOptions="Center"
@@ -61,13 +62,13 @@
 
                         <VerticalStackLayout Spacing="16">
 
-                            <Label Text="Add Alternatives"
+                            <Label Text="{x:Static strings:AppResources.Add_Alternatives}"
                                    FontSize="20"
                                    FontFamily="AlegreyaSansExtraBold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
-                            <Label Text="Add up to 5 alternatives"
+                            <Label Text="{x:Static strings:AppResources.Add_up_to_5_alternatives}"
                                    FontSize="16"
                                    FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
@@ -117,15 +118,15 @@
                             </CollectionView>
 
                             <components:InputField x:Name="OptionEntry"
-                                                   PlaceholderText="Example: BMW" 
+                                                   PlaceholderText="{x:Static strings:AppResources.Example_Option}"
                                                    Margin="0,-30,0,20"/>
 
-                            <components:SecondaryButton ButtonText="Add Alternative"
+                            <components:SecondaryButton ButtonText="{x:Static strings:AppResources.Add_Alternative}"
                                                 Clicked="AddOptionClicked"
                                                 HorizontalOptions="Center" />
 
 
-                            <components:PrimaryButton ButtonText="Continue"
+                            <components:PrimaryButton ButtonText="{x:Static strings:AppResources.Continue}"
                                                       Clicked="ContinueClicked"
                                                       HorizontalOptions="Center"
                                                       Margin="0,0,0,5" />

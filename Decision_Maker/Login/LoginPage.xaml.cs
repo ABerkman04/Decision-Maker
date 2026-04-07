@@ -1,4 +1,6 @@
 using Decision_Maker.AHP;
+using Decision_Maker.Resources.Localization;
+using Supabase.Storage;
 using System.Diagnostics;
 
 namespace Decision_Maker.Login;
@@ -10,6 +12,13 @@ public partial class LoginPage : ContentPage
         InitializeComponent();
     }
 
+    public class ErrorResponse
+    {
+        public int code { get; set; }
+        public string error_code { get; set; } = "";
+        public string msg { get; set; } = "";
+    }
+
     private async void OnLoginClicked(object sender, EventArgs e)
     {
         string email = EmailEntry.Text?.Trim() ?? "";
@@ -17,7 +26,10 @@ public partial class LoginPage : ContentPage
 
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
         {
-            await DisplayAlertAsync("Error", "Please enter email and password.", "OK");
+            await DisplayAlertAsync(
+                AppResources.Error,
+                AppResources.Please_enter_email_and_password,
+                AppResources.OK);
             return;
         }
 
@@ -28,15 +40,49 @@ public partial class LoginPage : ContentPage
 
             if (session.User != null)
             {
-                await DisplayAlertAsync("Success", $"Welcome {session.User.Email}", "OK");
+                await DisplayAlertAsync(
+                    AppResources.Success,
+                    string.Format(AppResources.Welcome_user, session.User.Email),
+                    AppResources.OK);
                 await Navigation.PushAsync(new DecisionsPage());
             }
         }
         catch (Exception ex)
         {
             Debug.WriteLine(ex.Message);
-            await DisplayAlertAsync("Login failed", ex.Message, "OK");
+
+            string userFriendlyMessage = AppResources.Login_failed; // vaikimisi
+
+            try
+            {
+                // proovime JSON-i parse'ida
+                var errorObj = System.Text.Json.JsonSerializer.Deserialize<ErrorResponse>(ex.Message);
+                if (errorObj != null && !string.IsNullOrEmpty(errorObj.msg))
+                {
+                    // Kui on olemas msg, kasutame seda
+                    userFriendlyMessage = TranslateErrorCode(errorObj.error_code, errorObj.msg);
+                }
+            }
+            catch
+            {
+                // kui parse ebaõnnestub, jääb userFriendlyMessage vaikimisi
+            }
+
+            await DisplayAlertAsync(
+                AppResources.Error,
+                userFriendlyMessage,
+                AppResources.OK);
         }
+    }
+    private string TranslateErrorCode(string errorCode, string defaultMsg)
+    {
+        return errorCode switch
+        {
+            "invalid_credentials" => AppResources.Invalid_credentials, // Lisa .resx failis
+            "user_not_found" => AppResources.User_not_found,
+            "email_not_verified" => AppResources.Email_not_verified,
+            _ => defaultMsg
+        };
     }
 
     private async void OnCreateAccountClicked(object sender, EventArgs e)

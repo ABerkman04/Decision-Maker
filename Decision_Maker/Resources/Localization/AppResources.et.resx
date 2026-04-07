@@ -120,8 +120,20 @@
   <data name="About app" xml:space="preserve">
     <value>Rakendusest</value>
   </data>
+  <data name="About_app_info" xml:space="preserve">
+    <value>See rakendus aitab teha hästi põhjendatud otsuseid, kasutades AHP (Analüütilise Hierarhia Protsessi) meetodit. Võrdle valikuid samm-sammult, vaata tulemusi ja mõista, miks parim valik sai kõrgeima koha.</value>
+  </data>
+  <data name="Account_created" xml:space="preserve">
+    <value>Konto loodud!</value>
+  </data>
   <data name="Add a title to your decision" xml:space="preserve">
     <value>Lisa oma otsusele pealkiri</value>
+  </data>
+  <data name="Add at least 2 criteria" xml:space="preserve">
+    <value>Lisa vähemalt 2 kriteeriumit.</value>
+  </data>
+  <data name="Add at least 2 options" xml:space="preserve">
+    <value>Lisa vähemalt 2 valikut.</value>
   </data>
   <data name="Add Criteria" xml:space="preserve">
     <value>Lisa kriteeriumid</value>
@@ -132,8 +144,23 @@
   <data name="Add up to 5 criteria" xml:space="preserve">
     <value>Lisa kuni 5 kriteeriumi</value>
   </data>
+  <data name="Add_Alternative" xml:space="preserve">
+    <value>Lisa valik</value>
+  </data>
+  <data name="Add_Alternatives" xml:space="preserve">
+    <value>Lisa valikud</value>
+  </data>
+  <data name="Add_up_to_5_alternatives" xml:space="preserve">
+    <value>Lisa kuni 5 valikut</value>
+  </data>
+  <data name="All_fields_required" xml:space="preserve">
+    <value>Kõik väljad on kohustuslikud.</value>
+  </data>
   <data name="Already have an account" xml:space="preserve">
     <value>Kas sul on juba konto? </value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Tühista</value>
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Jätka</value>
@@ -147,11 +174,23 @@
   <data name="Decision Maker" xml:space="preserve">
     <value>Valiku Võlur</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Delete_confirmation" xml:space="preserve">
+    <value>Kas oled kindel, et soovid selle otsuse kustutada?</value>
+  </data>
   <data name="Dont have an account" xml:space="preserve">
     <value>Kas sul pole veel kontot? </value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>E-post</value>
+  </data>
+  <data name="Email not verified" xml:space="preserve">
+    <value>E-post ei ole kinnitatud</value>
+  </data>
+  <data name="Email_already_registered" xml:space="preserve">
+    <value>E-post on juba registreeritud</value>
   </data>
   <data name="Enter email" xml:space="preserve">
     <value>Sisesta e-posti aadress</value>
@@ -162,11 +201,20 @@
   <data name="Enter password" xml:space="preserve">
     <value>Sisesta parool</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Viga</value>
+  </data>
   <data name="Example Choose a car" xml:space="preserve">
     <value>Näide: vali auto</value>
   </data>
   <data name="Example Price" xml:space="preserve">
     <value>Näide: hind</value>
+  </data>
+  <data name="Example_Option" xml:space="preserve">
+    <value>Näide: BMW</value>
+  </data>
+  <data name="Failed_to_delete_decision" xml:space="preserve">
+    <value>Otsuse kustutamine ebaõnnestus.</value>
   </data>
   <data name="Forgot password" xml:space="preserve">
     <value>Unustasid parooli?</value>
@@ -177,14 +225,38 @@
   <data name="Home" xml:space="preserve">
     <value>Avaleht</value>
   </data>
+  <data name="Invalid credentials" xml:space="preserve">
+    <value>Vale e-post või parool</value>
+  </data>
+  <data name="Invalid_email" xml:space="preserve">
+    <value>Vale e-posti aadress</value>
+  </data>
+  <data name="Invalid_email_format" xml:space="preserve">
+    <value>Palun sisesta kehtiv e-posti aadress.</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Keel</value>
+  </data>
+  <data name="Limit reached" xml:space="preserve">
+    <value>Limiit saavutatud</value>
   </data>
   <data name="Log in" xml:space="preserve">
     <value>Logi sisse</value>
   </data>
   <data name="Log out" xml:space="preserve">
     <value>Logi välja</value>
+  </data>
+  <data name="Login failed" xml:space="preserve">
+    <value>Sisselogimine ebaõnnestus</value>
+  </data>
+  <data name="Logout_confirmation" xml:space="preserve">
+    <value>Kas oled kindel, et soovid välja logida?</value>
+  </data>
+  <data name="Maximum 5 criteria allowed" xml:space="preserve">
+    <value>Lubatud on maksimaalselt 5 kriteeriumi.</value>
+  </data>
+  <data name="Move_sliders_to_change_importance" xml:space="preserve">
+    <value>Liiguta liugureid, et muuta tähtsust</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nimi</value>
@@ -198,11 +270,29 @@
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="or" xml:space="preserve">
+    <value> või </value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Parool</value>
   </data>
+  <data name="Passwords_do_not_match" xml:space="preserve">
+    <value>Paroolid ei kattu.</value>
+  </data>
+  <data name="Please enter decision name" xml:space="preserve">
+    <value>Sisestage otsuse nimi.</value>
+  </data>
+  <data name="Please enter email and password" xml:space="preserve">
+    <value>Palun sisesta e-post ja parool.</value>
+  </data>
   <data name="Please log in first" xml:space="preserve">
     <value>Palun logi sisse. Suuname avalehele.</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Küsimus</value>
+  </data>
+  <data name="Regarding" xml:space="preserve">
+    <value>Seoses </value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Registreeru</value>
@@ -216,13 +306,121 @@
   <data name="Settings" xml:space="preserve">
     <value>Seaded</value>
   </data>
+  <data name="Set_Criteria_Importance" xml:space="preserve">
+    <value>Sea kriteeriumide tähtsus</value>
+  </data>
+  <data name="Sign_up_failed" xml:space="preserve">
+    <value>Konto loomine ebaõnnestus</value>
+  </data>
   <data name="Start as guest" xml:space="preserve">
     <value>Alusta külalisena</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Õnnestus</value>
+  </data>
+  <data name="User not found" xml:space="preserve">
+    <value>Kasutajat ei leitud</value>
+  </data>
+  <data name="Weak_password" xml:space="preserve">
+    <value>Parool on liiga nõrk. See peab olema vähemalt 6 tähemärki pikk ning sisaldama nii tähti kui ka numbreid.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Tere tulemast, {0}!</value>
   </data>
+  <data name="Welcome user" xml:space="preserve">
+    <value>Tere tulemast, {0}!</value>
+  </data>
   <data name="Well founded decision" xml:space="preserve">
     <value>Põhjendatud otsus = rahulikum meel</value>
+  </data>
+  <data name="which is more important" xml:space="preserve">
+    <value>, mis on olulisem: </value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Jah</value>
+  </data>
+  <data name="Select how important it is compared to the other option" xml:space="preserve">
+    <value>Valige, kui oluline see on võrreldes teise valikuga:</value>
+  </data>
+  <data name="Equally_important" xml:space="preserve">
+    <value>Võrdselt oluline</value>
+  </data>
+  <data name="Extremely_more_important" xml:space="preserve">
+    <value>Äärmiselt olulisem</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Kokkuvõte</value>
+  </data>
+  <data name="Your_choice" xml:space="preserve">
+    <value>Sinu valik:</value>
+  </data>
+  <data name="Strength_1" xml:space="preserve">
+    <value>Tugevus: 1 - Võrdselt oluline</value>
+  </data>
+  <data name="QuestionLabelFormat" xml:space="preserve">
+    <value>Küsimus {0}</value>
+  </data>
+  <data name="YourChoiceSelected" xml:space="preserve">
+    <value>Teie valik: {0}</value>
+  </data>
+  <data name="StrengthLabelFormat" xml:space="preserve">
+    <value>Tugevus: {0} - {1}</value>
+  </data>
+  <data name="PleaseSelectOption" xml:space="preserve">
+    <value>Palun vali üks valik.</value>
+  </data>
+  <data name="Strength1" xml:space="preserve">
+    <value>Võrdselt oluline</value>
+  </data>
+  <data name="Strength2" xml:space="preserve">
+    <value>Võrdselt kuni mõõdukalt olulisem</value>
+  </data>
+  <data name="Strength3" xml:space="preserve">
+    <value>Mõõdukalt olulisem</value>
+  </data>
+  <data name="Strength4" xml:space="preserve">
+    <value>Mõõdukalt kuni tugevalt olulisem</value>
+  </data>
+  <data name="Strength5" xml:space="preserve">
+    <value>Tugevalt olulisem</value>
+  </data>
+  <data name="Strength6" xml:space="preserve">
+    <value>Tugevalt kuni väga tugevalt olulisem</value>
+  </data>
+  <data name="Strength7" xml:space="preserve">
+    <value>Väga tugevalt olulisem</value>
+  </data>
+  <data name="Strength8" xml:space="preserve">
+    <value>Väga tugevalt kuni äärmiselt olulisem</value>
+  </data>
+  <data name="Strength9" xml:space="preserve">
+    <value>Äärmiselt olulisem</value>
+  </data>
+  <data name="Show results page" xml:space="preserve">
+    <value>Kuva tulemuste leht</value>
+  </data>
+  <data name="LeaveDecisionTitle" xml:space="preserve">
+    <value>Jätta otsus pooleli?</value>
+  </data>
+  <data name="LeaveDecisionMessage" xml:space="preserve">
+    <value>Teie praegune otsus kaob.</value>
+  </data>
+  <data name="LeaveButton" xml:space="preserve">
+    <value>Lahku</value>
+  </data>
+  <data name="StayButton" xml:space="preserve">
+    <value>Jää</value>
+  </data>
+  <data name="LoginRequiredTitle" xml:space="preserve">
+    <value>Vajalik sisselogimine</value>
+  </data>
+  <data name="LoginRequiredMessage" xml:space="preserve">
+    <value>Selleks, et tulemusi salvestada, peate sisse logima. Kas soovite sisse logida või jätkata külalisena?</value>
+  </data>
+  <data name="ContinueAsGuestButton" xml:space="preserve">
+    <value>Jätka külalisena</value>
+  </data>
+  <data name="Here you can see all your decisions" xml:space="preserve">
+    <value>Siin näete kõiki oma otsuseid</value>
   </data>
 </root>

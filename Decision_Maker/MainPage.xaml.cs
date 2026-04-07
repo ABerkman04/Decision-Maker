@@ -2,7 +2,6 @@
 using Decision_Maker.Login;
 using Decision_Maker.NawBarSettings;
 using Decision_Maker.Resources.Localization;
-using Decision_Maker.Test;
 using System.Globalization;
 using Microsoft.Maui.Storage;
 
@@ -13,6 +12,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+
     }
 
 

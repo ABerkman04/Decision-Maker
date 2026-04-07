@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.NavBarResults.NavResultsListPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              Title="NavResultsListPage"
              BackgroundColor="Grey"
              NavigationPage.HasNavigationBar="False">
@@ -34,7 +35,7 @@
                            HeightRequest="34"
                            Aspect="AspectFit" />
 
-                    <Label Text="Decision Maker"
+                    <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="20"
                            FontFamily="AlegreyaSansExtraBold"
                            VerticalOptions="Center"
@@ -62,13 +63,13 @@
 
                         <VerticalStackLayout Spacing="16">
 
-                            <Label Text="Results"
+                            <Label Text="{x:Static strings:AppResources.Results}"
                                    FontSize="20"
                                    FontFamily="AlegreyaSansExtraBold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
-                            <Label Text="Here you can see all your decisions"
+                            <Label Text="{x:Static strings:AppResources.Here_you_can_see_all_your_decisions}"
                                    FontSize="16"
                                    FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
@@ -94,7 +95,7 @@
                                                   ColumnSpacing="12">
 
                                                 <Button Grid.Column="0"
-                                                        Text="{Binding Name}"
+                                                        Text="{Binding Name, StringFormat='{}{0}                                                               '}"
                                                         BackgroundColor="Transparent"
                                                         TextColor="Black"
                                                         FontSize="16"

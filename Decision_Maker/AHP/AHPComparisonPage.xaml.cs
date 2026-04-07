@@ -1,4 +1,5 @@
 //using Android.Locations;
+using Decision_Maker.Resources.Localization;
 using Decision_Maker.Services;
 using System.Diagnostics;
 
@@ -13,7 +14,7 @@ public partial class AHPComparisonPage : ContentPage
 
     string selectedOption = "-";
 
-    int strength = 5;
+    int strength = 1;
 
     int currentCriterionIndex = 0;
 
@@ -101,7 +102,7 @@ public partial class AHPComparisonPage : ContentPage
         var criterion = DecisionManager.CurrentDecision.Criteria[currentCriterionIndex].Name;
 
 
-        QuestionLabel.Text = $"Question {questionIndex}";
+        QuestionLabel.Text = string.Format(AppResources.QuestionLabelFormat, questionIndex);
 
         CriterionLabel.Text = criterion;
 
@@ -112,21 +113,32 @@ public partial class AHPComparisonPage : ContentPage
         OptionBButton.Text = pair.B;
 
         selectedOption = "-";
-        ChoiceLabel.Text = "Your Choice: -";
+        ChoiceLabel.Text = AppResources.Your_choice + " -";
+
+        ImportanceSlider.Value = 1;
+        strength = 1;
+        UpdateStrengthLabel(strength);
+
+        UpdateContinueButtonState();
+
     }
 
     void OptionAClicked(object sender, EventArgs e)
     {
         selectedOption = comparisons[currentIndex].A;
 
-        ChoiceLabel.Text = $"Your Choice: {selectedOption}";
+        ChoiceLabel.Text = string.Format(AppResources.YourChoiceSelected, selectedOption);
+
+        UpdateContinueButtonState();
     }
 
     void OptionBClicked(object sender, EventArgs e)
     {
         selectedOption = comparisons[currentIndex].B;
 
-        ChoiceLabel.Text = $"Your Choice: {selectedOption}";
+        ChoiceLabel.Text = string.Format(AppResources.YourChoiceSelected, selectedOption);
+
+        UpdateContinueButtonState();
     }
 
     void SliderChanged(object sender, ValueChangedEventArgs e)
@@ -147,18 +159,18 @@ public partial class AHPComparisonPage : ContentPage
         string[] texts =
         {
         "",
-        "Equally important",
-        "Equally to moderately more important",
-        "Moderately more important",
-        "Moderately to strongly more important",
-        "Strongly more important",
-        "Strongly to very strongly more important",
-        "Very strongly more important",
-        "Very strongly to extremely more important",
-        "Extremely more important"
-    };
+        AppResources.Strength1,
+        AppResources.Strength2,
+        AppResources.Strength3,
+        AppResources.Strength4,
+        AppResources.Strength5,
+        AppResources.Strength6,
+        AppResources.Strength7,
+        AppResources.Strength8,
+        AppResources.Strength9
+        };
 
-        StrengthLabel.Text = $"Strength: {value} - {texts[value]}";
+        StrengthLabel.Text = string.Format(AppResources.StrengthLabelFormat, value, texts[value]);
     }
 
     void BackClicked(object sender, EventArgs e)
@@ -176,7 +188,7 @@ public partial class AHPComparisonPage : ContentPage
     {
         if (selectedOption == "-")
         {
-            await DisplayAlertAsync("Error", "Please select an option.", "OK");
+            await DisplayAlertAsync(AppResources.Error, AppResources.PleaseSelectOption, AppResources.OK);
             return;
         }
 
@@ -337,6 +349,20 @@ public partial class AHPComparisonPage : ContentPage
         for (int i = 0; i < optionsCount; i++)
         {
             Console.WriteLine($"{decision.Options[i]}: {finalScores[i]}");
+        }
+    }
+
+    void UpdateContinueButtonState()
+    {
+        if (selectedOption != "-")
+        {
+            ContinueButton.IsEnabled = true;
+            ContinueButton.Opacity = 1; // aktiivne
+        }
+        else
+        {
+            ContinueButton.IsEnabled = false;
+            ContinueButton.Opacity = 0.5; // hall
         }
     }
 

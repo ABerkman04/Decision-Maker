@@ -1,7 +1,6 @@
 using Decision_Maker.Components;
 using Decision_Maker.Login;
 using Decision_Maker.Resources.Localization;
-using Decision_Maker.Test;
 using System.Diagnostics;
 using System.Globalization;
 
@@ -38,7 +37,7 @@ public partial class NawBarSettingsPage : ContentPage
 
     private void AboutClicked(object sender, EventArgs e)
     {
-        DisplayAlertAsync("About", "About page", "OK");
+        DisplayAlertAsync(AppResources.About_app, AppResources.About_app_info, AppResources.OK);
     }
 
     private void LanguageClicked(object sender, EventArgs e)
@@ -67,10 +66,11 @@ public partial class NawBarSettingsPage : ContentPage
     private async void LogoutClicked(object sender, EventArgs e)
     {
         bool confirm = await DisplayAlertAsync(
-            "Logout",
-            "Are you sure you want to logout?",
-            "Logout",
-            "Cancel");
+            AppResources.Log_out,
+            AppResources.Logout_confirmation,
+            AppResources.Log_out,
+            AppResources.Cancel
+        );
 
         if (!confirm)
             return;

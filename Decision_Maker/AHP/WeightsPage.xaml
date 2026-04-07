@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Decision_Maker.AHP.WeightsPage"
              xmlns:components="clr-namespace:Decision_Maker.Components"
+             xmlns:strings="clr-namespace:Decision_Maker.Resources.Localization"
              BackgroundColor="Grey"
              NavigationPage.HasNavigationBar="False">
 
@@ -32,7 +33,7 @@
                            HeightRequest="34"
                            Aspect="AspectFit" />
 
-                    <Label Text="Decision Maker"
+                    <Label Text="{x:Static strings:AppResources.Decision_Maker}"
                            FontSize="20"
                            FontFamily="AlegreyaSansExtraBold"
                            VerticalOptions="Center"
@@ -61,13 +62,13 @@
 
                         <VerticalStackLayout Spacing="16">
 
-                            <Label Text="Set Criteria Importance"
+                            <Label Text="{x:Static strings:AppResources.Set_Criteria_Importance}"
                                    FontSize="20"
                                    FontFamily="AlegreyaSansExtraBold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="Black" />
 
-                            <Label Text="Move sliders to change importance"
+                            <Label Text="{x:Static strings:AppResources.Move_sliders_to_change_importance}"
                                    FontSize="16"
                                    FontFamily="AlegreyaSansRegular"
                                    HorizontalTextAlignment="Center"
@@ -128,7 +129,7 @@
                             </CollectionView>
 
 
-                            <components:PrimaryButton ButtonText="Continue"
+                            <components:PrimaryButton ButtonText="{x:Static strings:AppResources.Continue}"
                                                       Clicked="ContinueClicked"
                                                       HorizontalOptions="Center"
                                                       Margin="0,0,0,5" />
@@ -148,78 +149,5 @@
 
     </Grid>
 
-
-    <!--<Grid RowDefinitions="*,80"
-          RowSpacing="0">
-
-        <Frame Grid.Row="0" HasShadow="False">
-
-            <VerticalStackLayout Padding="30" Spacing="25">
-
-                <Label Text="Set Criteria Importance"
-                       FontSize="26"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="Move sliders to show importance"
-                       FontSize="14"
-                       HorizontalOptions="Center"/>
-
-
-                <CollectionView x:Name="WeightsList">
-
-                    <CollectionView.ItemTemplate>
-
-                        <DataTemplate>
-
-                            <Frame Padding="15"
-                                   BackgroundColor="#E5E5E5"
-                                   CornerRadius="15"
-                                   HasShadow="False">
-
-                                <VerticalStackLayout Spacing="10">
-
-                                    <Label Text="{Binding Name}"
-                                           FontSize="16"
-                                           FontAttributes="Bold"/>
-
-                                    <Grid ColumnDefinitions="*,40">
-
-                                        <Slider Minimum="1"
-                                        Maximum="10"
-                                        Value="{Binding RawWeight, Mode=TwoWay}"
-                                        ValueChanged="SliderChanged"/>
-
-                                        <Label Grid.Column="1"
-                                       Text="{Binding RawWeight}"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center"/>
-
-                                    </Grid>
-
-                                </VerticalStackLayout>
-
-                            </Frame>
-
-                        </DataTemplate>
-
-                    </CollectionView.ItemTemplate>
-
-                </CollectionView>
-
-
-                <Button Text="Continue"
-                        HeightRequest="55"
-                        CornerRadius="25"
-                        BackgroundColor="#CFCFCF"
-                        Clicked="ContinueClicked"/>
-
-            </VerticalStackLayout>
-
-        </Frame>
-
-        <components:NavigationBar Grid.Row="1"/>
-
-    </Grid>-->
 
 </ContentPage>

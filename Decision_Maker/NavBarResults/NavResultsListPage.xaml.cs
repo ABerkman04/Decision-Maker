@@ -1,6 +1,7 @@
 namespace Decision_Maker.NavBarResults;
 
 using Decision_Maker.Components;
+using Decision_Maker.Resources.Localization;
 using System.Diagnostics;
 
 
@@ -62,10 +63,10 @@ public partial class NavResultsListPage : ContentPage
 
         // confirm (soovitatav!)
         bool confirm = await DisplayAlertAsync(
-            "Delete",
-            "Are you sure you want to delete this decision?",
-            "Yes",
-            "Cancel"
+            AppResources.Delete,
+            AppResources.Delete_confirmation,
+            AppResources.Yes, // Võid lisada ka tõlke, nt AppResources.Yes
+            AppResources.Cancel
         );
 
         if (!confirm)
@@ -86,7 +87,11 @@ public partial class NavResultsListPage : ContentPage
         {
             Debug.WriteLine(ex);
 
-            await DisplayAlertAsync("Error", "Failed to delete decision.", "OK");
+            await DisplayAlertAsync(
+            AppResources.Error,
+            AppResources.Failed_to_delete_decision,
+            AppResources.OK
+            );
         }
     }
 }
