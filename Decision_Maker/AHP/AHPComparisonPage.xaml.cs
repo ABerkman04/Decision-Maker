@@ -66,6 +66,7 @@ public partial class AHPComparisonPage : ContentPage
                 matrix.Add(row);
             }
 
+
             DecisionManager.CurrentDecision.criteriaMatrix.Add(matrix);
 
         }
